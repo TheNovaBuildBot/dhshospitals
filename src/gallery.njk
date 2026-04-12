@@ -22,11 +22,6 @@ activePage: "more"
         <img src="/assets/images/gallery/pg-{{ i }}.jpg" alt="DHS Multispecialty Hospital facility photo {{ i }}" loading="lazy" style="width:100%;height:250px;object-fit:cover;transition:transform .3s">
       </a>
       {% endfor %}
-      {% for i in range(1, 18) %}
-      <a href="/assets/images/gallery/{{ i }}.jpg" target="_blank" rel="noopener" style="display:block;border-radius:var(--radius);overflow:hidden">
-        <img src="/assets/images/gallery/{{ i }}.jpg" alt="DHS Multispecialty Hospital photo {{ i }}" loading="lazy" style="width:100%;height:250px;object-fit:cover;transition:transform .3s">
-      </a>
-      {% endfor %}
     </div>
     <div style="text-align:center;margin-top:40px">
       <a href="{{ site.virtual_tour_url }}" target="_blank" rel="noopener" class="btn btn-primary">Take a Virtual Tour</a>
