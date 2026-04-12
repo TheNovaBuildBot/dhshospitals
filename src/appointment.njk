@@ -20,32 +20,32 @@ activePage: "home"
       <input type="hidden" name="_subject" value="Appointment Request - DHS Hospital">
       <input type="hidden" name="_captcha" value="false">
       <div class="form-group">
-        <label>Full Name *</label>
-        <input type="text" name="name" required placeholder="Enter Full Name">
+        <label for="appt-name">Full Name <span aria-label="required">*</span></label>
+        <input type="text" name="name" id="appt-name" required aria-required="true" placeholder="Enter Full Name" autocomplete="name">
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Email *</label>
-          <input type="email" name="email" required placeholder="Enter Email">
+          <label for="appt-email">Email <span aria-label="required">*</span></label>
+          <input type="email" name="email" id="appt-email" required aria-required="true" placeholder="Enter Email" autocomplete="email">
         </div>
         <div class="form-group">
-          <label>Phone *</label>
-          <input type="tel" name="phone" required placeholder="Enter Phone No" maxlength="10">
+          <label for="appt-phone">Phone <span aria-label="required">*</span></label>
+          <input type="tel" name="phone" id="appt-phone" required aria-required="true" placeholder="Enter Phone No" maxlength="10" autocomplete="tel">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Preferred Date</label>
-          <input type="date" name="date">
+          <label for="appt-date">Preferred Date</label>
+          <input type="date" name="date" id="appt-date">
         </div>
         <div class="form-group">
-          <label>Preferred Time</label>
-          <input type="time" name="time">
+          <label for="appt-time">Preferred Time</label>
+          <input type="time" name="time" id="appt-time">
         </div>
       </div>
       <div class="form-group">
-        <label>Department</label>
-        <select name="department">
+        <label for="appt-dept">Department</label>
+        <select name="department" id="appt-dept">
           <option value="">Select Department</option>
           {% for dept in departments %}
           <option value="{{ dept.name }}">{{ dept.name }}</option>
@@ -53,8 +53,8 @@ activePage: "home"
         </select>
       </div>
       <div class="form-group">
-        <label>Your Query</label>
-        <textarea name="query" placeholder="Enter your query or symptoms"></textarea>
+        <label for="appt-query">Your Query</label>
+        <textarea name="query" id="appt-query" placeholder="Enter your query or symptoms"></textarea>
       </div>
       <p style="font-size:.8rem;color:var(--text-light);margin-bottom:15px">I agree to the <a href="/terms-conditions/">Terms & Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a>.</p>
       <button type="submit" class="btn btn-primary" style="width:100%">Submit Appointment Request</button>
