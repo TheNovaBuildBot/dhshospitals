@@ -11,7 +11,7 @@
   {
     "slug": "joint-replacement",
     "name": "Joint Replacement",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/joint-bg.jpg",
     "short_desc": "Restoring mobility and improving quality of life through advanced joint replacement procedures.",
     "full_desc": "Our Joint Replacement Department in Ahmedabad specializes in restoring mobility and improving quality of life through advanced joint replacement procedures. Whether you're dealing with arthritis, injury-related joint damage, or other conditions affecting your joints, our expert team is here to provide comprehensive care tailored to your needs. We focus on early mobilisation and minimal discomfort.\n\nLed by renowned orthopedic and knee replacement surgeons of Ahmedabad, Dr Hardik Shah and Dr Swagat Shah, our Joint Replacement Department offers state-of-the-art surgical techniques and advanced rehabilitation services.",
     "services": [
@@ -27,7 +27,7 @@
   {
     "slug": "trauma",
     "name": "Trauma",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/trauma-bg.jpg",
     "short_desc": "24x7 emergency trauma care with advanced surgical capabilities for musculoskeletal injuries.",
     "full_desc": "The Trauma department at DHS Multispecialty Hospital provides round-the-clock emergency care for all types of musculoskeletal injuries including fractures, dislocations, and polytrauma cases. Our experienced surgeons use the latest fixation techniques and minimally invasive approaches.",
     "services": ["Fracture Management", "Polytrauma Care", "Pelvic & Acetabular Surgery", "Deformity Correction", "Ilizarov & External Fixation"],
@@ -36,7 +36,7 @@
   {
     "slug": "arthroscopy",
     "name": "Arthroscopy",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/arthroscopy-bg.jpg",
     "short_desc": "Minimally invasive arthroscopic procedures for joint diagnosis and treatment.",
     "full_desc": "Our Arthroscopy department offers minimally invasive procedures for diagnosing and treating joint conditions. Using advanced arthroscopic technology, our surgeons perform procedures with smaller incisions, resulting in less pain, faster recovery, and better outcomes.",
     "services": ["Knee Arthroscopy", "Shoulder Arthroscopy", "ACL Reconstruction", "Meniscus Repair", "Rotator Cuff Repair"],
@@ -45,7 +45,7 @@
   {
     "slug": "spine-surgery",
     "name": "Spine Surgery",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/surgery-bg.jpg",
     "short_desc": "Comprehensive spine care from conservative management to advanced surgical interventions.",
     "full_desc": "The Spine Surgery department provides comprehensive care for all spinal conditions including disc herniation, spinal stenosis, scoliosis, and spinal injuries. Our surgeons perform both minimally invasive and complex spinal procedures.",
     "services": ["Disc Replacement", "Spinal Fusion", "Minimally Invasive Spine Surgery", "Vertebroplasty", "Scoliosis Correction"],
@@ -54,7 +54,7 @@
   {
     "slug": "sports-medicine",
     "name": "Sports Medicine",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/arthroscopy-bg.jpg",
     "short_desc": "Specialized care for sports injuries with focus on getting athletes back to peak performance.",
     "full_desc": "Our Sports Medicine department provides comprehensive care for athletic injuries and helps patients return to their active lifestyles. From diagnosis through rehabilitation, our team works to restore function and prevent future injuries.",
     "services": ["Sports Injury Assessment", "Ligament Reconstruction", "Cartilage Restoration", "Sports Rehabilitation", "Injury Prevention Programs"],
@@ -81,7 +81,7 @@
   {
     "slug": "cardiology",
     "name": "Cardiology",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/cardiology-bg.jpg",
     "short_desc": "Comprehensive cardiac diagnostics and treatment by a team of skilled heart specialists.",
     "full_desc": "DHS Multispecialty Hospital has a team of skilled doctors who are committed to providing excellence in heart health. We provide a range of diagnostic services to evaluate heart health including ECG, Echocardiography, and Stress Testing.",
     "services": [
@@ -141,7 +141,7 @@
   {
     "slug": "dialysis-unit",
     "name": "Nephrology & Dialysis",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/nephrology-bg.jpg",
     "short_desc": "Eight-bed exclusive dialysis area with German equipment for kidney care.",
     "full_desc": "The Nephrology & Dialysis department provides comprehensive kidney care including an eight-bed exclusive dialysis area equipped with German equipment. Our team manages chronic kidney disease, acute kidney injury, and provides ongoing dialysis support.",
     "services": ["Hemodialysis", "Chronic Kidney Disease Management", "Acute Kidney Injury Treatment", "Kidney Biopsy", "Dialysis Access Care"],
@@ -150,7 +150,7 @@
   {
     "slug": "cosmetology-plastic-surgery",
     "name": "Plastic Surgery",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/cosmetology-bg.jpg",
     "short_desc": "Reconstructive and cosmetic plastic surgery procedures.",
     "full_desc": "The Plastic Surgery department offers both reconstructive and cosmetic procedures. Our surgeons provide expert care for trauma reconstruction, burn care, and aesthetic procedures.",
     "services": ["Reconstructive Surgery", "Burn Care", "Hand Surgery", "Cosmetic Procedures", "Scar Revision"],
@@ -159,7 +159,7 @@
   {
     "slug": "pulmonary-clinic",
     "name": "Pulmonology",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/pulmonology-bg.jpg",
     "short_desc": "Diagnosis and treatment of respiratory and lung diseases.",
     "full_desc": "The Pulmonology department provides comprehensive care for all respiratory conditions. Our pulmonologists manage asthma, COPD, pneumonia, and other lung diseases with advanced diagnostic and treatment options.",
     "services": ["Pulmonary Function Testing", "Asthma Management", "COPD Treatment", "Sleep Studies", "Bronchoscopy"],
@@ -168,7 +168,7 @@
   {
     "slug": "icu",
     "name": "Critical Care & ICU",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/icu-bg.jpg",
     "short_desc": "8-bed ICU with advanced life-support systems and HEPA filters for critical patient care.",
     "full_desc": "Our 8-bed ICU is designed to provide critical care for seriously ill or injured patients, with advanced life-support systems, ventilator support, and central monitoring. Equipped with HEPA filters to prevent cross-infections, we also have dedicated isolation rooms for immunocompromised or highly infectious patients.",
     "services": ["Ventilator Support", "Central Monitoring", "Isolation Wards", "Advanced Life Support", "Post-Surgical ICU Care"],
@@ -177,7 +177,7 @@
   {
     "slug": "pathology-laboratory",
     "name": "Pathology Laboratory",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/client/medicine-bg.jpg",
     "short_desc": "Fully equipped laboratory with automated analysers for precise diagnostic services.",
     "full_desc": "Our fully equipped Pathology Laboratory offers precise and timely diagnostic services. From routine blood tests to advanced diagnostic procedures, our lab is operated by skilled technicians using state-of-the-art equipment.",
     "services": ["Blood Tests", "Urine Analysis", "Histopathology", "Microbiology", "Biochemistry"],
@@ -186,7 +186,7 @@
   {
     "slug": "radiology",
     "name": "Radiology",
-    "image": "/assets/images/department/orthopaedics.jpg",
+    "image": "/assets/images/hero/bg-3.png",
     "short_desc": "Full spectrum of imaging services including X-rays, ultrasound, and CT scans.",
     "full_desc": "The Radiology Department offers a full spectrum of imaging services, including X-rays, ultrasound, and CT scans. Using the latest imaging technology, we deliver high-quality diagnostic images for accurate diagnoses and effective treatment planning.",
     "services": ["16-Multislice CT Scanner", "3D/4D Sonography", "Colour Doppler", "2D Echocardiography", "Digital X-Ray"],
