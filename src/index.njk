@@ -11,16 +11,27 @@ extra_head: true
 ---
 
 <section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Care as advanced<br>as it is personal.</h1>
-      <p>Where Care Meets Comfort. Always.</p>
-      <div class="hero-buttons">
-        <a href="/doctors/" class="btn btn-outline" style="border-color:#fff;color:#fff">Find a Doctor</a>
+  <div class="hero-arc">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Care as advanced<br>as it is personal.</h1>
+        <p>Where Care Meets Comfort. Always.</p>
+        <div class="hero-buttons">
+          <a href="/doctors/" class="btn btn-outline" style="border-color:#fff;color:#fff">Find a Doctor</a>
+        </div>
       </div>
     </div>
   </div>
+  <div class="hero-image">
+    <img src="/assets/images/hero/bg-2.png" alt="DHS Multispecialty Hospital Ahmedabad" id="heroImg">
+  </div>
 </section>
+<script>
+(function(){
+  var imgs=['/assets/images/hero/bg-2.png','/assets/images/hero/bg-3.png','/assets/images/hero/bg-4.png'];
+  document.getElementById('heroImg').src=imgs[Math.floor(Math.random()*imgs.length)];
+})();
+</script>
 
 <section class="stats-bar">
   <div class="container">
