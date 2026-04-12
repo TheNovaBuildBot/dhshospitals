@@ -1,0 +1,14 @@
+{
+  "name": "dhshospitals",
+  "version": "1.0.0",
+  "description": "DHS Multispecialty Hospital - Ahmedabad",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "preview": "npx wrangler pages dev ./_site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "wrangler": "^4.77.0"
+  }
+}

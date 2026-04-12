@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: "Health Blog — DHS Multispecialty Hospital Ahmedabad"
+description: "Read health articles, medical tips, and updates from the doctors at DHS Multispecialty Hospital, Ahmedabad."
+canonical: "https://dhshospitals.com/blog/"
+activePage: "more"
+---
+
+<div class="page-banner">
+  <div class="container">
+    <h1>Health Blog</h1>
+    <div class="breadcrumb"><a href="/">Home</a> / Blog</div>
+  </div>
+</div>
+
+<section class="content-section">
+  <div class="container">
+    {% if collections.post and collections.post.length %}
+    <div class="dept-grid" style="grid-template-columns:repeat(3,1fr)">
+      {% for post in collections.post %}
+      <a href="{{ post.url }}" class="dept-card" style="text-decoration:none;color:inherit">
+        <div class="dept-card-body">
+          <h3>{{ post.data.title }}</h3>
+          <p style="font-size:.8rem;color:var(--primary);margin-bottom:8px">{{ post.date | dateFormat }}</p>
+          <p>{{ post.data.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p style="text-align:center;color:var(--text-light)">Blog posts coming soon. Stay tuned for health tips and medical updates from our doctors.</p>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,195 @@
+[
+  {
+    "slug": "orthopedics",
+    "name": "Orthopedics",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Advanced orthopedic treatments in our world-renowned hospital infrastructure with robotic-assisted surgery.",
+    "full_desc": "DHS Multispecialty Hospital's Orthopedic Department offers comprehensive care for all musculoskeletal conditions. Led by Dr. Hardik Shah and Dr. Swagat Shah, our team specializes in joint replacement, trauma surgery, arthroscopy, spine surgery, and sports medicine using state-of-the-art technology.",
+    "sub_departments": ["Trauma", "Joint Replacement", "Arthroscopy", "Spine Surgery", "Sports Medicine"],
+    "doctors": ["doctor-hardik", "doctor-swagat"]
+  },
+  {
+    "slug": "joint-replacement",
+    "name": "Joint Replacement",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Restoring mobility and improving quality of life through advanced joint replacement procedures.",
+    "full_desc": "Our Joint Replacement Department in Ahmedabad specializes in restoring mobility and improving quality of life through advanced joint replacement procedures. Whether you're dealing with arthritis, injury-related joint damage, or other conditions affecting your joints, our expert team is here to provide comprehensive care tailored to your needs. We focus on early mobilisation and minimal discomfort.\n\nLed by renowned orthopedic and knee replacement surgeons of Ahmedabad, Dr Hardik Shah and Dr Swagat Shah, our Joint Replacement Department offers state-of-the-art surgical techniques and advanced rehabilitation services.",
+    "services": [
+      "Primary Total Knee Replacement",
+      "Revision Knee Replacement",
+      "Uni-condylar Knee Replacement",
+      "Hip Replacement and Revision Hip Replacement",
+      "Elbow and Small Joint Replacement",
+      "Shoulder Replacement"
+    ],
+    "doctors": ["doctor-hardik", "doctor-swagat"]
+  },
+  {
+    "slug": "trauma",
+    "name": "Trauma",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "24x7 emergency trauma care with advanced surgical capabilities for musculoskeletal injuries.",
+    "full_desc": "The Trauma department at DHS Multispecialty Hospital provides round-the-clock emergency care for all types of musculoskeletal injuries including fractures, dislocations, and polytrauma cases. Our experienced surgeons use the latest fixation techniques and minimally invasive approaches.",
+    "services": ["Fracture Management", "Polytrauma Care", "Pelvic & Acetabular Surgery", "Deformity Correction", "Ilizarov & External Fixation"],
+    "doctors": ["doctor-hardik", "doctor-swagat"]
+  },
+  {
+    "slug": "arthroscopy",
+    "name": "Arthroscopy",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Minimally invasive arthroscopic procedures for joint diagnosis and treatment.",
+    "full_desc": "Our Arthroscopy department offers minimally invasive procedures for diagnosing and treating joint conditions. Using advanced arthroscopic technology, our surgeons perform procedures with smaller incisions, resulting in less pain, faster recovery, and better outcomes.",
+    "services": ["Knee Arthroscopy", "Shoulder Arthroscopy", "ACL Reconstruction", "Meniscus Repair", "Rotator Cuff Repair"],
+    "doctors": ["doctor-hardik", "doctor-swagat"]
+  },
+  {
+    "slug": "spine-surgery",
+    "name": "Spine Surgery",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Comprehensive spine care from conservative management to advanced surgical interventions.",
+    "full_desc": "The Spine Surgery department provides comprehensive care for all spinal conditions including disc herniation, spinal stenosis, scoliosis, and spinal injuries. Our surgeons perform both minimally invasive and complex spinal procedures.",
+    "services": ["Disc Replacement", "Spinal Fusion", "Minimally Invasive Spine Surgery", "Vertebroplasty", "Scoliosis Correction"],
+    "doctors": ["doctor-hardik", "doctor-swagat"]
+  },
+  {
+    "slug": "sports-medicine",
+    "name": "Sports Medicine",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Specialized care for sports injuries with focus on getting athletes back to peak performance.",
+    "full_desc": "Our Sports Medicine department provides comprehensive care for athletic injuries and helps patients return to their active lifestyles. From diagnosis through rehabilitation, our team works to restore function and prevent future injuries.",
+    "services": ["Sports Injury Assessment", "Ligament Reconstruction", "Cartilage Restoration", "Sports Rehabilitation", "Injury Prevention Programs"],
+    "doctors": ["doctor-hardik", "doctor-swagat"]
+  },
+  {
+    "slug": "neurosurgery",
+    "name": "Neurosurgery",
+    "image": "/assets/images/department/neurodept.jpg",
+    "short_desc": "Specialized diagnosis and treatment of neurological and neurosurgical conditions.",
+    "full_desc": "Advanced treatment of neurology-related disorders and illness is offered to patients at DHS Multispecialty Hospital. We offer a range of neurological and neurosurgical treatments for all illness related to brain stroke, epilepsy, movement disorders etc. Our expert team of neurologists, interventional radiologists are supported by a highly skilled neurosurgical team to offer comprehensive treatment to our patients.",
+    "services": ["Headache & Migraine", "Epilepsy & Seizures", "Stroke Treatment", "Alzheimer's & Parkinson's", "Meningitis & Encephalitis", "Multiple Sclerosis", "Cerebral Palsy", "Head & Spinal Injury"],
+    "doctors": ["doctor-kushal"]
+  },
+  {
+    "slug": "cancer-surgery",
+    "name": "Cancer Care",
+    "image": "/assets/images/department/cancercare.jpg",
+    "short_desc": "Comprehensive cancer diagnosis, treatment, and holistic support for improved quality of life.",
+    "full_desc": "The Cancer Care department at DHS Multispecialty Hospital provides comprehensive cancer treatment services. Our oncology team offers holistic support to improve quality of life and longevity after a cancer diagnosis, combining the latest surgical techniques with compassionate patient care.",
+    "services": ["Cancer Diagnosis", "Surgical Oncology", "Chemotherapy Day Care", "Cancer Screening", "Palliative Care"],
+    "doctors": ["doctor-dileep"]
+  },
+  {
+    "slug": "cardiology",
+    "name": "Cardiology",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Comprehensive cardiac diagnostics and treatment by a team of skilled heart specialists.",
+    "full_desc": "DHS Multispecialty Hospital has a team of skilled doctors who are committed to providing excellence in heart health. We provide a range of diagnostic services to evaluate heart health including ECG, Echocardiography, and Stress Testing.",
+    "services": [
+      "Electrocardiogram (ECG/EKG)",
+      "Echocardiography",
+      "Stress Testing (TMT)",
+      "Preventive Cardiology",
+      "Heart Failure Management"
+    ],
+    "doctors": ["doctor-sunil"]
+  },
+  {
+    "slug": "gastro-surgery",
+    "name": "Gastroenterology",
+    "image": "/assets/images/department/gastrodept.jpg",
+    "short_desc": "Surgical treatment of digestive organs with advanced laparoscopic techniques.",
+    "full_desc": "The Gastroenterology department deals with the diagnosis and treatment of diseases affecting the digestive system. Our team offers advanced endoscopic procedures, laparoscopic surgeries, and comprehensive management of gastrointestinal conditions.",
+    "services": ["Endoscopy", "Colonoscopy", "Laparoscopic Surgery", "GERD Treatment", "Liver Disease Management", "Hernia Surgery", "Weight Loss Surgery"],
+    "doctors": ["doctor-chirag", "doctor-ruchir"]
+  },
+  {
+    "slug": "general-surgery",
+    "name": "General Surgery",
+    "image": "/assets/images/department/generalsurgery.jpg",
+    "short_desc": "General and laparoscopic surgery focusing on abdominal and minimally invasive procedures.",
+    "full_desc": "The General and Laparoscopic Surgery department focuses on abdominal contents and provides comprehensive surgical care using both traditional and minimally invasive techniques.",
+    "services": ["Laparoscopic Surgery", "Hernia Repair", "Appendectomy", "Gallbladder Surgery", "Thyroid Surgery"],
+    "doctors": ["doctor-chirag", "doctor-devshi"]
+  },
+  {
+    "slug": "internal-medicine",
+    "name": "Internal Medicine",
+    "image": "/assets/images/department/internal.jpg",
+    "short_desc": "Physicians offering optimum care tailor-made for your medical needs.",
+    "full_desc": "The Internal Medicine department provides comprehensive medical care for a wide range of conditions. Our physicians specialize in diabetes management, hypertension, infectious diseases, and geriatric care.",
+    "services": ["Diabetes Management", "Hypertension Treatment", "Infectious Disease Care", "Geriatric Medicine", "Preventive Health"],
+    "doctors": ["doctor-archit"]
+  },
+  {
+    "slug": "urology-surgery",
+    "name": "Urology Surgery",
+    "image": "/assets/images/department/urology.jpg",
+    "short_desc": "Treatment of diseases of the genitourinary tract including kidneys, bladder, and prostate.",
+    "full_desc": "The Urology department treats diseases of the genitourinary tract. Our urologist provides minimally invasive surgeries for kidney stones, prostate conditions, and urological cancers.",
+    "services": ["Kidney Stone Treatment", "Prostate Surgery", "Urological Cancer Treatment", "Minimally Invasive Urology", "Reconstructive Urology"],
+    "doctors": ["doctor-darshil"]
+  },
+  {
+    "slug": "vascular-surgery",
+    "name": "Vascular Surgery",
+    "image": "/assets/images/department/vascularsurgery.jpg",
+    "short_desc": "Diagnosis, treatment, and management of conditions in arteries and veins.",
+    "full_desc": "Our Vascular Surgery department diagnoses, treats, and manages conditions in your arteries and veins. We offer both surgical and endovascular treatments for vascular diseases.",
+    "services": ["Varicose Vein Treatment", "Peripheral Artery Disease", "Dialysis Access Surgery", "Deep Vein Thrombosis", "Aneurysm Repair"],
+    "doctors": ["doctor-devshi"]
+  },
+  {
+    "slug": "dialysis-unit",
+    "name": "Nephrology & Dialysis",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Eight-bed exclusive dialysis area with German equipment for kidney care.",
+    "full_desc": "The Nephrology & Dialysis department provides comprehensive kidney care including an eight-bed exclusive dialysis area equipped with German equipment. Our team manages chronic kidney disease, acute kidney injury, and provides ongoing dialysis support.",
+    "services": ["Hemodialysis", "Chronic Kidney Disease Management", "Acute Kidney Injury Treatment", "Kidney Biopsy", "Dialysis Access Care"],
+    "doctors": []
+  },
+  {
+    "slug": "cosmetology-plastic-surgery",
+    "name": "Plastic Surgery",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Reconstructive and cosmetic plastic surgery procedures.",
+    "full_desc": "The Plastic Surgery department offers both reconstructive and cosmetic procedures. Our surgeons provide expert care for trauma reconstruction, burn care, and aesthetic procedures.",
+    "services": ["Reconstructive Surgery", "Burn Care", "Hand Surgery", "Cosmetic Procedures", "Scar Revision"],
+    "doctors": []
+  },
+  {
+    "slug": "pulmonary-clinic",
+    "name": "Pulmonology",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Diagnosis and treatment of respiratory and lung diseases.",
+    "full_desc": "The Pulmonology department provides comprehensive care for all respiratory conditions. Our pulmonologists manage asthma, COPD, pneumonia, and other lung diseases with advanced diagnostic and treatment options.",
+    "services": ["Pulmonary Function Testing", "Asthma Management", "COPD Treatment", "Sleep Studies", "Bronchoscopy"],
+    "doctors": []
+  },
+  {
+    "slug": "icu",
+    "name": "Critical Care & ICU",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "8-bed ICU with advanced life-support systems and HEPA filters for critical patient care.",
+    "full_desc": "Our 8-bed ICU is designed to provide critical care for seriously ill or injured patients, with advanced life-support systems, ventilator support, and central monitoring. Equipped with HEPA filters to prevent cross-infections, we also have dedicated isolation rooms for immunocompromised or highly infectious patients.",
+    "services": ["Ventilator Support", "Central Monitoring", "Isolation Wards", "Advanced Life Support", "Post-Surgical ICU Care"],
+    "doctors": ["doctor-mansi"]
+  },
+  {
+    "slug": "pathology-laboratory",
+    "name": "Pathology Laboratory",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Fully equipped laboratory with automated analysers for precise diagnostic services.",
+    "full_desc": "Our fully equipped Pathology Laboratory offers precise and timely diagnostic services. From routine blood tests to advanced diagnostic procedures, our lab is operated by skilled technicians using state-of-the-art equipment.",
+    "services": ["Blood Tests", "Urine Analysis", "Histopathology", "Microbiology", "Biochemistry"],
+    "doctors": ["doctor-yesha"]
+  },
+  {
+    "slug": "radiology",
+    "name": "Radiology",
+    "image": "/assets/images/department/orthopaedics.jpg",
+    "short_desc": "Full spectrum of imaging services including X-rays, ultrasound, and CT scans.",
+    "full_desc": "The Radiology Department offers a full spectrum of imaging services, including X-rays, ultrasound, and CT scans. Using the latest imaging technology, we deliver high-quality diagnostic images for accurate diagnoses and effective treatment planning.",
+    "services": ["16-Multislice CT Scanner", "3D/4D Sonography", "Colour Doppler", "2D Echocardiography", "Digital X-Ray"],
+    "doctors": []
+  }
+]

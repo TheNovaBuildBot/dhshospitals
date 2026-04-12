@@ -1,0 +1,72 @@
+---
+pagination:
+  data: doctors
+  size: 1
+  alias: doc
+permalink: "doctors/{{ doc.slug }}/"
+layout: base.njk
+eleventyComputed:
+  title: "{{ doc.name }} — {{ doc.specialty }} | DHS Multispecialty Hospital Ahmedabad"
+  description: "{{ doc.name }}, {{ doc.qualification }} — {{ doc.specialty }} specialist at DHS Multispecialty Hospital, Ahmedabad. Book appointment today."
+  canonical: "https://dhshospitals.com/doctors/{{ doc.slug }}/"
+activePage: "doctors"
+---
+
+<div class="page-banner">
+  <div class="container">
+    <h1>{{ doc.name }}</h1>
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/doctors/">Doctors</a> / {{ doc.name }}</div>
+  </div>
+</div>
+
+<section class="content-section">
+  <div class="container">
+    <div class="doctor-detail">
+      <div>
+        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy">
+        <div style="margin-top:20px">
+          <a href="/appointment/" class="btn btn-primary" style="width:100%;text-align:center">Book Appointment</a>
+        </div>
+        {% if doc.languages %}
+        <div style="margin-top:15px;font-size:.85rem;color:var(--text-light)">
+          <strong>Languages:</strong> {{ doc.languages }}
+        </div>
+        {% endif %}
+        {% if doc.expertise %}
+        <div style="margin-top:10px;font-size:.85rem;color:var(--text-light)">
+          <strong>Expertise:</strong> {{ doc.expertise }}
+        </div>
+        {% endif %}
+      </div>
+      <div>
+        <h2>{{ doc.name }}</h2>
+        <div class="qualification">{{ doc.qualification }}</div>
+        {% if doc.role %}<div class="role">{{ doc.role }}</div>{% endif %}
+        <div style="color:var(--primary);font-weight:600;margin-bottom:20px">{{ doc.specialty }}</div>
+
+        {% if doc.about %}
+        <p>{{ doc.about }}</p>
+        {% endif %}
+        {% if doc.about_extended %}
+        <p>{{ doc.about_extended }}</p>
+        {% endif %}
+
+        {% if doc.specializations and doc.specializations.length %}
+        <div class="specialization-list">
+          <h3 style="margin-top:25px">Areas of Expertise</h3>
+          {% for spec in doc.specializations %}
+          <div style="margin-top:15px">
+            <h4 style="color:var(--primary);font-size:1rem;font-family:'Inter',sans-serif">{{ spec.name }}</h4>
+            <p>{{ spec.desc }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if doc.closing %}
+        <p style="margin-top:20px;font-style:italic;color:var(--text-light)">{{ doc.closing }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

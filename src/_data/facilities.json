@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Ambulance",
+    "icon": "/assets/images/icon/ambulace.png",
+    "description": "Our 24/7 Ambulance Service is equipped with advanced life-support systems and highly trained medical personnel to ensure rapid and safe transportation for emergency patients."
+  },
+  {
+    "name": "Radiology",
+    "icon": "/assets/images/icon/radiology.png",
+    "description": "The Radiology Department offers a full spectrum of imaging services, including X-rays, ultrasound, and CT scans using the latest imaging technology."
+  },
+  {
+    "name": "Pharmacy",
+    "icon": "/assets/images/icon/drugstore.png",
+    "description": "The in-house Pharmacy ensures quick and easy access to a wide range of medicines. Our licensed pharmacists are available for consultations."
+  },
+  {
+    "name": "ICU",
+    "icon": "/assets/images/icon/icu.png",
+    "description": "Our 8-bed ICU provides critical care with advanced life-support systems, ventilator support, central monitoring, and HEPA filters to prevent cross-infections."
+  },
+  {
+    "name": "Canteen",
+    "icon": "/assets/images/icon/meal.png",
+    "description": "Our Canteen provides a variety of healthy, nutritious meals and snacks for patients, visitors, and staff with balanced dietary options."
+  },
+  {
+    "name": "Laboratory",
+    "icon": "/assets/images/icon/worker.png",
+    "description": "Our fully equipped Laboratory offers precise and timely diagnostic services operated by skilled technicians using state-of-the-art equipment."
+  }
+]

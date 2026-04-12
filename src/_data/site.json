@@ -1,0 +1,49 @@
+{
+  "name": "DHS Multispecialty Hospital",
+  "title_suffix": "DHS Multispecialty Hospital — Where Care Meets Comfort",
+  "tagline": "Where Care Meets Comfort",
+  "legal_entity": "DHS Properties and Hospitals LLP",
+  "accreditation": "NABH",
+  "domain": "dhshospitals.com",
+  "url": "https://dhshospitals.com",
+  "address": {
+    "name": "DHS Multispecialty Hospital",
+    "line1": "18 Sunrise Park Society",
+    "line2": "Vastrapur Lake - Drive in Link Road",
+    "area": "Gurukul",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "pincode": "380052",
+    "full": "18 Sunrise Park Society, Vastrapur Lake - Drive in Link Road, Gurukul, Ahmedabad, Gujarat 380052"
+  },
+  "geo": {
+    "latitude": "23.0430",
+    "longitude": "72.5261"
+  },
+  "phones": {
+    "emergency": "+91 9081610444",
+    "landline1": "(079) 26844444",
+    "landline2": "(079) 26845555",
+    "billing": "+91 9081021444",
+    "whatsapp": "919081610333"
+  },
+  "email": "info@dhshospitals.com",
+  "whatsapp_link": "https://api.whatsapp.com/send?phone=919081610333&text=Book+Appointment",
+  "google_maps_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.475815112073!2d72.52613367436825!3d23.043011115566973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f5942675b7%3A0x90be92473960a578!2sDHS%20Multispecialty%20Hospital!5e0!3m2!1sen!2sin!4v1732106074153!5m2!1sen!2sin",
+  "google_maps_link": "https://www.google.com/maps/search/?api=1&query=DHS+Multispecialty+Hospital+Ahmedabad",
+  "virtual_tour_url": "https://tourmkr.com/F1ugqILUia/11118938p&180.61h&92.3t",
+  "social": {
+    "facebook": "https://www.facebook.com/DHS.Hospitals",
+    "twitter": "https://x.com/DhsHospital",
+    "linkedin": "https://www.linkedin.com/in/dhs-multispecialty-hospital-2b1b16188/",
+    "instagram": "https://www.instagram.com/dhs_hospitals/"
+  },
+  "stats": [
+    { "value": "6+", "label": "Years" },
+    { "value": "100000+", "label": "Patients Treated" },
+    { "value": "2000+", "label": "Knee Replacement Surgeries" },
+    { "value": "5000+", "label": "Critical Care Patients" },
+    { "value": "15+", "label": "Specialties" }
+  ],
+  "visiting_hours": "4PM to 6PM daily (ICU: 5PM to 6PM)"
+}

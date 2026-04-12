@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: "Patient Testimonials — DHS Multispecialty Hospital Ahmedabad"
+description: "Read patient testimonials and reviews about DHS Multispecialty Hospital, Ahmedabad. See what our patients say about their treatment experience."
+canonical: "https://dhshospitals.com/testimonials/"
+activePage: "more"
+---
+
+<div class="page-banner">
+  <div class="container">
+    <h1>Patient Testimonials</h1>
+    <div class="breadcrumb"><a href="/">Home</a> / Testimonials</div>
+  </div>
+</div>
+
+<section class="content-section">
+  <div class="container">
+    <p class="section-subtitle" style="margin-bottom:40px">Read what our patients have to say about their experience at DHS Multispecialty Hospital.</p>
+    <div class="reviews-grid">
+      {% for review in reviews %}
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"{{ review.text }}"</p>
+        <div class="source">— {{ review.source }} Review</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

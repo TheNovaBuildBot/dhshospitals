@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: "Health Check-Up Plans — DHS Multispecialty Hospital Ahmedabad"
+description: "Comprehensive health check-up plans at DHS Multispecialty Hospital, Ahmedabad. From basic screening to executive cardiac packages. Book your health check-up today."
+canonical: "https://dhshospitals.com/health-check-up/"
+activePage: "health"
+---
+
+<div class="page-banner">
+  <div class="container">
+    <h1>Health Check-Up Plans</h1>
+    <div class="breadcrumb"><a href="/">Home</a> / Health Check-Up Plans</div>
+  </div>
+</div>
+
+<section class="content-section">
+  <div class="container">
+    <p class="section-subtitle" style="margin-bottom:40px">We support your vision of a healthy future with our comprehensive health check-up plans. Health with Precision.</p>
+    <div class="plans-grid">
+      {% for plan in healthplans %}
+      <div class="plan-card">
+        <div class="plan-card-header">
+          <h3>{{ plan.name }}</h3>
+        </div>
+        <div class="plan-card-body">
+          <ul>
+            {% for test in plan.tests %}
+            <li>{{ test }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:40px;padding:25px;background:var(--primary-light);border-radius:var(--radius)">
+      <p style="margin-bottom:15px;font-size:1.05rem">To book a health check-up or enquire about pricing, contact us:</p>
+      <a href="tel:{{ site.phones.emergency }}" class="btn btn-primary">Call {{ site.phones.emergency }}</a>
+      <a href="/appointment/" class="btn btn-outline" style="margin-left:10px">Book Online</a>
+    </div>
+  </div>
+</section>

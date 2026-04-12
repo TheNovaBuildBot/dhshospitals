@@ -1,0 +1,30 @@
+[
+  {
+    "name": "DHS Advance Screening",
+    "tests": ["Physical Examination", "Preliminary Test", "CBC-ESR, Blood Group & Rh, Urine Routine", "Liver Function Test (SGPT, SGOT, Bilirubin, ALP, Protein, Albumin, Globulin, A/G Ratio, Serum Gamma GT)", "Kidney Function Test (Creatinine, Urea, Uric Acid)", "Diabetic Profile (RBS or FBS)", "Cardiac Profile (Lipid Profile, ECG)", "Bone Health (Calcium, Phosphorous)", "Infection Recording (HIV, HBsAg)", "Radiology (Chest X-ray)", "Consultations (Physician)"]
+  },
+  {
+    "name": "DHS Preventive",
+    "tests": ["Physical Examination", "Preliminary Test", "CBC-ESR, Blood Group & Rh, Urine Routine", "Liver Function Test (SGPT, SGOT, Bilirubin, ALP, Protein, Albumin, Globulin, A/G Ratio, Serum Gamma GT)", "Kidney Function Test (Creatinine, Urea, Uric Acid)", "Thyroid Screening (TSH)", "Diabetic Profile (RBS or FBS, HbA1c)", "Cardiac Profile (Lipid Profile, ECG)", "Bone Health (Calcium, Phosphorous)", "Vitamins (Vitamin B12)", "Infection Recording (HIV, HBsAg)", "Radiology (Chest X-ray)", "Lung Efficiency Test (Pulmonary Function Test)", "Consultations (Physician)"]
+  },
+  {
+    "name": "DHS Comprehensive",
+    "tests": ["Physical Examination", "Preliminary Test", "CBC-ESR, Blood Group & Rh, Urine Routine", "Liver Function Test (Complete)", "Kidney Function Test (Creatinine, Urea, Uric Acid)", "Thyroid Screening (TSH, T3, T4)", "Diabetic Profile (RBS or FBS, PPBS, HbA1c)", "Cardiac Profile (Lipid Profile, ECG)", "Bone Health (Calcium, Phosphorous, RA Factor)", "Vitamins (Vitamin B12, Vitamin D)", "Infection Recording (HIV, HBsAg)", "Radiology (Chest X-ray, USG Abdomen)", "Lung Efficiency Test (Pulmonary Function Test)", "Consultations (Physician, Orthopedic)", "Complimentary Breakfast"]
+  },
+  {
+    "name": "DHS Executive",
+    "tests": ["Physical Examination", "Preliminary Test", "CBC-ESR, Blood Group & Rh, Urine Routine", "Liver Function Test (Complete)", "Kidney Function Test (Creatinine, Urea, Uric Acid)", "Thyroid Screening (T3, T4, TSH)", "Diabetic Profile (RBS or FBS, PPBS, HbA1c)", "Cardiac Profile (Lipid Profile, ECG, 2D Echo, TMT)", "Bone Health (Calcium, Phosphorous, RA Factor)", "Vitamins (Vitamin B12, Vitamin D)", "Infection Recording (HIV, HBsAg, HCV)", "Cancer Detection (PSA for Male / CA 125 for Female)", "Radiology (Chest X-ray, USG Abdomen)", "Lung Efficiency Test (Pulmonary Function Test)", "Consultations (Physician, Orthopedic)", "Complimentary Breakfast"]
+  },
+  {
+    "name": "DHS Executive Plus",
+    "tests": ["Physical Examination", "Preliminary Test", "CBC-ESR, Blood Group & Rh, Urine & Stool Routine", "Anemia Profile (Iron, Ferritin, TIBC, Vitamin B12)", "Liver Function Test (Complete + Serum Gamma GT)", "Kidney Function Test (Creatinine, Urea, Uric Acid)", "Thyroid Screening (T3, T4, TSH)", "Diabetic Profile (RBS or FBS, PPBS, HbA1c)", "Cardiac Profile (Lipid, Lipo(A), ApoLipo A1/B, Homocysteine, hs-CRP, ECG, 2D Echo, TMT)", "Bone Health (Calcium, Phosphorous, RA Factor, Vitamin D)", "Infection Recording (hs-CRP, HIV, HBsAg, HCV)", "Cancer Detection (PSA for Male / CA 125 + Pap Smear for Female)", "Radiology (Chest X-ray, USG Abdomen)", "Lung Efficiency Test (Pulmonary Function Test)", "Consultations (Physician, Orthopedic)", "Complimentary Breakfast"]
+  },
+  {
+    "name": "DHS Basic Cardiac",
+    "tests": ["CBC-ESR, Creatinine, SGPT, Lipid Profile, HbA1c", "ECG, 2D Echo, TMT", "Consultations (Physician, Orthopedic)"]
+  },
+  {
+    "name": "DHS Advance Cardiac",
+    "tests": ["CBC-ESR, FBS, Lipid Profile, SGPT, Creatinine, hs-CRP, HbA1c, Homocysteine", "ECG, 2D Echo, TMT", "Consultations (Physician, Orthopedic)"]
+  }
+]

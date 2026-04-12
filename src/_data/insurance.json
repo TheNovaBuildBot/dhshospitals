@@ -1,0 +1,29 @@
+{
+  "companies": [
+    { "name": "HDFC Ergo General Insurance", "image": "/assets/images/insurance/hdfc_ergo.jpg" },
+    { "name": "Bajaj Allianz General Insurance", "image": "/assets/images/insurance/bajaj_allianz.png" },
+    { "name": "TATA AIG General Insurance", "image": "/assets/images/insurance/tata-aig.jpg" },
+    { "name": "SBI General Insurance", "image": "/assets/images/insurance/sbi-general.jpg" },
+    { "name": "National Insurance", "image": "/assets/images/insurance/national.jpg" },
+    { "name": "Oriental Insurance", "image": "/assets/images/insurance/oriental.png" },
+    { "name": "The New India Insurance", "image": "/assets/images/insurance/new_india.png" },
+    { "name": "United India", "image": "/assets/images/insurance/UIIC.jpg" }
+  ],
+  "tpa_partners": [
+    { "name": "Anmol Medicare TPA", "image": "/assets/images/tpa/anmol.jpg" },
+    { "name": "Ericson Insurance TPA", "image": "/assets/images/tpa/ericson.jpg" },
+    { "name": "Family Health Plan TPA", "image": "/assets/images/tpa/family_health.jpg" },
+    { "name": "Genins India Insurance TPA", "image": "/assets/images/tpa/genins_india.jpg" },
+    { "name": "Good Health Plan Ltd", "image": "/assets/images/tpa/good_health.jpg" },
+    { "name": "Health Insurance TPA of India", "image": "/assets/images/tpa/health.jpg" },
+    { "name": "Health India TPA Service", "image": "/assets/images/tpa/health_india.jpg" },
+    { "name": "Heritage Health Insurance TPA", "image": "/assets/images/tpa/heritage_health.jpg" },
+    { "name": "Mdindia Healthcare Services", "image": "/assets/images/tpa/mdindia_health.jpg" },
+    { "name": "Medi Assist India TPA", "image": "/assets/images/tpa/medi_assist.jpg" },
+    { "name": "Medsave Healthcare TPA", "image": "/assets/images/tpa/medsave_health.jpg" },
+    { "name": "Paramount Health Care Services TPA", "image": "/assets/images/tpa/paramount_health.jpg" },
+    { "name": "Raksha TPA", "image": "/assets/images/tpa/raksha_health.jpg" },
+    { "name": "Safeway Insurance TPA", "image": "/assets/images/tpa/safeway.jpg" },
+    { "name": "Vidal Health TPA", "image": "/assets/images/tpa/vidal_health.jpg" }
+  ]
+}

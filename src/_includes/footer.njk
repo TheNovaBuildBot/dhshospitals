@@ -1,0 +1,62 @@
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="/assets/images/logo.png" alt="{{ site.name }}">
+        </div>
+        <p>{{ site.address.full }}</p>
+        <p style="margin-top:10px"><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <p><strong>Emergency:</strong> <a href="tel:{{ site.phones.emergency }}">{{ site.phones.emergency }}</a></p>
+        <p><strong>Landline:</strong> {{ site.phones.landline1 }} / {{ site.phones.landline2 }}</p>
+        <p><strong>Billing:</strong> <a href="tel:{{ site.phones.billing }}">{{ site.phones.billing }}</a></p>
+        <div class="footer-social">
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="{{ site.social.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+          <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Departments</h4>
+        <ul>
+          <li><a href="/departments/orthopedics/">Orthopedics</a></li>
+          <li><a href="/departments/cancer-surgery/">Cancer Care</a></li>
+          <li><a href="/departments/cardiology/">Cardiology</a></li>
+          <li><a href="/departments/general-surgery/">General Surgery</a></li>
+          <li><a href="/departments/neurosurgery/">Neurosurgery</a></li>
+          <li><a href="/departments/gastro-surgery/">Gastroenterology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/doctors/">Find a Doctor</a></li>
+          <li><a href="/career/">Career</a></li>
+          <li><a href="/vision-mission/">Vision & Mission</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/cashless/">Cashless</a></li>
+          <li><a href="/testimonials/">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Orthopedics</h4>
+        <ul>
+          <li><a href="/departments/trauma/">Trauma</a></li>
+          <li><a href="/departments/joint-replacement/">Joint Replacement</a></li>
+          <li><a href="/departments/arthroscopy/">Arthroscopy</a></li>
+          <li><a href="/departments/sports-medicine/">Sports Medicine</a></li>
+          <li><a href="/departments/spine-surgery/">Spine Surgery</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      &copy; {{ "now" | dateFormat }} {{ site.name }}. Managed by {{ site.legal_entity }}.
+      <a href="/about/">About Us</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms-conditions/">Terms of Use</a>
+    </div>
+  </div>
+</footer>

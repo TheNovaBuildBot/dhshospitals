@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: "Cashless & Insurance — DHS Multispecialty Hospital Ahmedabad"
+description: "DHS Multispecialty Hospital offers cashless treatment with major insurance companies and TPA partners. Check our empaneled insurance providers."
+canonical: "https://dhshospitals.com/cashless/"
+activePage: "more"
+---
+
+<div class="page-banner">
+  <div class="container">
+    <h1>Cashless & Insurance</h1>
+    <div class="breadcrumb"><a href="/">Home</a> / Cashless</div>
+  </div>
+</div>
+
+<section class="content-section">
+  <div class="container">
+    <p style="text-align:center;max-width:700px;margin:0 auto 40px;color:var(--text-light)">DHS Multispecialty Hospital offers Mediclaim & Cashless services from major insurance companies for patient's ease. Contact our billing department at <a href="tel:{{ site.phones.billing }}">{{ site.phones.billing }}</a> for assistance.</p>
+
+    <h2 class="section-title">Insurance Companies</h2>
+    <div class="insurance-grid" style="margin-bottom:50px">
+      {% for company in insurance.companies %}
+      <div class="insurance-card">
+        <img src="{{ company.image }}" alt="{{ company.name }}" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2 class="section-title">TPA Partners</h2>
+    <div class="insurance-grid">
+      {% for tpa in insurance.tpa_partners %}
+      <div class="insurance-card">
+        <img src="{{ tpa.image }}" alt="{{ tpa.name }}" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

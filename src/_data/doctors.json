@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "doctor-hardik",
+    "name": "Dr. Hardik M Shah",
+    "qualification": "MBBS, MS Orthopedic, FRCS (Germany)",
+    "specialty": "Orthopedics",
+    "role": "Medical Director",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/team/dr-hardik.jpg",
+    "about": "Dr Hardik Shah is our esteemed Medical Director and leading orthopedic surgeon at DHS Multispecialty Hospital. With over a decade of experience in the field, Dr. Shah is renowned for his expertise in knee and hip replacements as well as trauma surgeries in Gujarat. He is one of the leading knee replacement surgeons in Ahmedabad.",
+    "about_extended": "Dr. Hardik Shah graduated with honors from one of India's top medical schools and completed his specialized training in orthopedic surgery at prestigious institutions both in India and abroad. His commitment to advancing medical science and improving patient care has driven him to excel in his field, earning him a reputation as one of the best orthopedic surgeons in Ahmedabad.",
+    "specializations": [
+      { "name": "Knee Replacement Surgery", "desc": "Dr. Shah has performed numerous successful knee replacement surgeries, restoring mobility and enhancing the quality of life for many patients. His advanced techniques, such as minimally invasive surgery, ensure optimal outcomes and quick recovery times." },
+      { "name": "Hip Replacement Surgery", "desc": "With extensive experience in hip replacement surgery, Dr. Shah offers patients relief from chronic pain and improved joint function. His precision and attention to detail make him a trusted expert in both partial and total hip replacements." },
+      { "name": "Trauma Surgery", "desc": "As a trauma specialist, Dr. Shah is adept at managing and treating severe musculoskeletal injuries. His quick and effective interventions have saved countless lives and helped patients recover fully from traumatic incidents." },
+      { "name": "Joint Preservation Surgery", "desc": "For patients with early-stage joint issues, Dr. Shah offers joint preservation surgeries, including osteotomies and cartilage restoration procedures, to delay or prevent the need for joint replacement." }
+    ],
+    "closing": "Under Dr Hardik Shah's leadership, DHS Multispecialty Hospital continues to thrive as a center of excellence in healthcare and one of the best orthopedic hospitals in Ahmedabad."
+  },
+  {
+    "slug": "doctor-swagat",
+    "name": "Dr. Swagat M Shah",
+    "qualification": "MS Ortho, DNB Ortho, FIAAS (UK)",
+    "specialty": "Orthopedics",
+    "role": "Director",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/team/dr-swagat.jpg",
+    "about": "Dr. Swagat Shah is a skilled orthopedic surgeon specializing in joint replacement and sports medicine at DHS Multispecialty Hospital. His expertise in shoulder replacement and complex joint procedures has earned him recognition as one of the top orthopedic surgeons in Ahmedabad.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-dileep",
+    "name": "Dr. Dileep Srinivasan",
+    "qualification": "MD (Medicine), DM (Oncology)",
+    "specialty": "Oncology",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/team/dr-dileep.jpg",
+    "about": "Dr. Dileep Srinivasan is a consultant oncologist at DHS Multispecialty Hospital, specializing in the diagnosis and treatment of various cancers. His comprehensive approach to cancer care combines the latest treatments with compassionate patient support.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-yesha",
+    "name": "Dr. Yesha H. Shah",
+    "qualification": "MD Pathology",
+    "specialty": "Pathology",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/team/dr-yesha.jpg",
+    "about": "Dr. Yesha Shah heads the Pathology Laboratory at DHS Multispecialty Hospital. She ensures accurate and timely diagnostic services using state-of-the-art fully automated analysers.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-mansi",
+    "name": "Dr. Mansi Dandnaik",
+    "qualification": "MD Anesthesia, Critical Care Specialist",
+    "specialty": "Anesthesia / Critical Care",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/team/dr-mansi.jpg",
+    "about": "Dr. Mansi Dandnaik is a critical care specialist and anesthesiologist at DHS Multispecialty Hospital. She manages the ICU and ensures safe anesthesia delivery for all surgical procedures.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-archit",
+    "name": "Dr. Archit Parikh",
+    "qualification": "MD Medicine",
+    "specialty": "Internal Medicine",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/team/dr-archit.jpg",
+    "about": "Dr. Archit Parikh is a consultant physician at DHS Multispecialty Hospital. He has various publications and presentations to his credit and holds a special interest in diabetes management, chronic diseases, and geriatric care.",
+    "about_extended": "He has expertise in hypertension and infectious disease treatments. He has special focus on treating kidney, liver and lung diseases. He has had immense experience in resolving Dengue, Chikungunya, Malaria, Cholera, Jaundice and other viral infections.",
+    "expertise": "Diabetes, Thyroid, Cholesterol, Hypertension, Dengue, Chikungunya",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-chirag",
+    "name": "Dr. Chirag Thakkar",
+    "qualification": "MBBS, MS General Surgery, MRCS (UK)",
+    "specialty": "Gastro Surgery / General Surgery",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/doctors/dr-chirag.jpg",
+    "about": "Dr Chirag Thakkar is a consultant Gastro-Intestinal, Advanced Laparoscopic and Obesity Surgeon. He is adequately trained and equipped to give the best medical advice and services for patients with gastro-intestinal problems as well as those requiring abdominal, laparoscopic surgeries, weight loss and hernia surgeries.",
+    "about_extended": "He has special interest in treatment of gastro-esophageal reflux disease (GERD), esophageal motility disorders including achalasia cardia, weight loss and hernia surgery as well as treatment of esophageal and stomach cancers.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-darshil",
+    "name": "Dr. Darshil Shah",
+    "qualification": "MS General Surgery, MCH Urology (Gold Medal)",
+    "specialty": "Urology",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/doctors/dr-darshil.jpg",
+    "about": "Dr. Darshil Shah is a consultant urologist at DHS Multispecialty Hospital, specializing in minimally invasive urological surgeries, kidney stone management, and prostate treatments.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-kushal",
+    "name": "Dr. Kushal Shah",
+    "qualification": "MS General Surgery, MCH Neurosurgery",
+    "specialty": "Neurosurgery",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/doctors/dr-kushal.jpg",
+    "about": "Dr. Kushal Shah is a consultant neurosurgeon at DHS Multispecialty Hospital, specializing in brain and spinal surgeries including tumor removal, trauma care, and minimally invasive procedures.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-ruchir",
+    "name": "Dr. Ruchir Patel",
+    "qualification": "MD Medicine, DM Gastroenterology",
+    "specialty": "Gastroenterology",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/doctors/dr-ruchir.jpg",
+    "about": "Dr. Ruchir Patel is a consultant gastroenterologist at DHS Multispecialty Hospital, specializing in endoscopic procedures, liver diseases, and gastrointestinal disorders.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-sunil",
+    "name": "Dr. Sunil Gurmukhani",
+    "qualification": "MD Medicine, DM Cardiology",
+    "specialty": "Cardiology",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/doctors/dr-sunil.jpg",
+    "about": "Dr. Sunil Gurmukhani is a consultant cardiologist at DHS Multispecialty Hospital, providing comprehensive cardiac diagnostics and treatment including ECG, echocardiography, stress testing, and preventive cardiology.",
+    "specializations": []
+  },
+  {
+    "slug": "doctor-devshi",
+    "name": "Dr. Devshi Shah",
+    "qualification": "Consultant Surgeon",
+    "specialty": "General Surgery",
+    "languages": "English, Hindi, Gujarati",
+    "image": "/assets/images/doctors/dr-devshi.jpg",
+    "about": "Dr. Devshi Shah is a consultant surgeon at DHS Multispecialty Hospital specializing in general and vascular surgery.",
+    "specializations": []
+  }
+]

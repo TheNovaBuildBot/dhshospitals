@@ -1,0 +1,77 @@
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span>24x7 Emergency: <a href="tel:{{ site.phones.emergency }}">{{ site.phones.emergency }}</a></span>
+      <span>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+    </div>
+    <div class="top-bar-right">
+      <a href="/appointment/" class="btn btn-accent">Book Appointment</a>
+      <a href="{{ site.virtual_tour_url }}" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#fff;color:#fff">Virtual Tour</a>
+    </div>
+  </div>
+</div>
+
+<nav class="main-nav">
+  <div class="container">
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/logo.png" alt="{{ site.name }}" loading="lazy">
+    </a>
+    <span class="hamburger">&#9776;</span>
+    <ul class="nav-links">
+      <li><a href="/" {% if activePage == "home" %}class="active"{% endif %}>Home</a></li>
+      <li>
+        <a href="/departments/" {% if activePage == "departments" %}class="active"{% endif %}>Clinical Departments</a>
+        <div class="mega-menu">
+          <div class="mega-menu-grid">
+            <div>
+              <h4>Orthopedics</h4>
+              <a href="/departments/trauma/">Trauma</a>
+              <a href="/departments/joint-replacement/">Joint Replacement</a>
+              <a href="/departments/arthroscopy/">Arthroscopy</a>
+              <a href="/departments/spine-surgery/">Spine Surgery</a>
+              <a href="/departments/sports-medicine/">Sports Medicine</a>
+            </div>
+            <div>
+              <h4>Specialties</h4>
+              <a href="/departments/cardiology/">Cardiology</a>
+              <a href="/departments/gastro-surgery/">Gastroenterology</a>
+              <a href="/departments/general-surgery/">General Surgery</a>
+              <a href="/departments/internal-medicine/">Internal Medicine</a>
+              <a href="/departments/cancer-surgery/">Cancer Care</a>
+            </div>
+            <div>
+              <h4>More</h4>
+              <a href="/departments/dialysis-unit/">Nephrology & Dialysis</a>
+              <a href="/departments/neurosurgery/">Neurosurgery</a>
+              <a href="/departments/cosmetology-plastic-surgery/">Plastic Surgery</a>
+              <a href="/departments/pulmonary-clinic/">Pulmonology</a>
+              <a href="/departments/urology-surgery/">Urology</a>
+              <a href="/departments/icu/">Critical Care & ICU</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="/health-check-up/" {% if activePage == "health" %}class="active"{% endif %}>Health Check Up</a>
+        <ul class="dropdown">
+          <a href="/before-health-check-up/">Before Health Checkup</a>
+          <a href="/health-check-up/">Health Checkup Plans</a>
+        </ul>
+      </li>
+      <li><a href="/contact/" {% if activePage == "contact" %}class="active"{% endif %}>Contact Us</a></li>
+      <li><a href="/doctors/" {% if activePage == "doctors" %}class="active"{% endif %}>Find a Doctor</a></li>
+      <li>
+        <a href="#" {% if activePage == "more" %}class="active"{% endif %}>More</a>
+        <ul class="dropdown">
+          <a href="/career/">Career</a>
+          <a href="{{ site.virtual_tour_url }}" target="_blank" rel="noopener">Virtual Tour</a>
+          <a href="/cashless/">Cashless</a>
+          <a href="/unique-in-dhs/">Unique in DHS</a>
+          <a href="/vision-mission/">Vision & Mission</a>
+          <a href="/testimonials/">Testimonials</a>
+          <a href="/blog/">Blog</a>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

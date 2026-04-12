@@ -1,0 +1,27 @@
+[
+  {
+    "category": "General Information",
+    "items": [
+      { "q": "What are the visiting hours for patients?", "a": "Visiting hours are from 4PM to 6PM daily. However, for ICU patients, visiting hours are restricted from 5PM to 6PM." },
+      { "q": "How do I book an appointment with a doctor?", "a": "You can book an appointment online through our website, call our appointment desk at (+91) 9081610444, or visit the hospital reception." },
+      { "q": "Do I need a referral to consult a specialist?", "a": "No, you do not need a referral to consult a specialist at DHS Multispecialty Hospital. However, if your insurance requires a referral, please ensure you have it." },
+      { "q": "What documents should I bring for my first visit?", "a": "Please bring a valid ID proof, previous medical records, test results, and any medications you are currently taking. For insurance-covered patients, bring your insurance card or relevant documents." }
+    ]
+  },
+  {
+    "category": "Billing and Insurance",
+    "items": [
+      { "q": "What payment methods are accepted at the hospital?", "a": "We accept cash, debit/credit cards, and digital payments such as UPI. We also offer insurance claim processing for our empaneled insurance providers." },
+      { "q": "Does DHS Multispecialty Hospital accept health insurance?", "a": "Yes, DHS Multispecialty Hospital is empaneled with various insurance providers. Please contact our billing department at (+91) 9081021444 for further information." },
+      { "q": "Can I get an estimate of my treatment costs?", "a": "Yes, you can request an estimate of your treatment costs from our billing department. Please note that final costs may vary depending on your treatment plan." }
+    ]
+  },
+  {
+    "category": "Facilities and Services",
+    "items": [
+      { "q": "What services does the hospital offer in case of an emergency?", "a": "Our Emergency Department is open 24/7, equipped with advanced life-support systems, and managed by an experienced team of doctors and paramedics. Please call (+91) 9081610444 for any medical emergency." },
+      { "q": "Is there parking available at the hospital?", "a": "Yes, DHS Multispecialty Hospital provides ample parking space for patients and visitors." },
+      { "q": "Does the hospital offer ambulance services?", "a": "Yes, we offer 24/7 ambulance services. To request an ambulance, please contact our emergency helpline at (+91) 9081610444." }
+    ]
+  }
+]

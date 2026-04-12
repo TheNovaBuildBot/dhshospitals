@@ -1,0 +1,158 @@
+---
+layout: base.njk
+title: "DHS Multispecialty Hospital — NABH Accredited Hospital in Ahmedabad"
+description: "DHS Multispecialty Hospital, Ahmedabad — NABH accredited, 15+ specialties, 24/7 emergency & ICU. Joint replacement, cardiology, neurosurgery, oncology. 100,000+ patients treated. Book appointment now."
+keywords: "multispecialty hospital Ahmedabad, NABH hospital Ahmedabad, orthopedic hospital Ahmedabad, knee replacement Ahmedabad, DHS Hospital, emergency hospital Gurukul Ahmedabad"
+canonical: "https://dhshospitals.com/"
+og_title: "DHS Multispecialty Hospital — NABH Accredited Hospital in Ahmedabad"
+og_description: "NABH accredited multispecialty hospital in Ahmedabad with 15+ specialties, 24/7 emergency care, and 100,000+ patients treated."
+activePage: "home"
+extra_head: true
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>DHS Multispecialty Hospital</h1>
+      <p>{{ site.tagline }}. NABH accredited multispecialty hospital in Ahmedabad offering 15+ specialties with state-of-the-art infrastructure, 24/7 emergency care, and a dedicated team of expert doctors.</p>
+      <div class="hero-buttons">
+        <a href="/appointment/" class="btn btn-accent">Book Appointment</a>
+        <a href="/departments/" class="btn btn-outline" style="border-color:#fff;color:#fff">Our Departments</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      {% for stat in site.stats %}
+      <div class="stat-item">
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="about-section">
+      <div class="about-image">
+        <img src="/assets/images/about/dhs-about.jpg" alt="DHS Multispecialty Hospital Ahmedabad" loading="lazy">
+      </div>
+      <div class="about-text">
+        <div class="welcome">WELCOME TO</div>
+        <h2>DHS Multispecialty Hospital</h2>
+        <p>Welcome to DHS Multispecialty Hospital, your trusted hospital partner in Ahmedabad. DHS Multispecialty Hospital is a state-of-the-art advanced multispecialty hospital located in Vastrapur. DHS is a one-stop solution for secondary and tertiary care providing medical and surgical treatments with fully equipped 50 beds, 24x7 ICU & Emergency services.</p>
+        <p>After 5+ years of providing comprehensive medical services, DHS hospital proudly stands out for its cutting-edge infrastructure and personalised treatment. Having treated 25,000+ indoor and 100,000+ outdoor patients, we have carved a niche among hospitals in Ahmedabad.</p>
+        <p>DHS Multispecialty Hospital offers Mediclaim & Cashless services from major insurance companies for patient's ease.</p>
+        <div class="nabh-badge">NABH Accredited Hospital</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-light)">
+  <div class="container">
+    <h2 class="section-title">Hospital Facilities</h2>
+    <p class="section-subtitle">Apart from clinical departments, DHS Multispecialty Hospital has many critical and crucial supportive facilities ensuring prompt and quality patient care.</p>
+    <div class="facilities-grid">
+      {% for facility in facilities %}
+      <div class="facility-card">
+        <img src="{{ facility.icon }}" alt="{{ facility.name }} at DHS Hospital Ahmedabad" loading="lazy">
+        <h3>{{ facility.name }}</h3>
+        <p>{{ facility.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Our Departments</h2>
+    <p class="section-subtitle">Our hospital is accredited by NABH, reflecting our dedication to quality, safety, and continuous improvement.</p>
+    <div class="dept-grid">
+      {% for dept in departments | head(8) %}
+      <div class="dept-card">
+        <img src="{{ dept.image }}" alt="{{ dept.name }} department at DHS Hospital Ahmedabad" loading="lazy">
+        <div class="dept-card-body">
+          <h3>{{ dept.name }}</h3>
+          <p>{{ dept.short_desc }}</p>
+          <a href="/departments/{{ dept.slug }}/" class="btn btn-outline" style="font-size:.8rem;padding:6px 16px">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:30px">
+      <a href="/departments/" class="btn btn-primary">View All Departments</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-light)">
+  <div class="container">
+    <h2 class="section-title">Our Doctors</h2>
+    <p class="section-subtitle">Meet our team of experienced and dedicated medical professionals.</p>
+    <div class="doctors-grid">
+      {% for doc in doctors | head(4) %}
+      <div class="doctor-card">
+        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy">
+        <div class="doctor-card-body">
+          <h3>{{ doc.name }}</h3>
+          <div class="qualification">{{ doc.qualification }}</div>
+          <div class="specialty">{{ doc.specialty }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:30px">
+      <a href="/doctors/" class="btn btn-primary">View All Doctors</a>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews-section">
+  <div class="container">
+    <h2 class="section-title">Patient Testimonials</h2>
+    <p class="section-subtitle">What our patients say about their experience at DHS Multispecialty Hospital.</p>
+    <div class="reviews-grid">
+      {% for review in reviews %}
+      <div class="review-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"{{ review.text }}"</p>
+        <div class="source">— {{ review.source }} Review</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section faq-section" style="background:var(--bg-light)">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Find answers to common questions about DHS Multispecialty Hospital.</p>
+    {% for section in faq %}
+    <h3 class="faq-category">{{ section.category }}</h3>
+    {% for item in section.items %}
+    <details class="faq-item">
+      <summary>{{ item.q }}</summary>
+      <div class="faq-answer">{{ item.a }}</div>
+    </details>
+    {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" style="background:var(--primary);color:#fff;text-align:center">
+  <div class="container">
+    <h2 style="color:#fff;margin-bottom:15px">Need Medical Assistance?</h2>
+    <p style="opacity:.9;max-width:600px;margin:0 auto 25px">Our team of expert doctors is available 24/7 for emergencies. Book an appointment or call us now.</p>
+    <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap">
+      <a href="/appointment/" class="btn btn-accent">Book Appointment</a>
+      <a href="tel:{{ site.phones.emergency }}" class="btn" style="background:#fff;color:var(--primary)">Call: {{ site.phones.emergency }}</a>
+    </div>
+  </div>
+</section>
