@@ -1,0 +1,60 @@
+# Old HTML pages → new clean URLs (302 temporary redirects)
+/index.html / 302
+/aboutus.html /about/ 302
+/contact-us.html /contact/ 302
+/appointment.html /appointment/ 302
+/find-a-doctor.html /doctors/ 302
+/department.html /departments/ 302
+/vision-mission.html /vision-mission/ 302
+/unique-in-dhs.html /unique-in-dhs/ 302
+/testimonials.html /testimonials/ 302
+/cashless.html /cashless/ 302
+/career.html /career/ 302
+/blog.html /blog/ 302
+/news-media.html /news-media/ 302
+/health-check-up-plans.html /health-check-up/ 302
+/before-health-check-up.html /before-health-check-up/ 302
+/privacy-policy.html /privacy-policy/ 302
+/terms-conditions.html /terms-conditions/ 302
+/refund-policy.html /refund-policy/ 302
+
+# Departments
+/orthopaedic-hospitals-ahmedabad.html /departments/orthopedics/ 302
+/joint-replacement.html /departments/joint-replacement/ 302
+/truama.html /departments/trauma/ 302
+/arthroscopy.html /departments/arthroscopy/ 302
+/spine-surgery.html /departments/spine-surgery/ 302
+/sports-medicine.html /departments/sports-medicine/ 302
+/neuro-surgery.html /departments/neurosurgery/ 302
+/cancer-surgery.html /departments/cancer-surgery/ 302
+/cardiology.html /departments/cardiology/ 302
+/gastro-surgery.html /departments/gastro-surgery/ 302
+/general-surgery.html /departments/general-surgery/ 302
+/internal-medicine.html /departments/internal-medicine/ 302
+/urology-surgery.html /departments/urology-surgery/ 302
+/vascular-surgery.html /departments/vascular-surgery/ 302
+/dialysis-unit.html /departments/dialysis-unit/ 302
+/cosmetology-plastic-surgery.html /departments/cosmetology-plastic-surgery/ 302
+/pulmonary-clinic.html /departments/pulmonary-clinic/ 302
+/icu.html /departments/icu/ 302
+/pathology-laboratory.html /departments/pathology-laboratory/ 302
+/radiology.html /departments/radiology/ 302
+
+# Doctors
+/doctor-hardik.html /doctors/doctor-hardik/ 302
+/doctor-swagat.html /doctors/doctor-swagat/ 302
+/doctor-dileep.html /doctors/doctor-dileep/ 302
+/doctor-yesha.html /doctors/doctor-yesha/ 302
+/doctor-mansi.html /doctors/doctor-mansi/ 302
+/doctor-archit.html /doctors/doctor-archit/ 302
+/doctor-chirag.html /doctors/doctor-chirag/ 302
+/doctor-darshil.html /doctors/doctor-darshil/ 302
+/doctor-kushal.html /doctors/doctor-kushal/ 302
+/doctor-ruchir.html /doctors/doctor-ruchir/ 302
+/doctor-sunil.html /doctors/doctor-sunil/ 302
+/doctor-devshi.html /doctors/doctor-devshi/ 302
+
+# Other
+/my-account.html / 302
+/need-help.html /contact/ 302
+/blog-details.html /blog/ 302

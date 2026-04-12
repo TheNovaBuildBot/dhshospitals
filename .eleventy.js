@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/_redirects");
 
   eleventyConfig.addCollection("posts", function(collectionApi) {
     return collectionApi.getFilteredByTag("post").sort((a, b) => b.date - a.date);
