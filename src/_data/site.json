@@ -30,6 +30,8 @@
   "email": "info@dhshospitals.com",
   "whatsapp_link": "https://api.whatsapp.com/send?phone=919081610333&text=Book+Appointment",
   "google_maps_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.475815112073!2d72.52613367436825!3d23.043011115566973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f5942675b7%3A0x90be92473960a578!2sDHS%20Multispecialty%20Hospital!5e0!3m2!1sen!2sin!4v1732106074153!5m2!1sen!2sin",
+  "google_reviews_url": "https://www.google.com/maps?cid=10429934621639615864",
+  "google_place_cid": "10429934621639615864",
   "google_maps_link": "https://www.google.com/maps/search/?api=1&query=DHS+Multispecialty+Hospital+Ahmedabad",
   "virtual_tour_url": "https://tourmkr.com/F1ugqILUia/11118938p&180.61h&92.3t",
   "social": {
