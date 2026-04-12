@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: "News & Gallery — DHS Multispecialty Hospital Ahmedabad"
+description: "View news coverage, events, and photo gallery of DHS Multispecialty Hospital, Ahmedabad. See our state-of-the-art facility, medical camps, and community events."
+canonical: "https://dhshospitals.com/news-media/"
+activePage: "more"
+---
+
+<div class="page-banner">
+  <div class="container">
+    <h1>News & Gallery</h1>
+    <div class="breadcrumb"><a href="/">Home</a> / News & Gallery</div>
+  </div>
+</div>
+
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">News</h2>
+    <p class="section-subtitle">DHS Multispecialty Hospital in the news — events, medical camps, and community outreach</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:60px">
+      {% for i in range(1, 18) %}
+      <a href="/assets/images/gallery/{{ i }}.jpg" target="_blank" rel="noopener" style="display:block;border-radius:var(--radius);overflow:hidden">
+        <img src="/assets/images/gallery/{{ i }}.jpg" alt="DHS Hospital news photo {{ i }}" loading="lazy" style="width:100%;height:220px;object-fit:cover;transition:transform .3s">
+      </a>
+      {% endfor %}
+    </div>
+
+    <h2 class="section-title">Photo Gallery</h2>
+    <p class="section-subtitle">A glimpse inside DHS Multispecialty Hospital — our facility, infrastructure, and patient care</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+      {% for i in range(1, 5) %}
+      <a href="/assets/images/gallery/pg-{{ i }}.jpg" target="_blank" rel="noopener" style="display:block;border-radius:var(--radius);overflow:hidden">
+        <img src="/assets/images/gallery/pg-{{ i }}.jpg" alt="DHS Hospital gallery photo {{ i }}" loading="lazy" style="width:100%;height:220px;object-fit:cover;transition:transform .3s">
+      </a>
+      {% endfor %}
+    </div>
+
+    <div style="text-align:center;margin-top:40px">
+      <a href="{{ site.virtual_tour_url }}" target="_blank" rel="noopener" class="btn btn-primary">Take a Virtual Tour</a>
+    </div>
+  </div>
+</section>
