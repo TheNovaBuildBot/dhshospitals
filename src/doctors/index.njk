@@ -2,7 +2,10 @@
 layout: base.njk
 title: "Find a Doctor — DHS Multispecialty Hospital Ahmedabad"
 description: "Meet our team of expert doctors at DHS Multispecialty Hospital, Ahmedabad. Specialists in orthopedics, cardiology, neurosurgery, oncology, internal medicine, and more."
-canonical: "https://dhshospitals.com/doctors/"
+canonical: "https://www.dhshospitals.com/doctors/"
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Doctors", url: "/doctors/" }
 activePage: "doctors"
 ---
 
@@ -19,7 +22,7 @@ activePage: "doctors"
     <div class="doctors-grid">
       {% for doc in doctors %}
       <a href="/doctors/{{ doc.slug }}/" class="doctor-card" style="text-decoration:none;color:inherit">
-        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy">
+        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy" width="300" height="250">
         <div class="doctor-card-body">
           <h3>{{ doc.name }}</h3>
           <div class="qualification">{{ doc.qualification }}</div>

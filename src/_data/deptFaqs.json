@@ -1,0 +1,56 @@
+{
+  "joint-replacement": [
+    { "q": "Who needs joint replacement surgery?", "a": "Joint replacement is recommended when severe arthritis, joint damage from injury, or chronic pain limits daily activities and conservative treatments (medication, physiotherapy, injections) no longer provide relief. Common candidates have advanced osteoarthritis, rheumatoid arthritis, or post-traumatic joint damage in the knee, hip, or shoulder." },
+    { "q": "How long is recovery after knee replacement surgery?", "a": "Most patients walk with support within 24–48 hours of surgery, are discharged in 3–5 days, and resume normal daily activities in 6–8 weeks. Full recovery and return to low-impact sport typically takes 3–6 months. Early mobilisation and structured physiotherapy at DHS shorten the recovery curve." },
+    { "q": "What is the cost of knee replacement surgery in Ahmedabad?", "a": "Cost varies by implant type (standard, high-flex, robotic-assisted), unilateral vs bilateral, and room category. DHS Multispecialty Hospital is empaneled with major insurers and TPAs and offers cashless treatment. Contact billing at +91 9081021444 for a written estimate before admission." },
+    { "q": "Is robotic-assisted joint replacement available at DHS?", "a": "Yes. DHS offers advanced computer-navigated and minimally invasive joint replacement techniques performed by Dr. Hardik Shah and Dr. Swagat Shah, leading knee replacement surgeons in Ahmedabad with 2,000+ surgeries performed." },
+    { "q": "How long does a knee or hip implant last?", "a": "Modern knee and hip implants are designed to last 20–25 years in over 90% of patients. Longevity depends on implant material, patient weight, activity level, and surgical accuracy." }
+  ],
+  "trauma": [
+    { "q": "What is considered an orthopedic trauma emergency?", "a": "Fractures, dislocations, polytrauma from road accidents, open wounds with bone exposure, and crush injuries are orthopedic trauma emergencies that need immediate evaluation. DHS runs a 24/7 trauma service — call +91 9081610444." },
+    { "q": "Does DHS Hospital handle polytrauma cases?", "a": "Yes. DHS provides round-the-clock polytrauma care with on-call orthopedic, neurosurgery, vascular, and critical-care specialists, supported by a 24/7 ICU and operation theatres." },
+    { "q": "How quickly should a fracture be treated?", "a": "Closed fractures should be assessed within hours; open fractures require surgical washout within 6 hours to reduce infection risk. Call DHS Emergency at +91 9081610444 for immediate triage." }
+  ],
+  "arthroscopy": [
+    { "q": "What is arthroscopy?", "a": "Arthroscopy is a minimally invasive surgical technique that uses a small camera (arthroscope) inserted through a 5–10 mm incision to diagnose and treat joint problems. It results in less pain, smaller scars, and faster recovery than open surgery." },
+    { "q": "What conditions can arthroscopic surgery treat?", "a": "Arthroscopy treats meniscus tears, ACL/PCL injuries, rotator cuff tears, cartilage damage, loose bodies, and shoulder instability in the knee, shoulder, elbow, ankle, and hip joints." },
+    { "q": "How long does arthroscopy recovery take?", "a": "Diagnostic arthroscopy: 1–2 weeks. ACL reconstruction or rotator cuff repair: 4–6 months for full sport return. Most patients are discharged the same day or the next day." }
+  ],
+  "spine-surgery": [
+    { "q": "When is spine surgery necessary?", "a": "Spine surgery is recommended when conservative treatment (medication, physiotherapy, injections) fails to relieve symptoms of disc herniation, spinal stenosis, scoliosis, spinal injury, or progressive neurological deficit." },
+    { "q": "Is minimally invasive spine surgery available?", "a": "Yes. DHS offers minimally invasive spine procedures including microdiscectomy and minimally invasive fusion, which reduce blood loss, scar size, and hospital stay." }
+  ],
+  "sports-medicine": [
+    { "q": "What is sports medicine?", "a": "Sports medicine is a specialty focused on injuries and conditions related to physical activity. It covers ACL tears, meniscus injuries, tendinopathies, stress fractures, and rehabilitation back to peak performance." },
+    { "q": "Do you treat non-athletes?", "a": "Yes. Anyone with an active lifestyle — recreational players, dancers, gym-goers, or labourers with overuse injuries — can benefit from our sports medicine programme." }
+  ],
+  "cardiology": [
+    { "q": "When should I see a cardiologist?", "a": "See a cardiologist if you experience chest pain, breathlessness on exertion, palpitations, dizziness, fainting, swollen ankles, or have a family history of heart disease, diabetes, or high cholesterol." },
+    { "q": "Does DHS handle cardiac emergencies 24/7?", "a": "Yes. DHS runs a 24/7 cardiac emergency service with ECG, 2D Echo, and ICU support. Call +91 9081610444 for chest pain or suspected heart attack." },
+    { "q": "What heart tests are available at DHS?", "a": "DHS offers ECG, 2D Echocardiography, Stress Testing (TMT), Holter monitoring, and preventive cardiology evaluations under one roof." }
+  ],
+  "neurosurgery": [
+    { "q": "What conditions does neurosurgery treat?", "a": "Neurosurgery treats brain stroke, head injury, brain and spine tumours, epilepsy, hydrocephalus, slipped disc, and degenerative spine conditions. DHS combines neurology and neurosurgery for end-to-end care." },
+    { "q": "Is stroke treatment available 24/7?", "a": "Yes. DHS offers 24/7 stroke evaluation with CT imaging and acute management. The first 4.5 hours after stroke onset (\"golden window\") are critical — call +91 9081610444 immediately." }
+  ],
+  "cancer-surgery": [
+    { "q": "What cancer treatments are offered at DHS?", "a": "DHS provides surgical oncology, cancer screening, chemotherapy day-care, palliative care, and cancer diagnostics including biopsy and imaging." },
+    { "q": "Do I need a referral for a cancer consultation?", "a": "No referral is required. Walk-in or book a consultation directly with our oncology team via the website or by calling +91 9081610444." }
+  ],
+  "general-surgery": [
+    { "q": "What is laparoscopic surgery?", "a": "Laparoscopic (keyhole) surgery uses small incisions and a camera to perform abdominal procedures with less pain, smaller scars, and faster recovery than open surgery." },
+    { "q": "Which surgeries are commonly done laparoscopically at DHS?", "a": "Gallbladder removal, hernia repair, appendectomy, weight-loss (bariatric) surgery, and many gastrointestinal procedures are routinely performed laparoscopically at DHS." }
+  ],
+  "icu": [
+    { "q": "What facilities are available in the DHS ICU?", "a": "Our 8-bed ICU has ventilator support, central monitoring, HEPA-filtered air, isolation rooms, and 24/7 critical-care intensivist and nursing coverage." },
+    { "q": "Are ICU visiting hours flexible?", "a": "ICU visiting is restricted to 5 PM–6 PM daily to protect critically ill patients. One attendant briefing is provided once per day; emergency updates are available any time." }
+  ],
+  "dialysis-unit": [
+    { "q": "Is the DHS dialysis unit equipped for chronic kidney disease patients?", "a": "Yes. DHS has an exclusive 8-bed dialysis area with German-made dialysis machines, supporting both maintenance hemodialysis and acute kidney injury management." },
+    { "q": "Do you accept insurance and cashless dialysis?", "a": "Yes. DHS is empaneled with major insurance providers and TPAs for cashless dialysis. Contact billing at +91 9081021444." }
+  ],
+  "radiology": [
+    { "q": "What imaging services are available?", "a": "DHS Radiology offers Digital X-Ray, 16-multislice CT scan, 3D/4D Sonography, Colour Doppler, and 2D Echocardiography under one roof, with same-day reporting for most studies." },
+    { "q": "Do I need an appointment for an X-Ray or sonography?", "a": "X-Rays are walk-in. Sonography, CT, and specialised studies need an appointment. Book online or call +91 9081610444." }
+  ]
+}

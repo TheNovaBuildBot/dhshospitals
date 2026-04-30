@@ -6,9 +6,31 @@ pagination:
 permalink: "doctors/{{ doc.slug }}/"
 layout: base.njk
 eleventyComputed:
-  title: "{{ doc.name }} — {{ doc.specialty }} | DHS Multispecialty Hospital Ahmedabad"
+  title: "{{ doc.name }} — {{ doc.specialty }} Specialist in Ahmedabad — DHS Multispecialty Hospital"
   description: "{{ doc.name }}, {{ doc.qualification }} — {{ doc.specialty }} specialist at DHS Multispecialty Hospital, Ahmedabad. Book appointment today."
-  canonical: "https://dhshospitals.com/doctors/{{ doc.slug }}/"
+  canonical: "https://www.dhshospitals.com/doctors/{{ doc.slug }}/"
+  og_type: "profile"
+  og_image: "https://www.dhshospitals.com{{ doc.image }}"
+  og_image_alt: "{{ doc.name }} — {{ doc.specialty }} at DHS Multispecialty Hospital"
+  breadcrumbs:
+    - { name: "Home", url: "/" }
+    - { name: "Doctors", url: "/doctors/" }
+    - { name: "{{ doc.name }}" , url: "/doctors/{{ doc.slug }}/" }
+  pageSchema: |
+    {
+      "@type": "Physician",
+      "@id": "https://www.dhshospitals.com/doctors/{{ doc.slug }}/#physician",
+      "name": "{{ doc.name }}",
+      "image": "https://www.dhshospitals.com{{ doc.image }}",
+      "url": "https://www.dhshospitals.com/doctors/{{ doc.slug }}/",
+      "medicalSpecialty": "{{ doc.specialty }}",
+      "knowsLanguage": "{{ doc.languages or 'English, Hindi, Gujarati' }}",
+      "worksFor": { "@id": "https://www.dhshospitals.com/#hospital" },
+      "memberOf": { "@id": "https://www.dhshospitals.com/#hospital" },
+      "hasCredential": "{{ doc.qualification }}",
+      "jobTitle": "{{ doc.role or doc.specialty + ' Specialist' }}",
+      "areaServed": { "@type": "City", "name": "Ahmedabad" }
+    }
 activePage: "doctors"
 ---
 
@@ -23,7 +45,7 @@ activePage: "doctors"
   <div class="container">
     <div class="doctor-detail">
       <div>
-        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy">
+        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy" width="300" height="380">
         <div style="margin-top:20px">
           <a href="/appointment/" class="btn btn-primary" style="width:100%;text-align:center">Book Appointment</a>
         </div>

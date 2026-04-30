@@ -2,7 +2,10 @@
 layout: base.njk
 title: "Cashless & Insurance — DHS Multispecialty Hospital Ahmedabad"
 description: "DHS Multispecialty Hospital offers cashless treatment with major insurance companies and TPA partners. Check our empaneled insurance providers."
-canonical: "https://dhshospitals.com/cashless/"
+canonical: "https://www.dhshospitals.com/cashless/"
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Cashless & Insurance", url: "/cashless/" }
 activePage: "more"
 ---
 
@@ -21,7 +24,7 @@ activePage: "more"
     <div class="insurance-grid" style="margin-bottom:50px">
       {% for company in insurance.companies %}
       <div class="insurance-card">
-        <img src="{{ company.image }}" alt="{{ company.name }}" loading="lazy">
+        <img src="{{ company.image }}" alt="{{ company.name }}" loading="lazy" width="120" height="50">
       </div>
       {% endfor %}
     </div>
@@ -30,7 +33,7 @@ activePage: "more"
     <div class="insurance-grid">
       {% for tpa in insurance.tpa_partners %}
       <div class="insurance-card">
-        <img src="{{ tpa.image }}" alt="{{ tpa.name }}" loading="lazy">
+        <img src="{{ tpa.image }}" alt="{{ tpa.name }}" loading="lazy" width="120" height="50">
       </div>
       {% endfor %}
     </div>

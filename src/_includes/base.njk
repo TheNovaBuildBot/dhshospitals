@@ -1,120 +1,210 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1FGFJPZW5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T1FGFJPZW5');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ title or site.title_suffix }}</title>
 <meta name="description" content="{{ description or '' }}">
-{% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
+{% if canonical %}<link rel="canonical" href="{{ canonical }}">
+<link rel="alternate" hreflang="en-in" href="{{ canonical }}">
+<link rel="alternate" hreflang="x-default" href="{{ canonical }}">{% endif %}
+<meta name="theme-color" content="#0B5D8A">
 <meta name="geo.region" content="IN-GJ">
 <meta name="geo.placename" content="Ahmedabad">
 <meta name="geo.position" content="{{ site.geo.latitude }};{{ site.geo.longitude }}">
 <meta name="ICBM" content="{{ site.geo.latitude }}, {{ site.geo.longitude }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ og_type or 'website' }}">
 <meta property="og:locale" content="en_IN">
 <meta property="og:site_name" content="{{ site.name }}">
 <meta property="og:title" content="{{ og_title or title or site.title_suffix }}">
 <meta property="og:description" content="{{ og_description or description or '' }}">
 <meta property="og:image" content="{{ og_image or site.url + '/assets/images/logo.png' }}">
+<meta property="og:image:width" content="{{ og_image_width or '1200' }}">
+<meta property="og:image:height" content="{{ og_image_height or '630' }}">
+<meta property="og:image:alt" content="{{ og_image_alt or site.name }}">
 <meta property="og:url" content="{{ canonical or site.url }}">
-{% if extra_head %}
-<meta name="keywords" content="{{ keywords or '' }}">
-{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title or title or site.title_suffix }}">
+<meta name="twitter:description" content="{{ og_description or description or '' }}">
+<meta name="twitter:image" content="{{ og_image or site.url + '/assets/images/logo.png' }}">
+<meta name="twitter:image:alt" content="{{ og_image_alt or site.name }}">
+{% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
 <link rel="icon" href="/assets/images/favicon/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
-{% if extra_head %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Hospital",
-  "name": "{{ site.name }}",
-  "description": "NABH-accredited multispecialty hospital in Ahmedabad offering orthopedics, cardiology, neurosurgery, oncology, gastroenterology, and 15+ specialties with 24/7 emergency care.",
-  "url": "{{ site.url }}",
-  "telephone": "{{ site.phones.emergency }}",
-  "email": "{{ site.email }}",
-  "image": "{{ site.url }}/assets/images/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "{{ site.address.line1 }}, {{ site.address.line2 }}",
-    "addressLocality": "{{ site.address.city }}",
-    "addressRegion": "{{ site.address.state }}",
-    "postalCode": "{{ site.address.pincode }}",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "{{ site.geo.latitude }}",
-    "longitude": "{{ site.geo.longitude }}"
-  },
-  "openingHours": "Mo-Su 00:00-23:59",
-  "medicalSpecialty": ["Orthopedic Surgery", "Cardiology", "Neurosurgery", "Oncology", "Gastroenterology", "Urology", "Internal Medicine", "Critical Care"],
-  "availableService": [
-    { "@type": "MedicalProcedure", "name": "Knee Replacement Surgery", "procedureType": "Surgical" },
-    { "@type": "MedicalProcedure", "name": "Hip Replacement Surgery", "procedureType": "Surgical" },
-    { "@type": "MedicalProcedure", "name": "Arthroscopy", "procedureType": "Surgical" },
-    { "@type": "MedicalProcedure", "name": "Cancer Surgery", "procedureType": "Surgical" },
-    { "@type": "MedicalProcedure", "name": "Neurosurgery", "procedureType": "Surgical" },
-    { "@type": "MedicalProcedure", "name": "Cardiac Diagnostics", "procedureType": "Diagnostic" }
-  ],
-  "areaServed": [
-    { "@type": "City", "name": "Ahmedabad" },
-    { "@type": "Place", "name": "Vastrapur, Ahmedabad" },
-    { "@type": "Place", "name": "Gurukul, Ahmedabad" },
-    { "@type": "Place", "name": "Satellite, Ahmedabad" },
-    { "@type": "Place", "name": "Drive-In, Ahmedabad" },
-    { "@type": "AdministrativeArea", "name": "Gujarat" }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "2445",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
-    {% for review in reviews %}
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Patient" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "{{ review.rating }}", "bestRating": "5" },
-      "reviewBody": "{{ review.text | replace('"', '\\"') | truncate(200) }}"
-    }{% if not loop.last %},{% endif %}
-    {% endfor %}
-  ],
-  "hasMap": "{{ site.google_maps_embed }}",
-  "sameAs": [
-    "{{ site.google_reviews_url }}",
-    "{{ site.social.facebook }}",
-    "{{ site.social.instagram }}",
-    "{{ site.social.linkedin }}",
-    "{{ site.social.twitter }}",
-    "https://drhardikshahortho.com/"
-  ]
-}
-</script>
+{% if preload_hero %}<link rel="preload" as="image" href="/assets/images/hero/bg-2.png" fetchpriority="high">{% endif %}
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for section in faq %}{% for item in section.items %}
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "{{ item.q }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ item.a | replace('"', '\\"') }}"
+      "@type": ["Hospital", "MedicalClinic", "EmergencyService"],
+      "@id": "{{ site.url }}/#hospital",
+      "name": "{{ site.name }}",
+      "alternateName": "DHS Hospital",
+      "description": "NABH-accredited multispecialty hospital in Ahmedabad offering orthopedics, cardiology, neurosurgery, oncology, gastroenterology, and 15+ specialties with 24/7 emergency care.",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/images/logo.png",
+      "image": "{{ site.url }}/assets/images/logo.png",
+      "telephone": "{{ site.phones.emergency }}",
+      "email": "{{ site.email }}",
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Insurance, Cashless",
+      "isAcceptingNewPatients": true,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.address.line1 }}, {{ site.address.line2 }}",
+        "addressLocality": "{{ site.address.city }}",
+        "addressRegion": "{{ site.address.state }}",
+        "postalCode": "{{ site.address.pincode }}",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "{{ site.geo.latitude }}",
+        "longitude": "{{ site.geo.longitude }}"
+      },
+      "hasMap": "https://www.google.com/maps?cid={{ site.google_place_cid }}",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "{{ site.phones.emergency }}",
+          "contactType": "Emergency",
+          "availableLanguage": ["English", "Hindi", "Gujarati"],
+          "areaServed": "IN",
+          "hoursAvailable": "Mo-Su 00:00-23:59"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "{{ site.phones.billing }}",
+          "contactType": "Billing"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "{{ site.phones.landline1 }}",
+          "contactType": "Reception"
+        }
+      ],
+      "medicalSpecialty": ["Orthopedic", "Cardiovascular", "Surgical", "Oncologic", "Gastroenterologic", "Urologic", "Internal", "CriticalCare", "Pulmonary", "PlasticSurgery"],
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Knee Replacement Surgery", "procedureType": "Surgical" },
+        { "@type": "MedicalProcedure", "name": "Hip Replacement Surgery", "procedureType": "Surgical" },
+        { "@type": "MedicalProcedure", "name": "Arthroscopy", "procedureType": "Surgical" },
+        { "@type": "MedicalProcedure", "name": "Cancer Surgery", "procedureType": "Surgical" },
+        { "@type": "MedicalProcedure", "name": "Neurosurgery", "procedureType": "Surgical" },
+        { "@type": "MedicalProcedure", "name": "Cardiac Diagnostics", "procedureType": "Diagnostic" }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Ahmedabad" },
+        { "@type": "Place", "name": "Vastrapur, Ahmedabad" },
+        { "@type": "Place", "name": "Gurukul, Ahmedabad" },
+        { "@type": "Place", "name": "Satellite, Ahmedabad" },
+        { "@type": "Place", "name": "Drive-In, Ahmedabad" },
+        { "@type": "AdministrativeArea", "name": "Gujarat" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "2000",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.google.com/maps?cid={{ site.google_place_cid }}",
+        "{{ site.social.facebook }}",
+        "{{ site.social.instagram }}",
+        "{{ site.social.linkedin }}",
+        "{{ site.social.twitter }}",
+        "https://drhardikshahortho.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "{{ site.name }}",
+      "publisher": { "@id": "{{ site.url }}/#hospital" },
+      "inLanguage": "en-IN"
+    }{% if breadcrumbs and breadcrumbs.length %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {% for crumb in breadcrumbs %}{
+          "@type": "ListItem",
+          "position": {{ loop.index }},
+          "name": "{{ crumb.name }}",
+          "item": "{{ site.url }}{{ crumb.url }}"
+        }{% if not loop.last %},{% endif %}{% endfor %}
+      ]
+    }{% endif %}{% set faqList = deptFaqs[dept.slug] if dept else null %}{% if faqList and faqList.length %},
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for item in faqList -%}
+        {%- if not loop.first %},{% endif -%}
+        {
+          "@type": "Question",
+          "name": "{{ item.q }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ item.a | replace('"', '\\"') }}" }
+        }
+        {%- endfor %}
+      ]
+    }{% endif %}{% if extra_head %},
+    {
+      "@type": "FAQPage",
+      "@id": "{{ site.url }}/#faq",
+      "mainEntity": [
+        {%- for section in faq -%}
+        {%- if not loop.first %},{% endif -%}
+        {%- for item in section.items -%}
+        {%- if not loop.first %},{% endif -%}
+        {
+          "@type": "Question",
+          "name": "{{ item.q }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ item.a | replace('"', '\\"') }}" }
+        }
+        {%- endfor -%}
+        {%- endfor %}
+      ]
+    }{% endif %}{% if pageSchema %},
+    {{ pageSchema | safe }}{% endif %},
+    {
+      "@type": "WebPage",
+      "@id": "{{ canonical or site.url }}#webpage",
+      "url": "{{ canonical or site.url }}",
+      "name": "{{ title or site.title_suffix }}",
+      "description": "{{ description or '' }}",
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "about": { "@id": "{{ site.url }}/#hospital" },
+      "inLanguage": "en-IN",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".hero p", ".section-subtitle", ".faq-answer", ".content-section p"]
       }
-    }{% if not loop.last or not loop.parent.last %},{% endif %}
-    {% endfor %}{% endfor %}
+    }
   ]
 }
 </script>
-{% endif %}
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
