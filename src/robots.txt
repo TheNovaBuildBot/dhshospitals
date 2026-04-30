@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dhshospitals.com/sitemap.xml
+Sitemap: https://www.dhshospitals.com/sitemap.xml

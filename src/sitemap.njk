@@ -3,13 +3,72 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {%- for page in collections.all %}
-  {%- if page.url and page.url != "/sitemap.xml" %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {%- set today = "now" | dateToISO -%}
+  {%- set staticPages = [
+    {url: "/", priority: "1.0", changefreq: "weekly"},
+    {url: "/about/", priority: "0.8", changefreq: "monthly"},
+    {url: "/contact/", priority: "0.8", changefreq: "monthly"},
+    {url: "/appointment/", priority: "0.9", changefreq: "monthly"},
+    {url: "/departments/", priority: "0.9", changefreq: "monthly"},
+    {url: "/doctors/", priority: "0.9", changefreq: "monthly"},
+    {url: "/blog/", priority: "0.7", changefreq: "weekly"},
+    {url: "/health-check-up/", priority: "0.8", changefreq: "monthly"},
+    {url: "/before-health-check-up/", priority: "0.5", changefreq: "yearly"},
+    {url: "/cashless/", priority: "0.7", changefreq: "monthly"},
+    {url: "/testimonials/", priority: "0.6", changefreq: "monthly"},
+    {url: "/gallery/", priority: "0.6", changefreq: "monthly"},
+    {url: "/news-media/", priority: "0.6", changefreq: "monthly"},
+    {url: "/career/", priority: "0.5", changefreq: "monthly"},
+    {url: "/vision-mission/", priority: "0.6", changefreq: "yearly"},
+    {url: "/unique-in-dhs/", priority: "0.6", changefreq: "yearly"},
+    {url: "/privacy-policy/", priority: "0.3", changefreq: "yearly"},
+    {url: "/terms-conditions/", priority: "0.3", changefreq: "yearly"},
+    {url: "/refund-policy/", priority: "0.3", changefreq: "yearly"}
+  ] -%}
+  {%- for p in staticPages %}
   <url>
-    <loc>https://dhshospitals.com{{ page.url }}</loc>
-    <lastmod>{{ page.date | dateToISO }}</lastmod>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>{{ p.changefreq }}</changefreq>
+    <priority>{{ p.priority }}</priority>
   </url>
-  {%- endif %}
+  {%- endfor %}
+  {%- for dept in departments %}
+  <url>
+    <loc>{{ site.url }}/departments/{{ dept.slug }}/</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    {%- if dept.image %}
+    <image:image>
+      <image:loc>{{ site.url }}{{ dept.image }}</image:loc>
+      <image:title>{{ dept.name }} at DHS Multispecialty Hospital Ahmedabad</image:title>
+    </image:image>
+    {%- endif %}
+  </url>
+  {%- endfor %}
+  {%- for doc in doctors %}
+  <url>
+    <loc>{{ site.url }}/doctors/{{ doc.slug }}/</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    {%- if doc.image %}
+    <image:image>
+      <image:loc>{{ site.url }}{{ doc.image }}</image:loc>
+      <image:title>{{ doc.name }} — {{ doc.specialty }} at DHS Multispecialty Hospital</image:title>
+    </image:image>
+    {%- endif %}
+  </url>
+  {%- endfor %}
+  {%- for post in collections.post %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | dateToISO }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   {%- endfor %}
 </urlset>

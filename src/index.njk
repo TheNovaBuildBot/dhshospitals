@@ -3,11 +3,12 @@ layout: base.njk
 title: "DHS Multispecialty Hospital — NABH Accredited Hospital in Ahmedabad"
 description: "DHS Multispecialty Hospital, Ahmedabad — NABH accredited, 15+ specialties, 24/7 emergency & ICU. Joint replacement, cardiology, neurosurgery, oncology. 100,000+ patients treated. Book appointment now."
 keywords: "multispecialty hospital Ahmedabad, NABH hospital Ahmedabad, orthopedic hospital Ahmedabad, knee replacement Ahmedabad, DHS Hospital, emergency hospital Gurukul Ahmedabad"
-canonical: "https://dhshospitals.com/"
+canonical: "https://www.dhshospitals.com/"
 og_title: "DHS Multispecialty Hospital — NABH Accredited Hospital in Ahmedabad"
 og_description: "NABH accredited multispecialty hospital in Ahmedabad with 15+ specialties, 24/7 emergency care, and 100,000+ patients treated."
 activePage: "home"
 extra_head: true
+preload_hero: true
 ---
 
 <section class="hero">
@@ -49,7 +50,7 @@ extra_head: true
   <div class="container">
     <div class="about-section">
       <div class="about-image">
-        <img src="/assets/images/about/dhs-about.jpg" alt="DHS Multispecialty Hospital Ahmedabad" loading="lazy">
+        <img src="/assets/images/about/dhs-about.jpg" alt="DHS Multispecialty Hospital Ahmedabad" loading="lazy" width="600" height="400">
       </div>
       <div class="about-text">
         <div class="welcome">WELCOME TO</div>
@@ -70,7 +71,7 @@ extra_head: true
     <div class="facilities-grid">
       {% for facility in facilities %}
       <div class="facility-card">
-        <img src="{{ facility.icon }}" alt="{{ facility.name }} at DHS Hospital Ahmedabad" loading="lazy">
+        <img src="{{ facility.icon }}" alt="{{ facility.name }} at DHS Hospital Ahmedabad" loading="lazy" width="50" height="50">
         <h3>{{ facility.name }}</h3>
         <p>{{ facility.description }}</p>
       </div>
@@ -86,7 +87,7 @@ extra_head: true
     <div class="dept-grid">
       {% for dept in departments | head(8) %}
       <div class="dept-card">
-        <img src="{{ dept.image }}" alt="{{ dept.name }} department at DHS Hospital Ahmedabad" loading="lazy">
+        <img src="{{ dept.image }}" alt="{{ dept.name }} department at DHS Hospital Ahmedabad" loading="lazy" width="300" height="180">
         <div class="dept-card-body">
           <h3>{{ dept.name }}</h3>
           <p>{{ dept.short_desc }}</p>
@@ -108,7 +109,7 @@ extra_head: true
     <div class="doctors-grid">
       {% for doc in doctors | head(4) %}
       <div class="doctor-card">
-        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy">
+        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy" width="300" height="250">
         <div class="doctor-card-body">
           <h3>{{ doc.name }}</h3>
           <div class="qualification">{{ doc.qualification }}</div>

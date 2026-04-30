@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("dateToISO", function(date) {
+    if (date === "now" || date == null) date = new Date();
     return new Date(date).toISOString();
   });
 
