@@ -140,7 +140,7 @@ preload_hero: true
         <div class="dept-card-body">
           <h3>{{ dept.name }}</h3>
           <p>{{ dept.short_desc }}</p>
-          <a href="/departments/{{ dept.slug }}/" class="btn btn-outline" style="font-size:.8rem;padding:6px 16px">Learn More</a>
+          <a href="/departments/{{ dept.slug }}/" class="btn btn-outline" style="font-size:.8rem;padding:6px 16px">Learn about {{ dept.name }} &rarr;</a>
         </div>
       </div>
       {% endfor %}
