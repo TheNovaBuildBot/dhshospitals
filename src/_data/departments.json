@@ -1,11 +1,29 @@
 [
   {
+    "slug": "robotic-surgery",
+    "name": "Robotic Joint Replacement",
+    "image": "/assets/images/client/joint-bg.jpg",
+    "short_desc": "VELYS robotic knee replacement and robotic hip surgery in Ahmedabad with sub-millimeter precision, no pre-op CT, faster recovery, and ₹3.5–5 lakh transparent pricing.",
+    "full_desc": "DHS Multispecialty Hospital is one of Ahmedabad's leading destinations for robotic-assisted joint replacement. Our Robotic Surgery programme is led by Dr. Hardik Shah (Medical Director, MS Orthopedic, FRCS Germany) and Dr. Swagat Shah (FIAAS UK), supported by a team that has performed 15,000+ knee surgeries with a 95%+ patient-satisfaction rate.\n\nDHS uses the VELYS Robotic-Assisted Solution from Johnson & Johnson DePuy Synthes — the fastest-growing robotic knee platform in India since its November 2022 launch. Unlike older CT-based platforms (Mako, ROSA), VELYS is imageless: there is no pre-operative CT scan, no extra radiation, and a faster pre-surgical workup. Specialised probes register your knee's anatomy during surgery, software models ligament tension and movement in real time, and the robotic arm guides bone cuts with sub-millimetre precision. Independent 2026 data reports up to 98% alignment accuracy with implants positioned within 1° of plan, comparable complication rates to experienced-surgeon manual TKA, and high early-functional scores.\n\nDHS performs VELYS robotic total knee replacement, partial (uni-condylar) knee replacement, revision knee replacement, and robotic-assisted hip replacement, paired with the J&J Attune knee implant system. Most patients stand and walk aided on day 0, are discharged in 2–3 days, return to daily activities in 4–6 weeks, and reach full recovery at 3–4 months. Cashless treatment is available with all major insurers and TPAs; typical out-of-pocket cost in Ahmedabad ranges from ₹3,50,000 to ₹5,00,000 per knee depending on implant choice and room category.",
+    "services": [
+      "VELYS Robotic-Assisted Total Knee Replacement",
+      "Robotic Partial (Uni-condylar) Knee Replacement",
+      "Robotic Revision Knee Replacement",
+      "Robotic-Assisted Hip Replacement",
+      "Computer-Navigated Joint Replacement",
+      "Imageless Intra-operative 3D Mapping",
+      "J&J Attune Knee Implant System",
+      "Cashless Insurance-Backed Robotic Surgery"
+    ],
+    "doctors": ["doctor-hardik", "doctor-swagat"]
+  },
+  {
     "slug": "orthopedics",
     "name": "Orthopedics",
     "image": "/assets/images/department/orthopaedics.jpg",
     "short_desc": "Advanced orthopedic treatments in our world-renowned hospital infrastructure with robotic-assisted surgery.",
-    "full_desc": "DHS Multispecialty Hospital's Orthopedic Department offers comprehensive care for all musculoskeletal conditions. Led by Dr. Hardik Shah and Dr. Swagat Shah, our team specializes in joint replacement, trauma surgery, arthroscopy, spine surgery, and sports medicine using state-of-the-art technology.",
-    "sub_departments": ["Trauma", "Joint Replacement", "Arthroscopy", "Spine Surgery", "Sports Medicine"],
+    "full_desc": "DHS Multispecialty Hospital's Orthopedic Department offers comprehensive care for all musculoskeletal conditions. Led by Dr. Hardik Shah and Dr. Swagat Shah, our team specializes in joint replacement, trauma surgery, arthroscopy, spine surgery, and sports medicine using state-of-the-art technology — including robotic-assisted joint replacement with sub-millimeter precision.",
+    "sub_departments": ["Robotic Joint Replacement", "Trauma", "Joint Replacement", "Arthroscopy", "Spine Surgery", "Sports Medicine"],
     "doctors": ["doctor-hardik", "doctor-swagat"]
   },
   {

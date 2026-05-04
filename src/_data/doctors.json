@@ -10,8 +10,9 @@
     "about": "Dr Hardik Shah is our esteemed Medical Director and leading orthopedic surgeon at DHS Multispecialty Hospital. With over a decade of experience in the field, Dr. Shah is renowned for his expertise in knee and hip replacements as well as trauma surgeries in Gujarat. He is one of the leading knee replacement surgeons in Ahmedabad.",
     "about_extended": "Dr. Hardik Shah graduated with honors from one of India's top medical schools and completed his specialized training in orthopedic surgery at prestigious institutions both in India and abroad. His commitment to advancing medical science and improving patient care has driven him to excel in his field, earning him a reputation as one of the best orthopedic surgeons in Ahmedabad.",
     "specializations": [
-      { "name": "Knee Replacement Surgery", "desc": "Dr. Shah has performed numerous successful knee replacement surgeries, restoring mobility and enhancing the quality of life for many patients. His advanced techniques, such as minimally invasive surgery, ensure optimal outcomes and quick recovery times." },
-      { "name": "Hip Replacement Surgery", "desc": "With extensive experience in hip replacement surgery, Dr. Shah offers patients relief from chronic pain and improved joint function. His precision and attention to detail make him a trusted expert in both partial and total hip replacements." },
+      { "name": "VELYS Robotic Knee Replacement", "desc": "Dr. Shah leads the robotic joint replacement programme at DHS, performing VELYS robotic-assisted total knee replacement (Johnson & Johnson DePuy Synthes) with the J&J Attune knee implant. The imageless platform avoids pre-operative CT scans and delivers up to 98% alignment accuracy with implants placed within 1° of plan, paired with faster recovery and earlier mobilisation." },
+      { "name": "Knee Replacement Surgery", "desc": "Dr. Shah has performed 15,000+ knee surgeries across multiple platforms, restoring mobility and enhancing quality of life with a 95%+ patient-satisfaction rate. His techniques include minimally invasive and robotic-assisted approaches for primary and revision knee replacement." },
+      { "name": "Hip Replacement Surgery", "desc": "With extensive experience in hip replacement surgery — including robotic-assisted hip arthroplasty — Dr. Shah offers patients relief from chronic pain and improved joint function. He is a trusted expert in both partial and total hip replacements." },
       { "name": "Trauma Surgery", "desc": "As a trauma specialist, Dr. Shah is adept at managing and treating severe musculoskeletal injuries. His quick and effective interventions have saved countless lives and helped patients recover fully from traumatic incidents." },
       { "name": "Joint Preservation Surgery", "desc": "For patients with early-stage joint issues, Dr. Shah offers joint preservation surgeries, including osteotomies and cartilage restoration procedures, to delay or prevent the need for joint replacement." }
     ],
@@ -25,8 +26,12 @@
     "role": "Director",
     "languages": "English, Hindi, Gujarati",
     "image": "/assets/images/team/dr-swagat.jpg",
-    "about": "Dr. Swagat Shah is a skilled orthopedic surgeon specializing in joint replacement and sports medicine at DHS Multispecialty Hospital. His expertise in shoulder replacement and complex joint procedures has earned him recognition as one of the top orthopedic surgeons in Ahmedabad.",
-    "specializations": []
+    "about": "Dr. Swagat Shah is a skilled orthopedic surgeon specializing in robotic-assisted joint replacement and sports medicine at DHS Multispecialty Hospital. He performs VELYS robotic knee replacement and shoulder replacement, and his expertise in complex joint procedures has earned him recognition as one of the top orthopedic surgeons in Ahmedabad.",
+    "specializations": [
+      { "name": "VELYS Robotic Knee Replacement", "desc": "Dr. Swagat Shah performs VELYS robotic-assisted knee replacement (Johnson & Johnson DePuy Synthes) at DHS Multispecialty Hospital using the J&J Attune knee implant — an imageless robotic platform that delivers sub-millimetre accuracy with no pre-operative CT scan." },
+      { "name": "Shoulder Replacement Surgery", "desc": "Specialised in primary and revision shoulder replacement, Dr. Shah treats severe arthritis and rotator cuff arthropathy with both anatomical and reverse shoulder arthroplasty." },
+      { "name": "Sports Medicine & Arthroscopy", "desc": "ACL reconstruction, meniscus repair, rotator cuff repair, and return-to-sport rehabilitation for athletes and active patients." }
+    ]
   },
   {
     "slug": "doctor-dileep",
