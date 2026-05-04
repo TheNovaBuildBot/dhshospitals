@@ -6,8 +6,8 @@ pagination:
 permalink: "doctors/{{ doc.slug }}/"
 layout: base.njk
 eleventyComputed:
-  title: "{{ doc.name }} — {{ doc.specialty }} Specialist in Ahmedabad — DHS Multispecialty Hospital"
-  description: "{{ doc.name }}, {{ doc.qualification }} — {{ doc.specialty }} specialist at DHS Multispecialty Hospital, Ahmedabad. Book appointment today."
+  title: "{{ doc.name }}, {{ (doc.specialty.split(' / '))[0] }} — DHS Ahmedabad"
+  description: "{{ doc.name }} — {{ doc.specialty }} specialist at DHS Multispecialty Hospital, Ahmedabad. Book consultation today."
   canonical: "https://www.dhshospitals.com/doctors/{{ doc.slug }}/"
   og_type: "profile"
   og_image: "https://www.dhshospitals.com{{ doc.image }}"

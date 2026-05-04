@@ -6,8 +6,8 @@ pagination:
 permalink: "departments/{{ dept.slug }}/"
 layout: base.njk
 eleventyComputed:
-  title: "{{ dept.name }} in Ahmedabad — DHS Multispecialty Hospital"
-  description: "{{ dept.short_desc }} Expert {{ dept.name }} treatment at DHS Multispecialty Hospital, Ahmedabad. Book consultation today."
+  title: "{{ dept.name }} in Ahmedabad — DHS Hospital"
+  description: "{{ dept.meta_description or (dept.name + ' at DHS Multispecialty Hospital, Ahmedabad. ' + dept.short_desc) }}"
   canonical: "https://www.dhshospitals.com/departments/{{ dept.slug }}/"
   og_image: "https://www.dhshospitals.com{{ dept.image }}"
   og_image_alt: "{{ dept.name }} department at DHS Multispecialty Hospital Ahmedabad"
