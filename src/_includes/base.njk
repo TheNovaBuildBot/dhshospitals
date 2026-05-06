@@ -208,6 +208,36 @@
 }
 </script>
 
+{% if page.url and page.url != "/" %}
+{% set urlParts = page.url.split("/") %}
+{% set section = urlParts[1] %}
+{% set isSubPage = urlParts.length > 3 %}
+{% set leafName = title.split(" — ")[0] if title else "" %}
+{% if dept and dept.name %}{% set leafName = dept.name %}{% endif %}
+{% if doc and doc.name %}{% set leafName = doc.name %}{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" }
+    {% if section == "departments" and isSubPage %}
+    ,{ "@type": "ListItem", "position": 2, "name": "Clinical Departments", "item": "{{ site.url }}/departments/" }
+    ,{ "@type": "ListItem", "position": 3, "name": "{{ leafName }}", "item": "{{ canonical }}" }
+    {% elif section == "doctors" and isSubPage %}
+    ,{ "@type": "ListItem", "position": 2, "name": "Find a Doctor", "item": "{{ site.url }}/doctors/" }
+    ,{ "@type": "ListItem", "position": 3, "name": "{{ leafName }}", "item": "{{ canonical }}" }
+    {% elif section == "blog" and urlParts[2] == "posts" %}
+    ,{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" }
+    ,{ "@type": "ListItem", "position": 3, "name": "{{ leafName }}", "item": "{{ canonical }}" }
+    {% else %}
+    ,{ "@type": "ListItem", "position": 2, "name": "{{ leafName }}", "item": "{{ canonical or site.url + page.url }}" }
+    {% endif %}
+  ]
+}
+</script>
+{% endif %}
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{

@@ -61,3 +61,19 @@ https://dhshospitals.com/* https://www.dhshospitals.com/:splat 301!
 /my-account.html / 301
 /need-help.html /contact/ 301
 /blog-details.html /blog/ 301
+
+# Legacy WordPress /services/ URLs (301 permanent — these are indexed in Google)
+/services/knee-replacement-surgeon/ /departments/joint-replacement/ 301
+/services/knee-replacement-surgeon /departments/joint-replacement/ 301
+/services/hip-replacement-surgeon/ /departments/joint-replacement/ 301
+/services/hip-replacement-surgeon /departments/joint-replacement/ 301
+/services/spine-surgeon/ /departments/spine-surgery/ 301
+/services/spine-surgeon /departments/spine-surgery/ 301
+/services/arthroscopy-surgeon/ /departments/arthroscopy/ 301
+/services/arthroscopy-surgeon /departments/arthroscopy/ 301
+/services/sports-medicine/ /departments/sports-medicine/ 301
+/services/sports-medicine /departments/sports-medicine/ 301
+/services/trauma/ /departments/trauma/ 301
+/services/trauma /departments/trauma/ 301
+# Catch-all for any other legacy /services/ URL
+/services/* /departments/ 301
