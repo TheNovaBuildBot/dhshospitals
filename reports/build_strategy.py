@@ -133,6 +133,30 @@ ct.setStyle(TableStyle([
     ("BOTTOMPADDING", (0, 0), (-1, -1), 10),
 ]))
 story.append(ct)
+story.append(Spacer(1, 14 * mm))
+
+# About this document — moved to cover so attribution is the first thing seen
+about_panel = Table([[
+    Paragraph(
+        f"<b>About this document.</b> &nbsp;Prepared by <b>NovaBuildBot's SEO Bot</b>, "
+        f"an AI agent from <b>Nova AI Technologies LLP</b>. NovaBuildBot ships SEO and "
+        f"content work end-to-end &mdash; research, drafting, schema, publishing, and "
+        f"distribution &mdash; so partner organisations like DHS do not need to hire writers, "
+        f"SEO consultants, or marketing leads. The only thing we ask of DHS is a "
+        f"<b>10&ndash;15 minute medical-accuracy review</b> from one specialist before each "
+        f"post goes live. The buck stops at medical accuracy &mdash; everything else is on us.",
+        ParagraphStyle("aboutpanel", parent=BODY, fontSize=10, leading=15, textColor=TEXT))
+]], colWidths=[170 * mm])
+about_panel.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#EBF4FA")),
+    ("BOX", (0, 0), (-1, -1), 0.6, PRIMARY),
+    ("LEFTPADDING", (0, 0), (-1, -1), 14),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 14),
+    ("TOPPADDING", (0, 0), (-1, -1), 12),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 12),
+]))
+story.append(about_panel)
+
 story.append(PageBreak())
 
 # 1. EXECUTIVE SUMMARY
@@ -568,7 +592,8 @@ story.append(Paragraph("• Confirmation that NovaBuildBot may publish to /blog/
 
 story.append(Spacer(1, 14))
 story.append(Paragraph(
-    f"<b>About this document.</b> This content strategy was prepared by <b>NovaBuildBot's SEO Bot agent</b> on {date.today().strftime('%B %d, %Y')} for DHS Multispecialty Hospital. NovaBuildBot is a product of <b>Nova AI Technologies LLP</b> — AI agents that ship SEO and content work end-to-end, with human strategist oversight. For questions, revisions, or to commission additional work, reach out via the same channel that delivered this document.",
+    f"<i>Document version: {date.today().strftime('%Y-%m-%d')}. "
+    f"NovaBuildBot &middot; Nova AI Technologies LLP.</i>",
     SMALL))
 
 
