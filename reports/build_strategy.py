@@ -1,12 +1,11 @@
-"""Generate the DHS Hospital Content Strategy PDF (shareable for review)."""
+"""DHS Content Strategy — tight 3-page deck."""
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_JUSTIFY
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle,
-    KeepTogether, Flowable, ListFlowable, ListItem
+    SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle, Flowable
 )
 from datetime import date
 
@@ -24,587 +23,328 @@ ROW_ALT = colors.HexColor("#F8FAFC")
 
 styles = getSampleStyleSheet()
 H1 = ParagraphStyle("H1", parent=styles["Heading1"], fontName="Helvetica-Bold",
-                    fontSize=22, leading=28, textColor=PRIMARY, spaceAfter=10)
+                    fontSize=20, leading=24, textColor=PRIMARY, spaceAfter=4)
 H2 = ParagraphStyle("H2", parent=styles["Heading2"], fontName="Helvetica-Bold",
-                    fontSize=14, leading=18, textColor=PRIMARY_DARK,
-                    spaceBefore=14, spaceAfter=6)
+                    fontSize=12, leading=15, textColor=PRIMARY_DARK,
+                    spaceBefore=8, spaceAfter=4)
 H3 = ParagraphStyle("H3", parent=styles["Heading3"], fontName="Helvetica-Bold",
-                    fontSize=11, leading=14, textColor=PRIMARY_DARK,
-                    spaceBefore=6, spaceAfter=4)
+                    fontSize=10, leading=13, textColor=PRIMARY_DARK,
+                    spaceBefore=4, spaceAfter=2)
 BODY = ParagraphStyle("Body", parent=styles["BodyText"], fontName="Helvetica",
-                      fontSize=10.5, leading=15, textColor=TEXT, spaceAfter=6,
-                      alignment=TA_JUSTIFY)
-BULLET = ParagraphStyle("Bullet", parent=BODY, leftIndent=14, bulletIndent=2,
-                        spaceAfter=4)
-SMALL = ParagraphStyle("Small", parent=BODY, fontSize=9, leading=12, textColor=MUTED)
-LABEL = ParagraphStyle("Label", parent=BODY, fontName="Helvetica-Bold",
-                       fontSize=9, textColor=colors.white, alignment=TA_CENTER, leading=11)
-COVER_TITLE = ParagraphStyle("CoverTitle", parent=H1, fontSize=30, leading=36,
-                             alignment=TA_CENTER, textColor=PRIMARY)
-COVER_SUB = ParagraphStyle("CoverSub", parent=BODY, fontSize=14, leading=20,
-                           alignment=TA_CENTER, textColor=MUTED)
+                      fontSize=9.5, leading=13, textColor=TEXT, spaceAfter=4,
+                      alignment=TA_LEFT)
+SMALL = ParagraphStyle("Small", parent=BODY, fontSize=8, leading=11, textColor=MUTED)
+BULLET = ParagraphStyle("Bullet", parent=BODY, leftIndent=10, bulletIndent=0, spaceAfter=2)
+TINY = ParagraphStyle("Tiny", parent=BODY, fontSize=7.5, leading=10, textColor=MUTED)
 
 
-def hr(color=LIGHT_BORDER, height=0.6):
+def hr(color=LIGHT_BORDER, height=0.6, w=170):
     class HR(Flowable):
-        def wrap(self, *_): return 170 * mm, 6
+        def wrap(self, *_): return w * mm, 4
         def draw(self):
             self.canv.setStrokeColor(color); self.canv.setLineWidth(height)
-            self.canv.line(0, 2, 170 * mm, 2)
+            self.canv.line(0, 1, w * mm, 1)
     return HR()
 
 
-def callout(title, body, color=PRIMARY):
-    bg = colors.HexColor("#EBF4FA")
-    t = Table([
-        [Paragraph(f"<b>{title}</b>", ParagraphStyle("c1", parent=BODY, textColor=color,
-                                                     fontName="Helvetica-Bold", fontSize=11))],
-        [Paragraph(body, BODY)],
-    ], colWidths=[170 * mm])
-    t.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, -1), bg),
-        ("BOX", (0, 0), (-1, -1), 0.5, color),
-        ("LEFTPADDING", (0, 0), (-1, -1), 14),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 14),
-        ("TOPPADDING", (0, 0), (-1, -1), 10),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 10),
-    ]))
-    return t
-
-
-def kv_table(rows, col1=44 * mm):
-    data = [[Paragraph(f"<b>{k}</b>", BODY), Paragraph(v, BODY)] for k, v in rows]
-    t = Table(data, colWidths=[col1, 170 * mm - col1])
-    t.setStyle(TableStyle([
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 10),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 10),
-        ("TOPPADDING", (0, 0), (-1, -1), 8),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
-        ("BACKGROUND", (0, 0), (-1, -1), LIGHT_BG),
-        ("BOX", (0, 0), (-1, -1), 0.5, LIGHT_BORDER),
-        ("INNERGRID", (0, 0), (-1, -1), 0.4, LIGHT_BORDER),
-    ]))
-    return t
-
-
-# ---- header / footer ----
+# ---- chrome ----
 def draw_chrome(c, doc):
     c.saveState()
-    c.setFillColor(PRIMARY); c.rect(0, A4[1] - 8 * mm, A4[0], 8 * mm, stroke=0, fill=1)
-    c.setFillColor(MUTED); c.setFont("Helvetica", 8)
-    c.drawString(20 * mm, 12 * mm, "DHS Multispecialty Hospital — Content Strategy")
-    c.drawRightString(A4[0] - 20 * mm, 12 * mm, f"Page {doc.page}")
-    c.setStrokeColor(LIGHT_BORDER); c.setLineWidth(0.4)
-    c.line(20 * mm, 16 * mm, A4[0] - 20 * mm, 16 * mm)
+    c.setFillColor(PRIMARY); c.rect(0, A4[1] - 6 * mm, A4[0], 6 * mm, stroke=0, fill=1)
+    c.setFillColor(MUTED); c.setFont("Helvetica", 7.5)
+    c.drawString(15 * mm, 8 * mm,
+                 f"DHS Multispecialty Hospital — Content Strategy · prepared by NovaBuildBot's SEO Bot · Nova AI Technologies LLP")
+    c.drawRightString(A4[0] - 15 * mm, 8 * mm, f"Page {doc.page} of 3")
     c.restoreState()
 
 
-# ---- content ----
 story = []
 
-# COVER
-story.append(Spacer(1, 40 * mm))
-story.append(Paragraph("Content Strategy", COVER_TITLE))
-story.append(Spacer(1, 8 * mm))
-story.append(Paragraph("DHS Multispecialty Hospital — www.dhshospitals.com", COVER_SUB))
-story.append(Spacer(1, 6 * mm))
-story.append(Paragraph("A 6-month plan for SEO, AI Overviews, and local Ahmedabad reach",
-                       ParagraphStyle("subt", parent=COVER_SUB, fontSize=12, textColor=PRIMARY)))
-story.append(Spacer(1, 8 * mm))
-story.append(Paragraph(
-    "Prepared by <b>NovaBuildBot's SEO Bot</b> &middot; an AI agent from <b>Nova AI Technologies LLP</b>",
-    ParagraphStyle("byline", parent=COVER_SUB, fontSize=10, textColor=MUTED)))
-story.append(Spacer(1, 18 * mm))
+# ============================================================
+# PAGE 1 — Cover-style header + Attribution + Executive Summary
+# ============================================================
 
-cover_box = [[
-    Paragraph(f"<b>Prepared for</b><br/>DHS Multispecialty Hospital", BODY),
-    Paragraph(f"<b>Prepared by</b><br/>NovaBuildBot — SEO Bot agent<br/><font size='8' color='#666666'>a product of Nova AI Technologies LLP</font>", BODY),
-    Paragraph(f"<b>Report date</b><br/>{date.today().strftime('%B %d, %Y')}<br/><font size='8' color='#666666'>For review &amp; approval</font>", BODY),
-]]
-ct = Table(cover_box, colWidths=[55 * mm, 55 * mm, 55 * mm])
-ct.setStyle(TableStyle([
-    ("BACKGROUND", (0, 0), (-1, -1), LIGHT_BG),
-    ("BOX", (0, 0), (-1, -1), 0.5, LIGHT_BORDER),
-    ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+# Title block
+story.append(Spacer(1, 4 * mm))
+story.append(Paragraph(
+    "DHS Multispecialty Hospital",
+    ParagraphStyle("brand", parent=BODY, fontSize=10, textColor=MUTED, leading=12,
+                   fontName="Helvetica-Bold")))
+story.append(Paragraph(
+    "Content Strategy",
+    ParagraphStyle("title", parent=H1, fontSize=26, leading=30, spaceAfter=4,
+                   textColor=PRIMARY)))
+story.append(Paragraph(
+    "A 6-month plan for SEO, AI Overviews, and local Ahmedabad reach &nbsp;·&nbsp; "
+    f"prepared {date.today().strftime('%B %d, %Y')}",
+    ParagraphStyle("sub", parent=BODY, textColor=MUTED, fontSize=10, leading=13)))
+
+story.append(Spacer(1, 5 * mm))
+
+# Big visible attribution panel — on page 1
+attribution = Table([[
+    Paragraph(
+        "<b>Prepared by NovaBuildBot's SEO Bot</b> "
+        "<font color='#666666'>· an AI agent from Nova AI Technologies LLP</font>",
+        ParagraphStyle("attribhead", parent=BODY, fontSize=12, leading=15,
+                       textColor=PRIMARY, fontName="Helvetica-Bold"))
+],[
+    Paragraph(
+        "NovaBuildBot ships SEO and content work end-to-end &mdash; research, drafting, "
+        "schema, publishing, and distribution &mdash; so DHS does not need to hire writers, "
+        "SEO consultants, or marketing leads. <b>The only thing we ask of DHS is a "
+        "10&ndash;15 minute medical-accuracy review</b> from one specialist before each "
+        "post goes live. The buck stops at medical accuracy &mdash; everything else is on us.",
+        BODY)
+]], colWidths=[170 * mm])
+attribution.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#EBF4FA")),
+    ("BOX", (0, 0), (-1, -1), 0.8, PRIMARY),
+    ("LINEABOVE", (0, 1), (-1, 1), 0.4, LIGHT_BORDER),
     ("LEFTPADDING", (0, 0), (-1, -1), 12),
     ("RIGHTPADDING", (0, 0), (-1, -1), 12),
-    ("TOPPADDING", (0, 0), (-1, -1), 10),
-    ("BOTTOMPADDING", (0, 0), (-1, -1), 10),
+    ("TOPPADDING", (0, 0), (-1, -1), 8),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
 ]))
-story.append(ct)
-story.append(Spacer(1, 14 * mm))
+story.append(attribution)
+story.append(Spacer(1, 5 * mm))
 
-# About this document — moved to cover so attribution is the first thing seen
-about_panel = Table([[
-    Paragraph(
-        f"<b>About this document.</b> &nbsp;Prepared by <b>NovaBuildBot's SEO Bot</b>, "
-        f"an AI agent from <b>Nova AI Technologies LLP</b>. NovaBuildBot ships SEO and "
-        f"content work end-to-end &mdash; research, drafting, schema, publishing, and "
-        f"distribution &mdash; so partner organisations like DHS do not need to hire writers, "
-        f"SEO consultants, or marketing leads. The only thing we ask of DHS is a "
-        f"<b>10&ndash;15 minute medical-accuracy review</b> from one specialist before each "
-        f"post goes live. The buck stops at medical accuracy &mdash; everything else is on us.",
-        ParagraphStyle("aboutpanel", parent=BODY, fontSize=10, leading=15, textColor=TEXT))
-]], colWidths=[170 * mm])
-about_panel.setStyle(TableStyle([
-    ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#EBF4FA")),
-    ("BOX", (0, 0), (-1, -1), 0.6, PRIMARY),
-    ("LEFTPADDING", (0, 0), (-1, -1), 14),
-    ("RIGHTPADDING", (0, 0), (-1, -1), 14),
-    ("TOPPADDING", (0, 0), (-1, -1), 12),
-    ("BOTTOMPADDING", (0, 0), (-1, -1), 12),
-]))
-story.append(about_panel)
-
-story.append(PageBreak())
-
-# 1. EXECUTIVE SUMMARY
-story.append(Paragraph("1. Executive Summary", H1))
-story.append(hr(PRIMARY, 1.2))
-story.append(Spacer(1, 4))
+# Executive summary
+story.append(Paragraph("Executive summary", H1))
+story.append(hr(PRIMARY, 1, 170))
+story.append(Spacer(1, 2))
 story.append(Paragraph(
-    "DHS Multispecialty Hospital has a strong technical SEO foundation and a "
-    "high-value differentiator (VELYS robotic knee replacement). The next "
-    "growth lever is <b>consistent, doctor-validated editorial content</b> "
-    "that captures patient questions before they decide where to seek care.",
-    BODY))
-story.append(Paragraph(
-    "<b>NovaBuildBot is built for exactly this.</b> DHS does not need to "
-    "hire a content writer, an SEO consultant, or a digital marketing lead. "
-    "Our SEO Bot agent drafts, edits, optimises, publishes, and promotes every "
-    "post end-to-end. The only thing we ask of DHS is a <b>10–15 minute "
-    "medical-accuracy review</b> from one specialist on the relevant topic, "
-    "before each post goes live. The buck stops at medical accuracy — "
-    "everything else is on us.",
-    BODY))
-story.append(Paragraph(
-    "This document proposes a <b>pillar-and-cluster</b> content model, three "
-    "non-negotiable editorial rules, a 6-month weekly editorial calendar, and "
-    "a recommended first follow-up post. It is intended for review with the "
-    "DHS leadership team before publication begins.",
+    "DHS has a strong technical SEO foundation and a high-value differentiator "
+    "(VELYS robotic knee replacement). The next growth lever is "
+    "<b>consistent, doctor-validated editorial content</b> that captures patient "
+    "questions before they decide where to seek care. AI Overviews and "
+    "ChatGPT/Perplexity now answer many medical questions before a single link "
+    "is clicked &mdash; ranking inside the AI summary depends on having clean, "
+    "question-shaped, doctor-reviewed content indexed against your domain.",
     BODY))
 
-story.append(Spacer(1, 6))
-story.append(Paragraph("Why now", H3))
-story.append(Paragraph(
-    "Two industry shifts make this the right moment:",
-    BODY))
-story.append(Paragraph(
-    "<b>1.</b> Google's AI Overviews and ChatGPT/Perplexity now answer many "
-    "patient questions before any link is clicked. Ranking in the AI summary "
-    "depends on having clean, question-shaped, doctor-authored content "
-    "indexed against your hospital domain.",
-    BULLET))
-story.append(Paragraph(
-    "<b>2.</b> Local search competition in Ahmedabad orthopedics is rising. "
-    "The hospitals that publish first capture the long-tail informational "
-    "queries (e.g. \"knee pain old age\", \"is robotic surgery safer\") "
-    "that feed the booking funnel.",
-    BULLET))
-story.append(PageBreak())
+# Strategy at a glance
+story.append(Paragraph("Strategy at a glance", H2))
 
-# 2. CURRENT STATE
-story.append(Paragraph("2. Where We Are Today", H1))
-story.append(hr(PRIMARY, 1.2))
-story.append(Spacer(1, 4))
-
-story.append(Paragraph("Already shipped (May 2026)", H3))
-story.append(Paragraph("Service pillar pages — strong, well-linked, schema-rich:", BODY))
-story.append(Paragraph("• <b>/velys-robotic-knee-replacement-ahmedabad/</b> — exact-match landing for the highest-intent VELYS query, with comparison table, recovery cards, both surgeon profiles, and 9 FAQs", BULLET))
-story.append(Paragraph("• <b>/departments/robotic-surgery/</b> — robotic joint replacement hub with 10 question-shaped FAQs", BULLET))
-story.append(Paragraph("• <b>/departments/joint-replacement/</b>, <b>/departments/orthopedics/</b>, all 21 clinical department pages", BULLET))
-story.append(Paragraph("• <b>/doctors/doctor-hardik/</b>, <b>/doctors/doctor-swagat/</b> — Physician schema, expertise listed", BULLET))
-story.append(Spacer(1, 4))
-story.append(Paragraph("Blog posts — one launch announcement live:", BODY))
-story.append(Paragraph("• <b>/blog/robotic-knee-replacement-ahmedabad/</b> — VELYS launch (May 2026)", BULLET))
-
-story.append(Paragraph("The gap", H3))
-story.append(Paragraph(
-    "The site's content funnel is currently <b>bottom-heavy</b>. We have "
-    "transactional pages (book appointment, doctor profiles, the launch "
-    "announcement) but very little <b>top-of-funnel</b> content — articles "
-    "that capture patients while they are still researching symptoms and "
-    "haven't decided where to seek care.",
-    BODY))
-story.append(Paragraph(
-    "Top-of-funnel content is what AI Overviews quote, what featured "
-    "snippets pull from, and what eventually drives a measurable share of "
-    "appointment bookings 60–90 days after publication.",
-    BODY))
-story.append(PageBreak())
-
-# 3. STRATEGY
-story.append(Paragraph("3. Strategy — Pillar &amp; Cluster", H1))
-story.append(hr(PRIMARY, 1.2))
-story.append(Paragraph(
-    "Each major service is a <b>pillar page</b>. Around it, we publish "
-    "<b>cluster posts</b> that answer specific patient questions and link "
-    "back to the pillar. This signals topical authority to Google and gives "
-    "AI engines a connected knowledge graph to draw from.",
-    BODY))
-
-story.append(Paragraph("How a cluster looks", H3))
-story.append(Paragraph(
-    "Pillar — <b>VELYS Robotic Knee Replacement</b><br/>"
-    "&nbsp;&nbsp;↳ Cluster post — Knee pain in older adults: when to consider replacement<br/>"
-    "&nbsp;&nbsp;↳ Cluster post — Robotic vs traditional knee replacement<br/>"
-    "&nbsp;&nbsp;↳ Cluster post — What to expect the day of your knee replacement<br/>"
-    "&nbsp;&nbsp;↳ Cluster post — Knee replacement recovery: a week-by-week timeline<br/>"
-    "&nbsp;&nbsp;↳ Cluster post — Cost &amp; insurance for robotic knee surgery in India",
-    BODY))
-
-story.append(Paragraph("Three editorial rules — non-negotiable", H2))
-story.append(callout(
-    "1. Question-shaped title",
-    "Every post title is phrased as the patient's actual query. "
-    "<i>\"How long does knee replacement recovery take?\"</i> beats "
-    "<i>\"Knee Replacement Recovery\"</i> on AI Overviews and featured "
-    "snippets, and reads more naturally when shared on WhatsApp. "
-    "Use the same phrasing as the H1 — they should match."
-))
-story.append(Spacer(1, 6))
-story.append(callout(
-    "2. Doctor by-line + medical reviewer",
-    "Healthcare content is YMYL (Your Money or Your Life) — Google's "
-    "highest E-E-A-T bar. Every post must be authored by a credentialed "
-    "DHS specialist and reviewed by a second physician. The author block "
-    "is rendered with credentials (FRCS, MS, DNB, etc.) and links to the "
-    "doctor's profile page so search engines can verify identity."
-))
-story.append(Spacer(1, 6))
-story.append(callout(
-    "3. One pillar, one location",
-    "Each post links to at least one service pillar (VELYS, Joint "
-    "Replacement, Cardiology, etc.) and mentions \"Ahmedabad\" plus a "
-    "specific neighbourhood (Vastrapur, Gurukul, Drive-In, Satellite, "
-    "Bodakdev, Memnagar, Thaltej, Sabarmati, Naranpura). Locality lives "
-    "in body copy, breadcrumbs, and structured data — never in the "
-    "title alone."
-))
-story.append(PageBreak())
-
-# 4. SEARCH INTENT LADDER
-story.append(Paragraph("4. Search Intent Ladder", H1))
-story.append(hr(PRIMARY, 1.2))
-story.append(Paragraph(
-    "Patients move through three search stages before booking. We need "
-    "content at each stage:",
-    BODY))
-
-ladder = [
-    ["Stage", "What the patient asks", "Page type", "Where DHS stands"],
-    ["Top of funnel\n(information)",
-     "\"Why does my knee hurt?\"\n\"What is a slipped disc?\"\n\"Heart attack warning signs\"",
-     "Symptom &amp; condition\nguides written by\nspecialists",
-     "Almost no coverage —\nbiggest opportunity"],
-    ["Middle of funnel\n(comparison)",
-     "\"Robotic vs traditional\nknee replacement\"\n\"Cost of bypass surgery\"",
-     "Comparison guides,\ndecision aids,\nrecovery timelines",
-     "Partial — VELYS landing\ncovers one comparison"],
-    ["Bottom of funnel\n(transactional)",
-     "\"Best knee surgeon\nAhmedabad\"\n\"Robotic surgery near me\"",
-     "Pillar landing pages,\ndoctor profiles,\nbooking flow",
-     "Strong — VELYS landing,\ndoctor pages, schema"],
-]
-data = []
-for i, row in enumerate(ladder):
-    if i == 0:
-        data.append([Paragraph(f"<font color='white'><b>{c}</b></font>", BODY) for c in row])
-    else:
-        styles_per_col = [
-            ParagraphStyle("s1", parent=BODY, fontName="Helvetica-Bold", textColor=PRIMARY_DARK),
-            BODY, BODY,
-            ParagraphStyle("s4", parent=BODY, textColor=GOLD if "opportunity" in row[3] else (ACCENT if "Strong" in row[3] else TEXT)),
-        ]
-        data.append([Paragraph(c.replace('\n', '<br/>'), styles_per_col[j]) for j, c in enumerate(row)])
-
-t = Table(data, colWidths=[26 * mm, 56 * mm, 44 * mm, 44 * mm], repeatRows=1)
-t.setStyle(TableStyle([
-    ("BACKGROUND", (0, 0), (-1, 0), PRIMARY),
-    ("BOX", (0, 0), (-1, -1), 0.5, LIGHT_BORDER),
-    ("INNERGRID", (0, 0), (-1, -1), 0.4, LIGHT_BORDER),
+strategy = Table([
+    [Paragraph("<b>Pillar-and-cluster</b>", BODY),
+     Paragraph("Service pages are pillars (VELYS landing, Joint Replacement, etc.). Blog posts are clusters that answer specific patient questions and link back to the pillar — signalling topical authority.", BODY)],
+    [Paragraph("<b>Three editorial rules</b>", BODY),
+     Paragraph("(1) Question-shaped title that matches the patient's actual query. (2) Doctor by-line + medical reviewer for every post (YMYL E-E-A-T). (3) Each post links to one pillar and mentions Ahmedabad + a specific neighbourhood (Vastrapur, Gurukul, Drive-In, Satellite, Bodakdev, Memnagar, Thaltej, Sabarmati, Naranpura).", BODY)],
+    [Paragraph("<b>Funnel balance</b>", BODY),
+     Paragraph("DHS has bottom-of-funnel pages (book appointment, doctor profiles, VELYS landing) but very little top-of-funnel content. The next 24 posts focus on top- and middle-of-funnel queries that feed the existing booking pages.", BODY)],
+], colWidths=[35 * mm, 135 * mm])
+strategy.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (-1, -1), LIGHT_BG),
+    ("BOX", (0, 0), (-1, -1), 0.4, LIGHT_BORDER),
+    ("INNERGRID", (0, 0), (-1, -1), 0.3, LIGHT_BORDER),
     ("VALIGN", (0, 0), (-1, -1), "TOP"),
-    ("LEFTPADDING", (0, 0), (-1, -1), 8),
-    ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-    ("TOPPADDING", (0, 0), (-1, -1), 7),
-    ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
-    ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, ROW_ALT]),
+    ("LEFTPADDING", (0, 0), (-1, -1), 10),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 10),
+    ("TOPPADDING", (0, 0), (-1, -1), 6),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
 ]))
-story.append(t)
-story.append(Spacer(1, 8))
-story.append(Paragraph(
-    "<b>Implication:</b> The next 4–5 posts should focus on top-of-funnel and "
-    "middle-of-funnel content. This balances the funnel and feeds qualified "
-    "traffic into the existing transactional pages.",
-    BODY))
+story.append(strategy)
+story.append(Spacer(1, 4 * mm))
+
+# How it works — minimal on page 1
+story.append(Paragraph("How it works", H2))
+ops = Table([
+    [Paragraph("<b>NovaBuildBot does</b>", ParagraphStyle("opsh", parent=BODY, textColor=PRIMARY, fontName="Helvetica-Bold", fontSize=10)),
+     Paragraph("<b>DHS does</b>", ParagraphStyle("opsh2", parent=BODY, textColor=ACCENT, fontName="Helvetica-Bold", fontSize=10))],
+    [Paragraph(
+        "Topic research · keyword analysis · drafting in doctor's voice · "
+        "SEO &amp; readability polish · schema · publishing to /blog/ · "
+        "Search Console indexing · Instagram + WhatsApp distribution · "
+        "monthly KPI report.", BODY),
+     Paragraph(
+        "<b>10&ndash;15 minute medical-accuracy review</b> per post by the "
+        "topic-relevant specialist · final sign-off by Medical Director "
+        "(single email/tap).<br/><br/>Total DHS doctor time at weekly "
+        "cadence: <b>~1 hour per month</b>, distributed across the doctor pool.",
+        BODY)],
+], colWidths=[85 * mm, 85 * mm])
+ops.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (0, -1), colors.HexColor("#EBF4FA")),
+    ("BACKGROUND", (1, 0), (1, -1), colors.HexColor("#EBF7EE")),
+    ("BOX", (0, 0), (-1, -1), 0.4, LIGHT_BORDER),
+    ("INNERGRID", (0, 0), (-1, -1), 0.3, LIGHT_BORDER),
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 10),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 10),
+    ("TOPPADDING", (0, 0), (-1, -1), 6),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+]))
+story.append(ops)
+
 story.append(PageBreak())
 
-# 5. EDITORIAL CALENDAR
-story.append(Paragraph("5. 6-Month Editorial Calendar — Weekly", H1))
-story.append(hr(PRIMARY, 1.2))
+# ============================================================
+# PAGE 2 — Editorial Calendar (24 posts, weekly)
+# ============================================================
+story.append(Paragraph("6-month editorial calendar — weekly", H1))
+story.append(hr(PRIMARY, 1, 170))
 story.append(Paragraph(
-    "<b>Cadence: one post per week, 24 posts in 6 months.</b> NovaBuildBot "
-    "drafts each post end-to-end; the assigned DHS specialist reviews for "
-    "medical accuracy in roughly 10–15 minutes before publish.",
-    BODY))
-story.append(Spacer(1, 6))
-story.append(callout(
-    "Two-tier post mix",
-    "<b>Cornerstone (every other week, 12 posts)</b> — long-form 1,200–1,800 "
-    "word patient guides that anchor a service pillar.<br/><br/>"
-    "<b>Mid-weight (every other week, 12 posts)</b> — focused 600–900 word "
-    "posts: comparison guides, plain-English explainers, condition primers, "
-    "patient FAQs. Same E-E-A-T standard, faster to read, faster to review.",
-    PRIMARY
-))
+    "<b>Cadence: 1 post per week, 24 posts in 6 months.</b> "
+    "<b>Cornerstone</b> = long-form pillar-anchoring guide (1,200&ndash;1,800 words). "
+    "<b>Mid-weight</b> = focused 600&ndash;900 word comparison / explainer / FAQ. "
+    "Reviewer column shows the proposed DHS specialist for the medical-accuracy check.",
+    SMALL))
+story.append(Spacer(1, 3))
 
 calendar = [
-    ["Week", "Post (working title)", "Tier", "Funnel", "Pillar", "Reviewer"],
-    ["W1 ✅",     "VELYS Robotic Knee Replacement now in Ahmedabad (launch)", "Cornerstone", "BoF", "VELYS", "Dr. Hardik"],
-    ["W2",        "Knee Pain in Older Adults — When to Consider Replacement", "Cornerstone", "ToF", "Joint Replacement", "Dr. Hardik"],
-    ["W3",        "Robotic vs Traditional Knee Replacement — Quick Comparison", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
-    ["W4",        "What to Expect on the Day of Your Knee Replacement", "Cornerstone", "MoF", "Joint Replacement", "Dr. Swagat"],
-    ["W5",        "5 Questions to Ask Your Knee Surgeon", "Mid-weight", "MoF", "Joint Replacement", "Dr. Hardik"],
-    ["W6",        "Knee Replacement Recovery — A Week-by-Week Timeline", "Cornerstone", "MoF", "VELYS", "Dr. Swagat"],
-    ["W7",        "ACL Tears in Athletes — Symptoms, Surgery &amp; Return to Sport", "Cornerstone", "ToF", "Sports Medicine", "Dr. Swagat"],
-    ["W8",        "Why Indians Are Switching to Robotic Surgery — Patient FAQ", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
-    ["W9",        "Trauma &amp; Accident Care — When to Come to DHS Emergency", "Cornerstone", "ToF", "Trauma + ICU", "Dr. Hardik"],
-    ["W10",       "Cost &amp; Insurance for Robotic Knee Surgery in India", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
-    ["W11",       "Heart Attack Warning Signs You Shouldn't Ignore", "Cornerstone", "ToF", "Cardiology", "Dr. Sunil"],
-    ["W12",       "Hip Replacement vs Knee Replacement — Which Comes First?", "Mid-weight", "MoF", "Joint Replacement", "Dr. Hardik"],
-    ["W13",       "Spine Surgery — When Is Conservative Care No Longer Enough?", "Cornerstone", "ToF/MoF", "Spine Surgery", "Dr. Hardik"],
-    ["W14",       "Diabetes &amp; Joint Pain — The Hidden Connection", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
-    ["W15",       "Cancer Surgery in Ahmedabad — Choosing a Surgical Oncologist", "Cornerstone", "MoF", "Cancer Care", "Dr. Dileep"],
-    ["W16",       "Reading Your Knee MRI Report — A Patient's Plain-English Guide", "Mid-weight", "ToF", "Radiology", "Dr. Yesha"],
-    ["W17",       "Hernia Repair — Laparoscopic vs Open Surgery Compared", "Cornerstone", "MoF", "General Surgery", "Dr. Chirag"],
-    ["W18",       "Stroke Care in Ahmedabad — The Golden Window", "Mid-weight", "ToF", "Neurosurgery", "Dr. Kushal"],
-    ["W19",       "Kidney Stones — Symptoms, Treatment &amp; Prevention", "Cornerstone", "ToF", "Urology", "Dr. Darshil"],
-    ["W20",       "Pre-op Anaesthesia — What Patients Worry About (And Shouldn't)", "Mid-weight", "MoF", "ICU", "Dr. Mansi"],
-    ["W21",       "Gallbladder Stones — Surgery vs Watch-and-Wait", "Cornerstone", "MoF", "Gastroenterology", "Dr. Ruchir"],
-    ["W22",       "Why Sleep Matters After Major Surgery", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
-    ["W23",       "Choosing Between OPD and Hospital Admission — A Quick Guide", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
-    ["W24",       "Patient Stories — A Year of Robotic Knee Replacement at DHS", "Cornerstone", "BoF", "VELYS", "Dr. Hardik"],
+    ["Wk", "Post (working title)", "Tier", "Funnel", "Pillar", "Reviewer"],
+    ["1✅", "VELYS Robotic Knee Replacement now in Ahmedabad (launch)", "Cornerstone", "BoF", "VELYS", "Dr. Hardik"],
+    ["2", "Knee Pain in Older Adults — When to Consider Replacement", "Cornerstone", "ToF", "Joint Replacement", "Dr. Hardik"],
+    ["3", "Robotic vs Traditional Knee Replacement — Quick Comparison", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
+    ["4", "What to Expect on the Day of Your Knee Replacement", "Cornerstone", "MoF", "Joint Replacement", "Dr. Swagat"],
+    ["5", "5 Questions to Ask Your Knee Surgeon", "Mid-weight", "MoF", "Joint Replacement", "Dr. Hardik"],
+    ["6", "Knee Replacement Recovery — Week-by-Week Timeline", "Cornerstone", "MoF", "VELYS", "Dr. Swagat"],
+    ["7", "ACL Tears in Athletes — Symptoms, Surgery, Return to Sport", "Cornerstone", "ToF", "Sports Medicine", "Dr. Swagat"],
+    ["8", "Why Indians Are Switching to Robotic Surgery — Patient FAQ", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
+    ["9", "Trauma &amp; Accident Care — When to Come to DHS Emergency", "Cornerstone", "ToF", "Trauma + ICU", "Dr. Hardik"],
+    ["10", "Cost &amp; Insurance for Robotic Knee Surgery in India", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
+    ["11", "Heart Attack Warning Signs You Shouldn't Ignore", "Cornerstone", "ToF", "Cardiology", "Dr. Sunil"],
+    ["12", "Hip Replacement vs Knee Replacement — Which Comes First?", "Mid-weight", "MoF", "Joint Replacement", "Dr. Hardik"],
+    ["13", "Spine Surgery — When Is Conservative Care No Longer Enough?", "Cornerstone", "ToF/MoF", "Spine Surgery", "Dr. Hardik"],
+    ["14", "Diabetes &amp; Joint Pain — The Hidden Connection", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
+    ["15", "Cancer Surgery in Ahmedabad — Choosing a Surgical Oncologist", "Cornerstone", "MoF", "Cancer Care", "Dr. Dileep"],
+    ["16", "Reading Your Knee MRI Report — Plain-English Patient Guide", "Mid-weight", "ToF", "Radiology", "Dr. Yesha"],
+    ["17", "Hernia Repair — Laparoscopic vs Open Surgery Compared", "Cornerstone", "MoF", "General Surgery", "Dr. Chirag"],
+    ["18", "Stroke Care in Ahmedabad — The Golden Window", "Mid-weight", "ToF", "Neurosurgery", "Dr. Kushal"],
+    ["19", "Kidney Stones — Symptoms, Treatment &amp; Prevention", "Cornerstone", "ToF", "Urology", "Dr. Darshil"],
+    ["20", "Pre-op Anaesthesia — What Patients Worry About (And Shouldn't)", "Mid-weight", "MoF", "ICU", "Dr. Mansi"],
+    ["21", "Gallbladder Stones — Surgery vs Watch-and-Wait", "Cornerstone", "MoF", "Gastroenterology", "Dr. Ruchir"],
+    ["22", "Why Sleep Matters After Major Surgery", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
+    ["23", "Choosing Between OPD and Hospital Admission — A Quick Guide", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
+    ["24", "Patient Stories — A Year of Robotic Knee Replacement at DHS", "Cornerstone", "BoF", "VELYS", "Dr. Hardik"],
 ]
 data = []
 for i, row in enumerate(calendar):
     if i == 0:
-        data.append([Paragraph(f"<font color='white'><b>{c}</b></font>", BODY) for c in row])
+        data.append([Paragraph(f"<font color='white'><b>{c}</b></font>",
+                               ParagraphStyle("hd", parent=BODY, fontSize=8.5)) for c in row])
     else:
         funnel_color = {"ToF": colors.HexColor("#1976D2"),
-                        "MoF": colors.HexColor("#9E7530"),
-                        "BoF": ACCENT,
+                        "MoF": GOLD, "BoF": ACCENT,
                         "ToF/MoF": colors.HexColor("#1976D2")}.get(row[3], TEXT)
-        tier_color = ACCENT if row[2].startswith("Cornerstone") else colors.HexColor("#9E7530")
+        tier_color = ACCENT if row[2] == "Cornerstone" else GOLD
         cells = [
-            Paragraph(row[0], ParagraphStyle("c0", parent=BODY, fontName="Helvetica-Bold", fontSize=9)),
-            Paragraph(row[1], ParagraphStyle("c1", parent=BODY, fontSize=9, leading=12)),
-            Paragraph(row[2], ParagraphStyle("c2t", parent=BODY, textColor=tier_color, fontSize=8.5, fontName="Helvetica-Bold")),
-            Paragraph(f"<b>{row[3]}</b>", ParagraphStyle("c2", parent=BODY, textColor=funnel_color, fontSize=9)),
-            Paragraph(row[4], ParagraphStyle("c3", parent=BODY, fontSize=9)),
-            Paragraph(row[5], ParagraphStyle("c4", parent=BODY, fontSize=9, textColor=MUTED)),
+            Paragraph(row[0], ParagraphStyle("c0", parent=BODY, fontName="Helvetica-Bold", fontSize=8)),
+            Paragraph(row[1], ParagraphStyle("c1", parent=BODY, fontSize=8, leading=10)),
+            Paragraph(row[2], ParagraphStyle("c2", parent=BODY, fontSize=7.5, fontName="Helvetica-Bold", textColor=tier_color, leading=10)),
+            Paragraph(f"<b>{row[3]}</b>", ParagraphStyle("c3", parent=BODY, fontSize=8, textColor=funnel_color)),
+            Paragraph(row[4], ParagraphStyle("c4", parent=BODY, fontSize=8, leading=10)),
+            Paragraph(row[5], ParagraphStyle("c5", parent=BODY, fontSize=8, textColor=MUTED)),
         ]
         data.append(cells)
 
-t = Table(data, colWidths=[14 * mm, 56 * mm, 22 * mm, 14 * mm, 28 * mm, 22 * mm], repeatRows=1)
+t = Table(data, colWidths=[10 * mm, 70 * mm, 22 * mm, 14 * mm, 32 * mm, 22 * mm], repeatRows=1)
 t.setStyle(TableStyle([
     ("BACKGROUND", (0, 0), (-1, 0), PRIMARY),
-    ("BOX", (0, 0), (-1, -1), 0.5, LIGHT_BORDER),
-    ("INNERGRID", (0, 0), (-1, -1), 0.4, LIGHT_BORDER),
+    ("BOX", (0, 0), (-1, -1), 0.4, LIGHT_BORDER),
+    ("INNERGRID", (0, 0), (-1, -1), 0.3, LIGHT_BORDER),
     ("VALIGN", (0, 0), (-1, -1), "TOP"),
-    ("LEFTPADDING", (0, 0), (-1, -1), 6),
-    ("RIGHTPADDING", (0, 0), (-1, -1), 6),
-    ("TOPPADDING", (0, 0), (-1, -1), 6),
-    ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+    ("LEFTPADDING", (0, 0), (-1, -1), 4),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+    ("TOPPADDING", (0, 0), (-1, -1), 3),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
     ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, ROW_ALT]),
 ]))
 story.append(t)
-story.append(Spacer(1, 6))
-story.append(Paragraph(
-    "<b>Reviewer column</b> = the DHS specialist NovaBuildBot will share the "
-    "draft with for a ~10-minute medical accuracy check. Adjust the assignment "
-    "freely; we will follow the doctor pool DHS provides.",
-    SMALL))
+
 story.append(PageBreak())
 
-# 6. NEXT POST DETAIL
-story.append(Paragraph("6. Recommended Next Post (Post #2)", H1))
-story.append(hr(PRIMARY, 1.2))
+# ============================================================
+# PAGE 3 — Targets, what could derail, decision needed
+# ============================================================
+story.append(Paragraph("Targets &amp; what to expect", H1))
+story.append(hr(PRIMARY, 1, 170))
 story.append(Paragraph(
-    "<b>Working title:</b> Knee Pain in Older Adults — When Should You Consider Knee Replacement?",
-    ParagraphStyle("nx", parent=BODY, fontName="Helvetica-Bold", textColor=PRIMARY_DARK, fontSize=12)))
-story.append(Spacer(1, 6))
+    "Content marketing pays off in 60&ndash;120 days, not 60&ndash;120 hours. "
+    "Targets below are <b>benchmarks, not promises</b> &mdash; SEO outcomes "
+    "depend on competitor activity, backlink earning, algorithm shifts, and "
+    "your starting baseline.",
+    BODY))
 
-story.append(kv_table([
-    ("URL", "/blog/knee-pain-when-to-consider-knee-replacement-ahmedabad/"),
-    ("Tier", "Cornerstone"),
-    ("Funnel", "Top of funnel (information)"),
-    ("Target queries",
-     "\"knee pain old age\", \"knee pain treatment Ahmedabad\", "
-     "\"when do I need knee replacement\", \"is my knee pain serious\""),
-    ("Pillar link", "/departments/joint-replacement/  →  /velys-robotic-knee-replacement-ahmedabad/"),
-    ("Drafted by", "<b>NovaBuildBot SEO Bot</b> — full draft in Dr. Hardik's voice, with schema, locality, citations"),
-    ("Medical reviewer", "Dr. Hardik M Shah (MS Orthopedic, FRCS Germany) — ~15 min accuracy review"),
-    ("Estimated length", "1,200–1,500 words"),
-    ("Hero image", "Original photo of an outpatient knee assessment (recommended)"),
+# Confidence tiers
+ct = Table([
+    [Paragraph("<b>High confidence (75&ndash;90%)</b>", ParagraphStyle("hc", parent=BODY, textColor=ACCENT, fontName="Helvetica-Bold")),
+     Paragraph(
+         "&bull; Branded queries (<i>'DHS Hospital'</i>) +50% &nbsp; "
+         "&bull; All 24 posts indexed within 1&ndash;2 weeks of publish &nbsp; "
+         "&bull; Top-10 ranking on long-tail queries (e.g. <i>'VELYS robotic knee replacement Ahmedabad'</i>) &nbsp; "
+         "&bull; Blog &rarr; appointment conversion 1.5&ndash;3% (industry benchmark)", BODY)],
+    [Paragraph("<b>Stretch (40&ndash;60%)</b>", ParagraphStyle("st", parent=BODY, textColor=GOLD, fontName="Helvetica-Bold")),
+     Paragraph(
+         "&bull; +150% total organic sessions in 12 months &nbsp; "
+         "&bull; +300% non-branded informational traffic &nbsp; "
+         "&bull; Top-3 on 5 priority queries by month 9", BODY)],
+    [Paragraph("<b>Variable (25&ndash;40%)</b>", ParagraphStyle("vr", parent=BODY, textColor=colors.HexColor("#C0392B"), fontName="Helvetica-Bold")),
+     Paragraph(
+         "&bull; AI Overviews citing DHS for orthopedic queries (model-dependent) &nbsp; "
+         "&bull; Specific timeline (could land month 5 or month 14)", BODY)],
+], colWidths=[34 * mm, 136 * mm])
+ct.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (-1, -1), LIGHT_BG),
+    ("BOX", (0, 0), (-1, -1), 0.4, LIGHT_BORDER),
+    ("INNERGRID", (0, 0), (-1, -1), 0.3, LIGHT_BORDER),
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 8),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 8),
+    ("TOPPADDING", (0, 0), (-1, -1), 5),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
 ]))
+story.append(ct)
+story.append(Spacer(1, 4 * mm))
 
-story.append(Paragraph("Why this post specifically", H3))
+# What could derail
+story.append(Paragraph("What could derail this", H2))
 story.append(Paragraph(
-    "<b>1. Highest search volume.</b> &quot;Knee pain&quot;, &quot;knee pain "
-    "in old age&quot;, and &quot;knee pain treatment&quot; are massive queries "
-    "in India. Approaching the topic from a symptom-first angle captures "
-    "patients <i>before</i> they have decided on surgery — much earlier in the "
-    "decision journey than &quot;knee replacement&quot; alone.",
-    BODY))
-story.append(Paragraph(
-    "<b>2. Funnels naturally to your existing pillars.</b> The post will "
-    "conclude by pointing readers who have decided to consider surgery toward "
-    "the Joint Replacement and VELYS landing pages.",
-    BODY))
-story.append(Paragraph(
-    "<b>3. E-E-A-T friendly.</b> Symptoms and red-flag content is exactly "
-    "what Google rewards when written by a credentialed surgeon — the "
-    "&quot;experience&quot; and &quot;expertise&quot; signals are obvious.",
-    BODY))
-story.append(Paragraph(
-    "<b>4. AI Overview bait.</b> Patients ask AI assistants &quot;is my knee "
-    "pain serious?&quot; daily. Question-shaped subheadings (&quot;When is "
-    "knee pain just ageing?&quot;, &quot;Red flags that mean you should see "
-    "a specialist&quot;) are the exact paragraph shapes AI engines quote.",
-    BODY))
-story.append(Paragraph(
-    "<b>5. Local SEO win.</b> &quot;Knee pain Ahmedabad&quot; has clear "
-    "commercial intent and no dominant ranking page yet — a clean ranking "
-    "opportunity in 60–90 days.",
+    "<b>1. Backlink gap.</b> Content alone rarely beats well-linked competitors. "
+    "Dr. Hardik's site cross-link helps; we should plan for PR mentions and "
+    "healthcare-directory listings in parallel. &nbsp; "
+    "<b>2. Algorithm volatility.</b> Google's medical-content updates (Aug 2024 "
+    "etc.) can move rankings overnight. &nbsp; "
+    "<b>3. Local-pack dominance.</b> Google Maps 3-pack eats most clicks for "
+    "<i>'hospital near me'</i> queries; needs Google Business Profile work in "
+    "parallel to content.",
     BODY))
 
-story.append(Paragraph("Proposed outline", H3))
+# What we'll measure
+story.append(Paragraph("What NovaBuildBot will report monthly", H2))
 story.append(Paragraph(
-    "1. Why knees ache as we age (the basic biomechanics)<br/>"
-    "2. When is knee pain just ageing — and when is it something more?<br/>"
-    "3. Red flags that mean you should see a specialist<br/>"
-    "4. Conservative options doctors try first (medication, physio, injections)<br/>"
-    "5. When is knee replacement the right answer?<br/>"
-    "6. What changes with robotic-assisted knee replacement<br/>"
-    "7. How DHS Multispecialty Hospital approaches knee care in Ahmedabad<br/>"
-    "8. FAQs (5–6 question-shaped, AI-quotable)<br/>"
-    "9. CTA — book a consultation",
-    BODY))
-story.append(PageBreak())
-
-# 7. KPIS
-story.append(Paragraph("7. Measurement &amp; KPIs", H1))
-story.append(hr(PRIMARY, 1.2))
-story.append(Paragraph(
-    "Content marketing pays off in 60–120 days, not 60–120 hours. We need "
-    "the right metrics so leadership can judge progress without false signals.",
+    "Organic impressions and clicks per pillar &middot; average position on the "
+    "10 priority queries &middot; appointment-form conversions attributed to "
+    "blog landings &middot; AI Overview / featured-snippet wins &middot; "
+    "backlinks earned &middot; recommendations for the next month.",
     BODY))
 
-story.append(Paragraph("What we will measure (monthly)", H3))
-story.append(Paragraph("• <b>Organic impressions</b> for target keyword clusters (Google Search Console)", BULLET))
-story.append(Paragraph("• <b>Average position</b> for the 5–10 priority queries per pillar", BULLET))
-story.append(Paragraph("• <b>Organic clicks</b> to each blog post and to its linked pillar page", BULLET))
-story.append(Paragraph("• <b>Appointment-form conversions</b> attributed to blog landings (GA4 event)", BULLET))
-story.append(Paragraph("• <b>AI Overview / featured-snippet wins</b> for tracked queries (manual quarterly check)", BULLET))
-story.append(Paragraph("• <b>Backlinks earned</b> per post (Ahrefs / free SEO tools)", BULLET))
+# Decision needed
+story.append(Spacer(1, 3 * mm))
+story.append(Paragraph("Decision needed before we ship Post #2", H2))
+story.append(Paragraph("&bull; Approval of the strategy and the weekly 24-post calendar", BULLET))
+story.append(Paragraph("&bull; A review pool of 3&ndash;5 specialists for medical-accuracy reviews (10&ndash;15 min each, on rotation)", BULLET))
+story.append(Paragraph("&bull; Confirmation of single-tap final sign-off (Medical Director Dr. Hardik Shah, unless a committee is preferred)", BULLET))
+story.append(Paragraph("&bull; Authorisation for NovaBuildBot to publish to /blog/, request indexing, and run Instagram + WhatsApp distribution on DHS's behalf", BULLET))
+story.append(Paragraph("&bull; A 30-day baseline measurement window in GA4 + Search Console <i>before</i> we ship Post #2 — so the &quot;+150%&quot; claim has a real number behind it", BULLET))
 
-story.append(Paragraph("What we will not over-index on", H3))
-story.append(Paragraph("• <b>Page views in week 1.</b> Most patient-research content takes 6–12 weeks to rank, then climbs steadily.", BULLET))
-story.append(Paragraph("• <b>Bounce rate.</b> Informational content has higher bounce by design — readers got their answer.", BULLET))
-story.append(Paragraph("• <b>Social shares.</b> Hospital content is rarely shared; that's not the channel.", BULLET))
-
-story.append(Paragraph("Realistic targets (12-month horizon)", H3))
-story.append(kv_table([
-    ("Total organic sessions", "+150% over baseline"),
-    ("Branded queries (e.g. \"DHS Hospital\")", "+50%"),
-    ("Non-branded informational queries", "+300% (largest growth)"),
-    ("Blog → appointment conversion rate", "1.5%–3% (industry benchmark for hospitals)"),
-    ("AI Overviews citing DHS for ortho queries", "≥3 captured per quarter"),
-    ("Top-3 ranking on at least 5 priority queries", "by month 9"),
-]))
-story.append(PageBreak())
-
-# 8. ROLES & APPROVAL
-story.append(Paragraph("8. How This Works — DHS Reviews, NovaBuildBot Ships", H1))
-story.append(hr(PRIMARY, 1.2))
+story.append(Spacer(1, 4 * mm))
+story.append(hr(PRIMARY, 0.6, 170))
 story.append(Paragraph(
-    "<b>DHS does not need to hire writers, SEO specialists, content "
-    "strategists, or a digital marketing lead.</b> NovaBuildBot's SEO Bot "
-    "agent does that work end-to-end. The only thing we ask of DHS is "
-    "<b>medical accuracy review</b> — typically 10–15 minutes per post, "
-    "from any one specialist on the relevant topic.",
-    BODY))
-
-story.append(Spacer(1, 4))
-story.append(Paragraph("Who does what", H3))
-story.append(kv_table([
-    ("Topic research &amp; SEO", "<b>NovaBuildBot</b> — keyword analysis, search-intent mapping, competitor gap analysis"),
-    ("Drafting", "<b>NovaBuildBot</b> — full draft in DHS doctors' voice, with locality, schema, citations"),
-    ("Editorial polish", "<b>NovaBuildBot</b> — SEO, readability, AI-Overview formatting, house style"),
-    ("Medical accuracy review", "<b>One DHS specialist</b> (~10–15 min) — verifies clinical facts &amp; safety. The buck stops here."),
-    ("Final sign-off", "<b>Medical Director</b> (Dr. Hardik Shah) — short approval before publish"),
-    ("Publishing", "<b>NovaBuildBot</b> — to /blog/, schema, sitemap, search console, internal links"),
-    ("Distribution", "<b>NovaBuildBot</b> — Instagram + WhatsApp + cross-link to drhardikshahortho.com"),
-    ("Performance reporting", "<b>NovaBuildBot</b> — monthly KPI report to DHS leadership"),
-]))
-
-story.append(Paragraph("Per-post process — total DHS time: ~15 min", H3))
-story.append(Paragraph(
-    "<b>1.</b> NovaBuildBot picks the next post from the agreed calendar, drafts it end-to-end<br/>"
-    "<b>2.</b> Draft is shared with the assigned DHS specialist (the topic owner)<br/>"
-    "<b>3.</b> Specialist reviews for medical accuracy — flags anything to correct (~10–15 min)<br/>"
-    "<b>4.</b> Medical Director signs off (single tap/email)<br/>"
-    "<b>5.</b> NovaBuildBot publishes, indexes, cross-links, schedules Instagram + WhatsApp",
-    BODY))
-story.append(Spacer(1, 6))
-story.append(callout(
-    "What this means in practice",
-    "At the proposed cadence (1 post / week), DHS doctor review time totals "
-    "roughly <b>1 hour per month</b>, distributed across whichever specialists "
-    "are most appropriate per topic. There is no marketing team to hire, no "
-    "SEO consultant to onboard, no editorial workflow tools to set up. "
-    "NovaBuildBot brings all of that to the table as part of the engagement.",
-    PRIMARY
-))
-
-story.append(Paragraph("Distribution beyond search", H3))
-story.append(Paragraph(
-    "Publishing the post is half the job. Each post should also be:",
-    BODY))
-story.append(Paragraph("• <b>Promoted on Instagram</b> — short-form summary post, swipe carousel of key takeaways", BULLET))
-story.append(Paragraph("• <b>Sent on WhatsApp</b> — to the hospital's existing patient list with a one-line teaser", BULLET))
-story.append(Paragraph("• <b>Cross-linked from Dr. Hardik's external site</b> (drhardikshahortho.com) — bidirectional backlink boosts both domains", BULLET))
-story.append(Paragraph("• <b>Submitted to Google Search Console</b> — &quot;Request indexing&quot; on day of publish for fastest pickup", BULLET))
-story.append(Paragraph("• <b>Featured in the next month's email newsletter</b> if/when one launches", BULLET))
-
-story.append(Spacer(1, 18))
-story.append(hr(PRIMARY, 1))
-story.append(Spacer(1, 8))
-story.append(Paragraph(
-    "<b>Decision needed before we ship Post #2.</b> Please confirm:",
-    BODY))
-story.append(Paragraph("• Approval of the pillar-and-cluster strategy and the weekly 6-month calendar (24 posts)", BULLET))
-story.append(Paragraph("• A small <b>review pool</b> of 3–5 DHS specialists who can each take a 10–15 minute medical-accuracy review when their topic comes up", BULLET))
-study_default = "single Medical Director sign-off (Dr. Hardik Shah) is the simplest workflow"
-story.append(Paragraph(f"• Final sign-off path — {study_default} unless a broader committee is preferred", BULLET))
-story.append(Paragraph("• Confirmation that NovaBuildBot may publish to /blog/, request indexing, and run Instagram + WhatsApp distribution on DHS's behalf", BULLET))
-
-story.append(Spacer(1, 14))
-story.append(Paragraph(
-    f"<i>Document version: {date.today().strftime('%Y-%m-%d')}. "
-    f"NovaBuildBot &middot; Nova AI Technologies LLP.</i>",
-    SMALL))
+    f"Document version {date.today().strftime('%Y-%m-%d')} &middot; "
+    "Prepared by NovaBuildBot's SEO Bot &middot; Nova AI Technologies LLP",
+    TINY))
 
 
 doc = SimpleDocTemplate(
     OUT, pagesize=A4,
     leftMargin=20 * mm, rightMargin=20 * mm,
-    topMargin=18 * mm, bottomMargin=20 * mm,
+    topMargin=14 * mm, bottomMargin=14 * mm,
     title="DHS Hospital — Content Strategy",
     author="NovaBuildBot SEO Bot — Nova AI Technologies LLP",
     subject="DHS Multispecialty Hospital content strategy and 6-month editorial calendar",
     creator="NovaBuildBot — Nova AI Technologies LLP",
 )
-doc.build(story, onFirstPage=lambda c, d: None, onLaterPages=draw_chrome)
+doc.build(story, onFirstPage=draw_chrome, onLaterPages=draw_chrome)
 print("Wrote", OUT)
