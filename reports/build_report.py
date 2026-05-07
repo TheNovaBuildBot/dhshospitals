@@ -558,7 +558,9 @@ doc = SimpleDocTemplate(
     leftMargin=20 * mm, rightMargin=20 * mm,
     topMargin=18 * mm, bottomMargin=20 * mm,
     title="DHS SEO & AIO Audit Report",
-    author="Nova BuildBot",
+    author="NovaBuildBot SEO Bot — Nova AI Technologies LLP",
+    subject="DHS Multispecialty Hospital SEO, Local SEO and AIO audit",
+    creator="NovaBuildBot — Nova AI Technologies LLP",
 )
 doc.build(story, onFirstPage=lambda c, d: None, onLaterPages=draw_chrome)
 print("Wrote", OUT)

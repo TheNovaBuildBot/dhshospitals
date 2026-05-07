@@ -111,12 +111,16 @@ story.append(Paragraph("DHS Multispecialty Hospital — www.dhshospitals.com", C
 story.append(Spacer(1, 6 * mm))
 story.append(Paragraph("A 6-month plan for SEO, AI Overviews, and local Ahmedabad reach",
                        ParagraphStyle("subt", parent=COVER_SUB, fontSize=12, textColor=PRIMARY)))
-story.append(Spacer(1, 26 * mm))
+story.append(Spacer(1, 8 * mm))
+story.append(Paragraph(
+    "Prepared by <b>NovaBuildBot's SEO Bot</b> &middot; an AI agent from <b>Nova AI Technologies LLP</b>",
+    ParagraphStyle("byline", parent=COVER_SUB, fontSize=10, textColor=MUTED)))
+story.append(Spacer(1, 18 * mm))
 
 cover_box = [[
     Paragraph(f"<b>Prepared for</b><br/>DHS Multispecialty Hospital", BODY),
-    Paragraph(f"<b>Report date</b><br/>{date.today().strftime('%B %d, %Y')}", BODY),
-    Paragraph("<b>Status</b><br/>For review &amp; approval", BODY),
+    Paragraph(f"<b>Prepared by</b><br/>NovaBuildBot — SEO Bot agent<br/><font size='8' color='#666666'>a product of Nova AI Technologies LLP</font>", BODY),
+    Paragraph(f"<b>Report date</b><br/>{date.today().strftime('%B %d, %Y')}<br/><font size='8' color='#666666'>For review &amp; approval</font>", BODY),
 ]]
 ct = Table(cover_box, colWidths=[55 * mm, 55 * mm, 55 * mm])
 ct.setStyle(TableStyle([
@@ -510,7 +514,7 @@ story.append(Paragraph("• Final approval workflow — single Medical Director 
 
 story.append(Spacer(1, 14))
 story.append(Paragraph(
-    f"<i>This document was prepared {date.today().strftime('%B %d, %Y')} by Nova BuildBot for DHS Multispecialty Hospital. For questions or revisions, reach out via the same channel.</i>",
+    f"<b>About this document.</b> This content strategy was prepared by <b>NovaBuildBot's SEO Bot agent</b> on {date.today().strftime('%B %d, %Y')} for DHS Multispecialty Hospital. NovaBuildBot is a product of <b>Nova AI Technologies LLP</b> — AI agents that ship SEO and content work end-to-end, with human strategist oversight. For questions, revisions, or to commission additional work, reach out via the same channel that delivered this document.",
     SMALL))
 
 
@@ -519,7 +523,9 @@ doc = SimpleDocTemplate(
     leftMargin=20 * mm, rightMargin=20 * mm,
     topMargin=18 * mm, bottomMargin=20 * mm,
     title="DHS Hospital — Content Strategy",
-    author="Nova BuildBot",
+    author="NovaBuildBot SEO Bot — Nova AI Technologies LLP",
+    subject="DHS Multispecialty Hospital content strategy and 6-month editorial calendar",
+    creator="NovaBuildBot — Nova AI Technologies LLP",
 )
 doc.build(story, onFirstPage=lambda c, d: None, onLaterPages=draw_chrome)
 print("Wrote", OUT)
