@@ -63,6 +63,18 @@ activePage: "more"
 
     <img src="/assets/images/client/joint-bg.jpg" alt="VELYS robotic-assisted knee replacement at DHS Multispecialty Hospital, Ahmedabad" loading="lazy" width="780" height="440" style="border-radius:var(--radius);margin:20px 0;box-shadow:var(--shadow);width:100%;height:auto">
 
+    <blockquote style="border-left:4px solid var(--primary);padding:18px 22px;margin:24px 0;background:var(--primary-light);border-radius:0 var(--radius) var(--radius) 0">
+      <p style="font-size:1.15rem;line-height:1.7;font-weight:600;color:var(--primary);margin-bottom:10px">The future of knee replacement is here.</p>
+      <p style="margin-bottom:10px">Introducing the <strong>VELYS Robotic System</strong> by <strong>Johnson &amp; Johnson</strong> at DHS Multispecialty Hospital. Experience precision-driven surgery with:</p>
+      <ul style="list-style:none;padding-left:0;margin:8px 0">
+        <li>✓ Less pain</li>
+        <li>✓ Smaller incisions</li>
+        <li>✓ Faster recovery</li>
+        <li>✓ Better outcomes</li>
+      </ul>
+      <p style="margin-top:10px;font-size:.95rem;color:var(--text-light)">Advanced technology combined with expert care — helping patients get back to life, faster. <strong>📍 Now available in Ahmedabad.</strong></p>
+    </blockquote>
+
     <p style="font-size:1.1rem;line-height:1.8"><strong>Patients in Ahmedabad now have access to robotic-assisted knee replacement at DHS Multispecialty Hospital, Gurukul.</strong> We have introduced the <strong>VELYS Robotic-Assisted Solution</strong> from <em>Johnson &amp; Johnson DePuy Synthes</em> — an imageless robotic platform that delivers sub-millimetre accuracy, faster recovery, and the proven J&amp;J Attune knee implant, all without the pre-operative CT scan that older systems require.</p>
 
     <p>For the people of Ahmedabad — across <strong>Gurukul, Vastrapur, Drive-In, Satellite, Bodakdev, Memnagar, Thaltej, Sabarmati and Naranpura</strong> — this means a knee replacement programme that is closer to home, technically state-of-the-art, and led by a team that has performed over 15,000 knee surgeries.</p>
@@ -81,8 +93,8 @@ activePage: "more"
       <li><strong>Sub-millimetre robotic accuracy.</strong> The robotic arm guides the bone cuts within tight tolerances that human hands alone cannot match.</li>
     </ul>
 
-    <h2>What this means for patients in Ahmedabad</h2>
-    <p>For someone considering knee replacement in Ahmedabad, robotic-assisted surgery at DHS translates into practical, patient-facing benefits:</p>
+    <h2>Helping patients get back to life, faster</h2>
+    <p>For someone considering knee replacement in Ahmedabad, the four benefits we highlighted in our launch announcement — <strong>less pain, smaller incisions, faster recovery, better outcomes</strong> — translate into a clear, day-by-day timeline:</p>
     <ul style="margin:10px 0 18px 24px;line-height:1.9">
       <li><strong>Standing and walking aided on the day of surgery</strong> — most VELYS patients are up the same day.</li>
       <li><strong>Hospital discharge in 2–3 days.</strong></li>
@@ -91,7 +103,7 @@ activePage: "more"
       <li><strong>Full recovery and complete range of motion in 3–4 months.</strong></li>
       <li><strong>Cashless treatment</strong> with most major Indian health insurance providers and TPAs.</li>
     </ul>
-    <p>For our older patients — and we treat many — the imageless workflow is a quiet but real advantage. There is no separate hospital trip for a CT scan, no additional radiation exposure, and the pre-surgery preparation moves faster.</p>
+    <p>Smaller incisions and computer-verified ligament balance mean less soft-tissue trauma, less post-operative pain, and less time on a walker. For our older patients — and we treat many — the imageless workflow is a quiet but real advantage. There is no separate hospital trip for a CT scan, no additional radiation exposure, and the pre-surgery preparation moves faster.</p>
 
     <h2>Who performs robotic knee replacement at DHS?</h2>
     <p>The DHS robotic knee replacement programme is led by <strong><a href="/doctors/doctor-hardik/">Dr. Hardik M Shah</a></strong> (Medical Director, MBBS Gold Medal, MS Orthopedic, FRCS Germany) and <strong><a href="/doctors/doctor-swagat/">Dr. Swagat M Shah</a></strong> (Director, MS Ortho, DNB Ortho, FIAAS UK). Together, our team has performed <strong>15,000+ knee replacements</strong> across multiple platforms with a <strong>95%+ patient-satisfaction rate</strong>.</p>
