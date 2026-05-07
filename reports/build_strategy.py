@@ -142,14 +142,23 @@ story.append(Spacer(1, 4))
 story.append(Paragraph(
     "DHS Multispecialty Hospital has a strong technical SEO foundation and a "
     "high-value differentiator (VELYS robotic knee replacement). The next "
-    "growth lever is <b>consistent, doctor-authored editorial content</b> that "
-    "captures patient questions before they decide where to seek care.",
+    "growth lever is <b>consistent, doctor-validated editorial content</b> "
+    "that captures patient questions before they decide where to seek care.",
+    BODY))
+story.append(Paragraph(
+    "<b>NovaBuildBot is built for exactly this.</b> DHS does not need to "
+    "hire a content writer, an SEO consultant, or a digital marketing lead. "
+    "Our SEO Bot agent drafts, edits, optimises, publishes, and promotes every "
+    "post end-to-end. The only thing we ask of DHS is a <b>10–15 minute "
+    "medical-accuracy review</b> from one specialist on the relevant topic, "
+    "before each post goes live. The buck stops at medical accuracy — "
+    "everything else is on us.",
     BODY))
 story.append(Paragraph(
     "This document proposes a <b>pillar-and-cluster</b> content model, three "
-    "non-negotiable editorial rules, a 6-month editorial calendar, and a "
-    "recommended first follow-up post. It is intended for review with the DHS "
-    "leadership team before publication begins.",
+    "non-negotiable editorial rules, a 6-month weekly editorial calendar, and "
+    "a recommended first follow-up post. It is intended for review with the "
+    "DHS leadership team before publication begins.",
     BODY))
 
 story.append(Spacer(1, 6))
@@ -308,28 +317,50 @@ story.append(Paragraph(
 story.append(PageBreak())
 
 # 5. EDITORIAL CALENDAR
-story.append(Paragraph("5. 6-Month Editorial Calendar", H1))
+story.append(Paragraph("5. 6-Month Editorial Calendar — Weekly", H1))
 story.append(hr(PRIMARY, 1.2))
 story.append(Paragraph(
-    "One post every 2–3 weeks. Each entry includes the funnel stage, the "
-    "service pillar it supports, and the local Ahmedabad keyword angle.",
+    "<b>Cadence: one post per week, 24 posts in 6 months.</b> NovaBuildBot "
+    "drafts each post end-to-end; the assigned DHS specialist reviews for "
+    "medical accuracy in roughly 10–15 minutes before publish.",
     BODY))
 story.append(Spacer(1, 6))
+story.append(callout(
+    "Two-tier post mix",
+    "<b>Cornerstone (every other week, 12 posts)</b> — long-form 1,200–1,800 "
+    "word patient guides that anchor a service pillar.<br/><br/>"
+    "<b>Mid-weight (every other week, 12 posts)</b> — focused 600–900 word "
+    "posts: comparison guides, plain-English explainers, condition primers, "
+    "patient FAQs. Same E-E-A-T standard, faster to read, faster to review.",
+    PRIMARY
+))
 
 calendar = [
-    ["Month", "Post (working title)", "Funnel", "Pillar", "Author"],
-    ["May 2026 ✅", "VELYS Robotic Knee Replacement now in Ahmedabad (launch)", "BoF", "VELYS", "Dr. Hardik Shah"],
-    ["Jun 2026", "Knee Pain in Older Adults — When to Consider Replacement", "ToF", "Joint Replacement", "Dr. Hardik Shah"],
-    ["Jun 2026", "Robotic vs Traditional Knee Replacement — What's Actually Different?", "MoF", "VELYS", "Dr. Hardik Shah"],
-    ["Jul 2026", "What to Expect on the Day of Your Knee Replacement", "MoF", "Joint Replacement", "Dr. Swagat Shah"],
-    ["Jul 2026", "Knee Replacement Recovery — A Week-by-Week Timeline", "MoF", "VELYS", "Dr. Swagat Shah"],
-    ["Aug 2026", "ACL Tears in Athletes — Symptoms, Surgery &amp; Return to Sport", "ToF", "Sports Medicine", "Dr. Swagat Shah"],
-    ["Aug 2026", "Trauma &amp; Accident Care — When to Come to DHS Emergency", "ToF", "Trauma + ICU", "Dr. Hardik Shah"],
-    ["Sep 2026", "Cost &amp; Insurance for Robotic Knee Surgery in India", "MoF", "VELYS", "Hospital + Dr. Hardik"],
-    ["Sep 2026", "Heart Attack Warning Signs You Shouldn't Ignore", "ToF", "Cardiology", "Dr. Sunil"],
-    ["Oct 2026", "Spine Surgery — When Is Conservative Care No Longer Enough?", "ToF/MoF", "Spine Surgery", "Dr. Hardik Shah"],
-    ["Oct 2026", "Cancer Surgery in Ahmedabad — Choosing a Surgical Oncologist", "MoF", "Cancer Care", "Dr. Dileep"],
-    ["Nov 2026", "Hernia Repair — Laparoscopic vs Open Surgery Compared", "MoF", "General Surgery", "Dr. Chirag / Dr. Devshi"],
+    ["Week", "Post (working title)", "Tier", "Funnel", "Pillar", "Reviewer"],
+    ["W1 ✅",     "VELYS Robotic Knee Replacement now in Ahmedabad (launch)", "Cornerstone", "BoF", "VELYS", "Dr. Hardik"],
+    ["W2",        "Knee Pain in Older Adults — When to Consider Replacement", "Cornerstone", "ToF", "Joint Replacement", "Dr. Hardik"],
+    ["W3",        "Robotic vs Traditional Knee Replacement — Quick Comparison", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
+    ["W4",        "What to Expect on the Day of Your Knee Replacement", "Cornerstone", "MoF", "Joint Replacement", "Dr. Swagat"],
+    ["W5",        "5 Questions to Ask Your Knee Surgeon", "Mid-weight", "MoF", "Joint Replacement", "Dr. Hardik"],
+    ["W6",        "Knee Replacement Recovery — A Week-by-Week Timeline", "Cornerstone", "MoF", "VELYS", "Dr. Swagat"],
+    ["W7",        "ACL Tears in Athletes — Symptoms, Surgery &amp; Return to Sport", "Cornerstone", "ToF", "Sports Medicine", "Dr. Swagat"],
+    ["W8",        "Why Indians Are Switching to Robotic Surgery — Patient FAQ", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
+    ["W9",        "Trauma &amp; Accident Care — When to Come to DHS Emergency", "Cornerstone", "ToF", "Trauma + ICU", "Dr. Hardik"],
+    ["W10",       "Cost &amp; Insurance for Robotic Knee Surgery in India", "Mid-weight", "MoF", "VELYS", "Dr. Hardik"],
+    ["W11",       "Heart Attack Warning Signs You Shouldn't Ignore", "Cornerstone", "ToF", "Cardiology", "Dr. Sunil"],
+    ["W12",       "Hip Replacement vs Knee Replacement — Which Comes First?", "Mid-weight", "MoF", "Joint Replacement", "Dr. Hardik"],
+    ["W13",       "Spine Surgery — When Is Conservative Care No Longer Enough?", "Cornerstone", "ToF/MoF", "Spine Surgery", "Dr. Hardik"],
+    ["W14",       "Diabetes &amp; Joint Pain — The Hidden Connection", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
+    ["W15",       "Cancer Surgery in Ahmedabad — Choosing a Surgical Oncologist", "Cornerstone", "MoF", "Cancer Care", "Dr. Dileep"],
+    ["W16",       "Reading Your Knee MRI Report — A Patient's Plain-English Guide", "Mid-weight", "ToF", "Radiology", "Dr. Yesha"],
+    ["W17",       "Hernia Repair — Laparoscopic vs Open Surgery Compared", "Cornerstone", "MoF", "General Surgery", "Dr. Chirag"],
+    ["W18",       "Stroke Care in Ahmedabad — The Golden Window", "Mid-weight", "ToF", "Neurosurgery", "Dr. Kushal"],
+    ["W19",       "Kidney Stones — Symptoms, Treatment &amp; Prevention", "Cornerstone", "ToF", "Urology", "Dr. Darshil"],
+    ["W20",       "Pre-op Anaesthesia — What Patients Worry About (And Shouldn't)", "Mid-weight", "MoF", "ICU", "Dr. Mansi"],
+    ["W21",       "Gallbladder Stones — Surgery vs Watch-and-Wait", "Cornerstone", "MoF", "Gastroenterology", "Dr. Ruchir"],
+    ["W22",       "Why Sleep Matters After Major Surgery", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
+    ["W23",       "Choosing Between OPD and Hospital Admission — A Quick Guide", "Mid-weight", "ToF", "Internal Medicine", "Dr. Archit"],
+    ["W24",       "Patient Stories — A Year of Robotic Knee Replacement at DHS", "Cornerstone", "BoF", "VELYS", "Dr. Hardik"],
 ]
 data = []
 for i, row in enumerate(calendar):
@@ -339,17 +370,19 @@ for i, row in enumerate(calendar):
         funnel_color = {"ToF": colors.HexColor("#1976D2"),
                         "MoF": colors.HexColor("#9E7530"),
                         "BoF": ACCENT,
-                        "ToF/MoF": colors.HexColor("#1976D2")}.get(row[2], TEXT)
+                        "ToF/MoF": colors.HexColor("#1976D2")}.get(row[3], TEXT)
+        tier_color = ACCENT if row[2].startswith("Cornerstone") else colors.HexColor("#9E7530")
         cells = [
-            Paragraph(row[0], ParagraphStyle("c0", parent=BODY, fontName="Helvetica-Bold", fontSize=9.5)),
-            Paragraph(row[1], BODY),
-            Paragraph(f"<b>{row[2]}</b>", ParagraphStyle("c2", parent=BODY, textColor=funnel_color, fontSize=9.5)),
-            Paragraph(row[3], ParagraphStyle("c3", parent=BODY, fontSize=9.5)),
-            Paragraph(row[4], ParagraphStyle("c4", parent=BODY, fontSize=9.5, textColor=MUTED)),
+            Paragraph(row[0], ParagraphStyle("c0", parent=BODY, fontName="Helvetica-Bold", fontSize=9)),
+            Paragraph(row[1], ParagraphStyle("c1", parent=BODY, fontSize=9, leading=12)),
+            Paragraph(row[2], ParagraphStyle("c2t", parent=BODY, textColor=tier_color, fontSize=8.5, fontName="Helvetica-Bold")),
+            Paragraph(f"<b>{row[3]}</b>", ParagraphStyle("c2", parent=BODY, textColor=funnel_color, fontSize=9)),
+            Paragraph(row[4], ParagraphStyle("c3", parent=BODY, fontSize=9)),
+            Paragraph(row[5], ParagraphStyle("c4", parent=BODY, fontSize=9, textColor=MUTED)),
         ]
         data.append(cells)
 
-t = Table(data, colWidths=[20 * mm, 70 * mm, 16 * mm, 28 * mm, 36 * mm], repeatRows=1)
+t = Table(data, colWidths=[14 * mm, 56 * mm, 22 * mm, 14 * mm, 28 * mm, 22 * mm], repeatRows=1)
 t.setStyle(TableStyle([
     ("BACKGROUND", (0, 0), (-1, 0), PRIMARY),
     ("BOX", (0, 0), (-1, -1), 0.5, LIGHT_BORDER),
@@ -364,9 +397,9 @@ t.setStyle(TableStyle([
 story.append(t)
 story.append(Spacer(1, 6))
 story.append(Paragraph(
-    "<b>Cadence:</b> 2 posts per month avg. Adjust to specialist availability — "
-    "we strongly prefer doctor-authored content over a steady drumbeat of "
-    "generic posts.",
+    "<b>Reviewer column</b> = the DHS specialist NovaBuildBot will share the "
+    "draft with for a ~10-minute medical accuracy check. Adjust the assignment "
+    "freely; we will follow the doctor pool DHS provides.",
     SMALL))
 story.append(PageBreak())
 
@@ -380,13 +413,14 @@ story.append(Spacer(1, 6))
 
 story.append(kv_table([
     ("URL", "/blog/knee-pain-when-to-consider-knee-replacement-ahmedabad/"),
+    ("Tier", "Cornerstone"),
     ("Funnel", "Top of funnel (information)"),
     ("Target queries",
      "\"knee pain old age\", \"knee pain treatment Ahmedabad\", "
      "\"when do I need knee replacement\", \"is my knee pain serious\""),
     ("Pillar link", "/departments/joint-replacement/  →  /velys-robotic-knee-replacement-ahmedabad/"),
-    ("Author", "Dr. Hardik M Shah (MS Orthopedic, FRCS Germany)"),
-    ("Reviewer", "Dr. Swagat M Shah (FIAAS UK)"),
+    ("Drafted by", "<b>NovaBuildBot SEO Bot</b> — full draft in Dr. Hardik's voice, with schema, locality, citations"),
+    ("Medical reviewer", "Dr. Hardik M Shah (MS Orthopedic, FRCS Germany) — ~15 min accuracy review"),
     ("Estimated length", "1,200–1,500 words"),
     ("Hero image", "Original photo of an outpatient knee assessment (recommended)"),
 ]))
@@ -468,28 +502,47 @@ story.append(kv_table([
 story.append(PageBreak())
 
 # 8. ROLES & APPROVAL
-story.append(Paragraph("8. Roles, Approval &amp; Channels", H1))
+story.append(Paragraph("8. How This Works — DHS Reviews, NovaBuildBot Ships", H1))
 story.append(hr(PRIMARY, 1.2))
+story.append(Paragraph(
+    "<b>DHS does not need to hire writers, SEO specialists, content "
+    "strategists, or a digital marketing lead.</b> NovaBuildBot's SEO Bot "
+    "agent does that work end-to-end. The only thing we ask of DHS is "
+    "<b>medical accuracy review</b> — typically 10–15 minutes per post, "
+    "from any one specialist on the relevant topic.",
+    BODY))
 
-story.append(Paragraph("Roles (proposed)", H3))
+story.append(Spacer(1, 4))
+story.append(Paragraph("Who does what", H3))
 story.append(kv_table([
-    ("Author", "DHS specialist relevant to the topic (Dr. Hardik, Dr. Swagat, etc.)"),
-    ("Medical reviewer", "A second DHS physician — verifies facts &amp; safety"),
-    ("Editorial lead", "Hospital marketing / digital lead — owns the calendar &amp; SEO targets"),
-    ("Publisher", "Web/dev (currently via Eleventy + GitHub) — handles publishing &amp; schema"),
-    ("Final approval", "Medical Director (Dr. Hardik Shah) — sign-off before publish"),
+    ("Topic research &amp; SEO", "<b>NovaBuildBot</b> — keyword analysis, search-intent mapping, competitor gap analysis"),
+    ("Drafting", "<b>NovaBuildBot</b> — full draft in DHS doctors' voice, with locality, schema, citations"),
+    ("Editorial polish", "<b>NovaBuildBot</b> — SEO, readability, AI-Overview formatting, house style"),
+    ("Medical accuracy review", "<b>One DHS specialist</b> (~10–15 min) — verifies clinical facts &amp; safety. The buck stops here."),
+    ("Final sign-off", "<b>Medical Director</b> (Dr. Hardik Shah) — short approval before publish"),
+    ("Publishing", "<b>NovaBuildBot</b> — to /blog/, schema, sitemap, search console, internal links"),
+    ("Distribution", "<b>NovaBuildBot</b> — Instagram + WhatsApp + cross-link to drhardikshahortho.com"),
+    ("Performance reporting", "<b>NovaBuildBot</b> — monthly KPI report to DHS leadership"),
 ]))
 
-story.append(Paragraph("Process per post", H3))
+story.append(Paragraph("Per-post process — total DHS time: ~15 min", H3))
 story.append(Paragraph(
-    "1. Editorial lead briefs the assigned doctor (target query, outline, length)<br/>"
-    "2. Doctor delivers a draft (rough, voice-noted, or written — whatever is easiest)<br/>"
-    "3. Editorial lead polishes for SEO + readability + house style<br/>"
-    "4. Second physician reviews medically<br/>"
-    "5. Medical Director gives final sign-off<br/>"
-    "6. Publisher pushes to /blog/, requests indexing in Search Console, links from any related pillar pages<br/>"
-    "7. Editorial lead schedules an Instagram + WhatsApp push within 48 hours of publish",
+    "<b>1.</b> NovaBuildBot picks the next post from the agreed calendar, drafts it end-to-end<br/>"
+    "<b>2.</b> Draft is shared with the assigned DHS specialist (the topic owner)<br/>"
+    "<b>3.</b> Specialist reviews for medical accuracy — flags anything to correct (~10–15 min)<br/>"
+    "<b>4.</b> Medical Director signs off (single tap/email)<br/>"
+    "<b>5.</b> NovaBuildBot publishes, indexes, cross-links, schedules Instagram + WhatsApp",
     BODY))
+story.append(Spacer(1, 6))
+story.append(callout(
+    "What this means in practice",
+    "At the proposed cadence (1 post / week), DHS doctor review time totals "
+    "roughly <b>1 hour per month</b>, distributed across whichever specialists "
+    "are most appropriate per topic. There is no marketing team to hire, no "
+    "SEO consultant to onboard, no editorial workflow tools to set up. "
+    "NovaBuildBot brings all of that to the table as part of the engagement.",
+    PRIMARY
+))
 
 story.append(Paragraph("Distribution beyond search", H3))
 story.append(Paragraph(
@@ -507,10 +560,11 @@ story.append(Spacer(1, 8))
 story.append(Paragraph(
     "<b>Decision needed before we ship Post #2.</b> Please confirm:",
     BODY))
-story.append(Paragraph("• Approval of the pillar-and-cluster strategy and the 6-month calendar", BULLET))
-story.append(Paragraph("• Author + reviewer assignment for Post #2 (currently proposed: Dr. Hardik authors, Dr. Swagat reviews)", BULLET))
-story.append(Paragraph("• Editorial cadence — 2 posts/month is the proposal; comfortable, sustainable", BULLET))
-story.append(Paragraph("• Final approval workflow — single Medical Director sign-off vs. broader committee", BULLET))
+story.append(Paragraph("• Approval of the pillar-and-cluster strategy and the weekly 6-month calendar (24 posts)", BULLET))
+story.append(Paragraph("• A small <b>review pool</b> of 3–5 DHS specialists who can each take a 10–15 minute medical-accuracy review when their topic comes up", BULLET))
+study_default = "single Medical Director sign-off (Dr. Hardik Shah) is the simplest workflow"
+story.append(Paragraph(f"• Final sign-off path — {study_default} unless a broader committee is preferred", BULLET))
+story.append(Paragraph("• Confirmation that NovaBuildBot may publish to /blog/, request indexing, and run Instagram + WhatsApp distribution on DHS's behalf", BULLET))
 
 story.append(Spacer(1, 14))
 story.append(Paragraph(
