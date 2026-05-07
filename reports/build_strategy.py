@@ -82,11 +82,31 @@ story.append(Paragraph("FOR DHS MULTISPECIALTY HOSPITAL", KICKER))
 story.append(Spacer(1, 2 * mm))
 story.append(Paragraph("Content Strategy", H_DISPLAY))
 story.append(Paragraph(
-    f"A 6-month plan for SEO, AI Overviews, and local Ahmedabad reach &nbsp;·&nbsp; "
-    f"prepared {date.today().strftime('%d %B %Y')}",
+    "A 6-month plan for SEO, AI Overviews, and local Ahmedabad reach",
     BODY_SOFT))
 
-story.append(Spacer(1, 8 * mm))
+story.append(Spacer(1, 4 * mm))
+
+# Visible byline — strategy report has an author
+byline = Table([[
+    Paragraph(
+        "<b>Prepared by NovaBuildBot's SEO Bot</b> &nbsp;·&nbsp; "
+        "<font color='#3F4856'>An AI agent from Nova AI Technologies LLP</font>"
+        f" &nbsp;·&nbsp; <font color='#6B7280'>{date.today().strftime('%d %B %Y')}</font>",
+        ParagraphStyle("byline", parent=BODY, fontSize=9.5, leading=12,
+                       textColor=BRAND, fontName="Helvetica"))
+]], colWidths=[170 * mm])
+byline.setStyle(TableStyle([
+    ("LINEABOVE", (0, 0), (-1, 0), 0.6, BRAND),
+    ("LINEBELOW", (0, 0), (-1, 0), 0.6, BRAND),
+    ("LEFTPADDING", (0, 0), (-1, -1), 0),
+    ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+    ("TOPPADDING", (0, 0), (-1, -1), 6),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+]))
+story.append(byline)
+
+story.append(Spacer(1, 6 * mm))
 
 # Executive summary
 story.append(Paragraph("Executive summary", H1))
