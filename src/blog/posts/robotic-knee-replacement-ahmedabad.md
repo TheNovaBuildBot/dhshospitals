@@ -79,6 +79,11 @@ activePage: "more"
 
     <p>For the people of Ahmedabad — across <strong>Gurukul, Vastrapur, Drive-In, Satellite, Bodakdev, Memnagar, Thaltej, Sabarmati and Naranpura</strong> — this means a knee replacement programme that is closer to home, technically state-of-the-art, and led by a senior orthopedic team that has successfully performed 2,000+ knee replacement surgeries (robotic and conventional).</p>
 
+    <figure style="margin:30px 0">
+      <img src="/assets/images/velys/ot-team-wide.jpg" alt="VELYS robotic knee replacement under way in the DHS Multispecialty Hospital operation theatre — surgeon using the VELYS tracking array, with assisting team and surgical lights overhead" loading="lazy" width="1080" height="810" style="border-radius:var(--radius);box-shadow:var(--shadow);width:100%;height:auto;display:block">
+      <figcaption style="font-size:.85rem;color:var(--text-light);margin-top:10px;text-align:center;font-style:italic">VELYS robotic knee replacement in progress at DHS Multispecialty Hospital, Ahmedabad.</figcaption>
+    </figure>
+
     <h2>Why we brought robotic knee replacement to DHS</h2>
     <p>For decades, knee replacement in India was a manual procedure: a skilled surgeon, conventional jigs, and instinct refined over thousands of cases. Outcomes were good — but small alignment errors of 2°, 3°, or 4° were common, and over a 20-year horizon they translated into earlier wear, more revision surgery, and less natural-feeling knees.</p>
     <p>Robotic-assisted joint replacement closes that gap. The robot does not perform the surgery — the surgeon does. What the robot adds is a real-time, computer-verified plan and an instrument that cuts bone within a tightly controlled boundary. Published data on VELYS shows <strong>strong alignment accuracy compared with conventional manual technique</strong>.</p>
