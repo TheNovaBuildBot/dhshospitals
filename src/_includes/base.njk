@@ -11,7 +11,7 @@
       document.documentElement.classList.add('new-typo');
       var l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap';
+      l.href = 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap';
       document.head.appendChild(l);
     }
   } catch(e) {}
@@ -494,39 +494,83 @@ footer{background:var(--text);color:#ccc;padding:50px 0 0}
   .services-list{grid-template-columns:1fr}
 }
 
-/* === Premium typography preview ===
+/* === Premium look preview v2 — Clinical Cream ===
    Activate: append ?new=true to any URL (persists across pages via localStorage)
    Deactivate: append ?new=false
-   Scoped under .new-typo on <html>; non-preview visitors are unaffected. */
-.new-typo body{font-feature-settings:"cv11","ss01","kern";font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.new-typo h1,.new-typo h2,.new-typo h3,.new-typo h4{font-family:'Fraunces','Playfair Display',serif;line-height:1.12;letter-spacing:-.015em;font-weight:600;font-variation-settings:"opsz" 96,"SOFT" 30}
-.new-typo h1{letter-spacing:-.028em;line-height:1.05;font-weight:600}
-.new-typo .hero h1,.new-typo .velys-led-hero h1{font-size:3.4rem;line-height:1.04;letter-spacing:-.03em;font-weight:600}
-.new-typo .page-banner h1{font-size:2.7rem;letter-spacing:-.025em}
-.new-typo .section-title{font-size:2.5rem;letter-spacing:-.02em;line-height:1.1;font-weight:500}
+   Scoped under .new-typo on <html>; non-preview visitors are unaffected.
+   Typography: Plus Jakarta Sans (modern sans-serif, no serif headings)
+   Colors: warm cream surfaces, deeper anchored blue, sage accent
+   Surfaces: borders instead of shadows, pill buttons */
+.new-typo{
+  --primary:#0A4F7A;
+  --primary-dark:#073A5A;
+  --primary-light:#EAEFEF;
+  --accent:#2E7D5E;
+  --accent-gold:#B0824A;
+  --text:#1B1B1F;
+  --text-light:#5C5C62;
+  --bg:#FAF8F3;
+  --bg-light:#F1ECDE;
+  --border:#E5DFD3;
+  --shadow:none;
+  --radius:6px;
+}
+.new-typo body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-feature-settings:"ss01","kern";background:var(--bg);color:var(--text)}
+.new-typo h1,.new-typo h2,.new-typo h3,.new-typo h4{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;letter-spacing:-.02em;line-height:1.1;font-weight:600;color:var(--text)}
+.new-typo h1{letter-spacing:-.035em;line-height:1.04;font-weight:700}
+.new-typo .hero h1,.new-typo .velys-led-hero h1{font-size:3.4rem;letter-spacing:-.035em;line-height:1.04;font-weight:700}
+.new-typo .page-banner h1{font-size:2.6rem;letter-spacing:-.028em;font-weight:600}
+.new-typo .section-title{font-size:2.4rem;letter-spacing:-.024em;line-height:1.1;font-weight:600;color:var(--text)}
 .new-typo .section{padding:88px 0}
 .new-typo .section-subtitle{font-size:1.05rem;max-width:640px;line-height:1.65;color:var(--text-light)}
-.new-typo .hero-eyebrow{font-size:.7rem;letter-spacing:.16em;font-weight:600;padding:6px 14px;text-transform:uppercase}
-.new-typo .welcome{font-size:.72rem;letter-spacing:.2em;font-weight:500}
-.new-typo .about-text h2{font-size:2.3rem;letter-spacing:-.02em;line-height:1.1}
-.new-typo .hero p,.new-typo .velys-led-hero .hero-content>p{font-size:1.15rem;line-height:1.7;opacity:.95;font-weight:380;font-variation-settings:"wght" 380}
+.new-typo .hero-eyebrow{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:.7rem;letter-spacing:.14em;font-weight:500;padding:6px 14px;text-transform:uppercase}
+.new-typo .welcome{font-size:.72rem;letter-spacing:.18em;font-weight:600;color:var(--accent-gold)}
+.new-typo .about-text h2{font-size:2.2rem;letter-spacing:-.025em;color:var(--text)}
+.new-typo .hero p,.new-typo .velys-led-hero .hero-content>p{font-size:1.15rem;line-height:1.65;opacity:.92;font-weight:400}
 .new-typo .content-section p:first-of-type{font-size:1.08rem;line-height:1.7;color:var(--text)}
-.new-typo .stats-bar .stat-value{font-family:'Fraunces',serif;font-size:2.7rem;font-weight:500;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
-.new-typo .stat-item .stat-label{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
-.new-typo .robotic-card h3,.new-typo .facility-card h3,.new-typo .dept-card h3,.new-typo .doctor-card h3{font-size:1.2rem;letter-spacing:-.012em;line-height:1.2;font-weight:500}
-.new-typo .doctor-card .qualification{font-size:.82rem;letter-spacing:.02em}
-.new-typo .btn{font-weight:500;letter-spacing:.01em}
-.new-typo .nav-links>li>a{font-weight:500;font-size:.98rem;letter-spacing:0}
-.new-typo .mega-menu h4{font-family:'Inter',sans-serif;letter-spacing:.14em;font-weight:600}
-.new-typo .review-card p{font-family:'Fraunces',serif;font-size:1.05rem;font-style:italic;font-variation-settings:"opsz" 14,"SOFT" 80;line-height:1.7}
-.new-typo .faq-item summary{font-weight:500;font-size:1rem;letter-spacing:-.005em}
-.new-typo .footer-col h4{font-family:'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;font-weight:600}
+.new-typo .stats-bar{background:var(--text)}
+.new-typo .stats-bar .stat-value{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:700;letter-spacing:-.035em}
+.new-typo .stat-item .stat-label{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.new-typo .robotic-card h3,.new-typo .facility-card h3,.new-typo .dept-card h3,.new-typo .doctor-card h3{font-size:1.15rem;letter-spacing:-.012em;line-height:1.25;font-weight:600;color:var(--text)}
+.new-typo .doctor-card .qualification{font-size:.82rem;letter-spacing:.005em;color:var(--text-light)}
+.new-typo .btn{font-weight:500;letter-spacing:.005em;border-radius:999px;padding:13px 28px;font-size:.92rem}
+.new-typo .btn-outline{border-width:1.5px}
+.new-typo .top-bar .btn{padding:7px 18px;font-size:.82rem}
+.new-typo .nav-links>li>a{font-weight:500;font-size:.95rem;letter-spacing:-.005em;color:var(--text)}
+.new-typo .nav-links>li>a:hover,.new-typo .nav-links>li>a.active{color:var(--primary)}
+.new-typo .mega-menu h4{font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.12em;font-weight:600;font-size:.74rem;color:var(--primary)}
+.new-typo .mega-menu a{font-size:.92rem;color:var(--text)}
+.new-typo .nav-badge{font-weight:600;letter-spacing:.06em}
+.new-typo .review-card p{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-style:normal;line-height:1.65;color:var(--text);font-weight:400}
+.new-typo .review-card .source{font-weight:600;letter-spacing:.005em}
+.new-typo .faq-item summary{font-weight:500;font-size:1rem;letter-spacing:-.005em;background:var(--bg)}
+.new-typo .faq-category{letter-spacing:-.018em;font-weight:600}
+.new-typo .footer-col h4{font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;font-weight:600}
+/* Surfaces: borders replace shadows; cream cards on cream body */
+.new-typo .facility-card,
+.new-typo .dept-card,
+.new-typo .doctor-card,
+.new-typo .review-card,
+.new-typo .plan-card,
+.new-typo .insurance-card,
+.new-typo .robotic-card,
+.new-typo .google-trust-strip,
+.new-typo .google-review-badge{box-shadow:none;border:1px solid var(--border);background:var(--bg)}
+.new-typo .robotic-card{border-top:3px solid var(--primary)}
+.new-typo .faq-item{border-color:var(--border)}
+.new-typo .faq-item summary{background:var(--bg)}
+.new-typo .nabh-badge{background:var(--primary-light);color:var(--primary);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:.74rem}
+.new-typo nav.main-nav{background:var(--bg);box-shadow:0 1px 0 var(--border)}
+.new-typo .top-bar{background:var(--text)}
+.new-typo .robotic-section{background:var(--bg-light)}
+.new-typo h1, .new-typo .hero h1{font-feature-settings:"ss01","ss02","ss03"}
 @media(max-width:768px){
-  .new-typo .hero h1,.new-typo .velys-led-hero h1{font-size:2.2rem;letter-spacing:-.025em}
-  .new-typo .section-title{font-size:1.95rem}
-  .new-typo .page-banner h1{font-size:2.05rem}
-  .new-typo .section{padding:60px 0}
-  .new-typo .stats-bar .stat-value{font-size:2.1rem}
+  .new-typo .hero h1,.new-typo .velys-led-hero h1{font-size:2.2rem;letter-spacing:-.03em}
+  .new-typo .section-title{font-size:1.9rem}
+  .new-typo .page-banner h1{font-size:2rem}
+  .new-typo .section{padding:64px 0}
+  .new-typo .stats-bar .stat-value{font-size:2rem}
+  .new-typo .about-text h2{font-size:1.8rem}
 }
 </style>
 </head>
