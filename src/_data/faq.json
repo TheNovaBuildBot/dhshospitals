@@ -1,5 +1,15 @@
 [
   {
+    "category": "Robotic Knee Replacement & Orthopedics",
+    "items": [
+      { "q": "Does DHS offer robotic knee replacement in Ahmedabad?", "a": "Yes. DHS Multispecialty Hospital performs VELYS robotic-assisted knee replacement from Johnson & Johnson DePuy Synthes, paired with the J&J Attune knee implant. The programme is led by Dr. Hardik M Shah and Dr. Swagat M Shah. Learn more on our VELYS Robotic Knee Replacement page." },
+      { "q": "What is the difference between robotic and conventional knee replacement?", "a": "Conventional knee replacement relies on the surgeon's manual technique and mechanical jigs. Robotic-assisted knee replacement uses real-time anatomical mapping and a robotic arm guided by the surgeon to deliver sub-millimetre cut accuracy, better ligament balance, and tighter alignment with the surgical plan. The surgeon remains in control; the robot improves precision." },
+      { "q": "Do you perform partial (uni-condylar) knee replacement?", "a": "Yes. We perform partial knee replacement — also called uni-condylar knee replacement — for patients whose arthritis is limited to one compartment of the knee. The VELYS robotic platform is particularly suited to partial knee replacement because of its precision in small-volume resections." },
+      { "q": "Who is the best knee replacement surgeon at DHS Hospital Ahmedabad?", "a": "Our knee replacement programme is led by Dr. Hardik M Shah (Medical Director, MS Orthopedic, FRCS Germany) and Dr. Swagat M Shah (MS Ortho, DNB Ortho, FIAAS UK). The team has performed 15,000+ knee surgeries with a 95%+ patient-satisfaction rate across robotic and conventional platforms." },
+      { "q": "Is robotic knee replacement covered by insurance?", "a": "Yes. VELYS robotic knee replacement at DHS is covered by most Indian health insurance policies and TPAs, with cashless processing for empaneled insurers. For a personalised written estimate, call our billing desk at (+91) 9081021444." }
+    ]
+  },
+  {
     "category": "General Information",
     "items": [
       { "q": "What are the visiting hours for patients?", "a": "Visiting hours are from 4PM to 6PM daily. However, for ICU patients, visiting hours are restricted from 5PM to 6PM." },
