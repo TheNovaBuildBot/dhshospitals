@@ -1,12 +1,16 @@
 <div class="top-bar" role="banner">
   <div class="container">
     <div class="top-bar-left">
-      <span>24x7 Emergency: <a href="tel:{{ site.phones.emergency }}" aria-label="Call emergency number {{ site.phones.emergency }}">{{ site.phones.emergency }}</a></span>
-      <span class="email-link">Email: <a href="mailto:{{ site.email }}" aria-label="Email {{ site.email }}">{{ site.email }}</a></span>
+      <span class="top-bar-emergency">
+        <strong>24×7 Emergency:</strong>
+        <a href="tel:{{ site.phones.emergency }}" aria-label="Call emergency number {{ site.phones.emergency }}">{{ site.phones.emergency }}</a>
+      </span>
     </div>
     <div class="top-bar-right">
-      <a href="/appointment/" class="btn btn-accent">Book Appointment</a>
-      <a href="{{ site.virtual_tour_url }}" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#fff;color:#fff" aria-label="Take a virtual tour of the hospital (opens in new tab)">Virtual Tour</a>
+      <a href="/cashless/" class="top-bar-cashless" aria-label="Cashless insurance accepted at DHS Multispecialty Hospital">
+        <span class="cashless-check" aria-hidden="true">✓</span> Cashless Insurance Accepted
+      </a>
+      <span class="email-link">Email: <a href="mailto:{{ site.email }}" aria-label="Email {{ site.email }}">{{ site.email }}</a></span>
     </div>
   </div>
 </div>
@@ -16,67 +20,76 @@
     <a href="/" class="nav-logo" aria-label="{{ site.name }} — go to homepage">
       <img src="/assets/images/logo.png" alt="{{ site.name }}" width="180" height="72" fetchpriority="high">
     </a>
-    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
     <ul class="nav-links" id="nav-menu" role="menubar">
-      <li role="none"><a href="/" role="menuitem" {% if activePage == "home" %}class="active" aria-current="page"{% endif %}>Home</a></li>
       <li role="none">
-        <a href="/departments/" role="menuitem" aria-haspopup="true" {% if activePage == "departments" %}class="active" aria-current="page"{% endif %}>Clinical Departments</a>
-        <div class="mega-menu" role="menu" aria-label="Clinical Departments submenu">
-          <div class="mega-menu-grid">
+        <a href="/departments/" role="menuitem" aria-haspopup="true" {% if activePage == "departments" %}class="active" aria-current="page"{% endif %}>Departments</a>
+        <div class="mega-menu" role="menu" aria-label="Departments submenu">
+          <div class="mega-menu-grid mega-menu-grid-4">
             <div>
-              <h4>Orthopedics &amp; Robotic Surgery</h4>
+              <h4>Joint, Bone &amp; Spine</h4>
               <a href="/departments/robotic-surgery/" role="menuitem" class="nav-highlight"><strong>Robotic Joint Replacement</strong> <span class="nav-badge">NEW</span></a>
               <a href="/velys-robotic-knee-replacement-ahmedabad/" role="menuitem" class="nav-highlight">VELYS Robotic Knee</a>
               <a href="/knee-replacement-ahmedabad/" role="menuitem">Knee Replacement</a>
               <a href="/departments/joint-replacement/" role="menuitem">Joint Replacement</a>
+              <a href="/departments/orthopedics/" role="menuitem">Orthopedics</a>
               <a href="/departments/trauma/" role="menuitem">Trauma</a>
               <a href="/departments/arthroscopy/" role="menuitem">Arthroscopy</a>
               <a href="/departments/spine-surgery/" role="menuitem">Spine Surgery</a>
               <a href="/departments/sports-medicine/" role="menuitem">Sports Medicine</a>
             </div>
             <div>
-              <h4>Specialties</h4>
+              <h4>Heart, Lungs &amp; Internal Medicine</h4>
               <a href="/departments/cardiology/" role="menuitem">Cardiology</a>
-              <a href="/departments/gastro-surgery/" role="menuitem">Gastroenterology</a>
-              <a href="/departments/general-surgery/" role="menuitem">General Surgery</a>
+              <a href="/departments/pulmonary-clinic/" role="menuitem">Pulmonology</a>
               <a href="/departments/internal-medicine/" role="menuitem">Internal Medicine</a>
-              <a href="/departments/cancer-surgery/" role="menuitem">Cancer Care</a>
             </div>
             <div>
-              <h4>More Departments</h4>
-              <a href="/departments/dialysis-unit/" role="menuitem">Nephrology & Dialysis</a>
-              <a href="/departments/neurosurgery/" role="menuitem">Neurosurgery</a>
-              <a href="/departments/cosmetology-plastic-surgery/" role="menuitem">Plastic Surgery</a>
-              <a href="/departments/pulmonary-clinic/" role="menuitem">Pulmonology</a>
+              <h4>Cancer &amp; Surgical Specialties</h4>
+              <a href="/departments/cancer-surgery/" role="menuitem">Cancer Care</a>
+              <a href="/departments/general-surgery/" role="menuitem">General Surgery</a>
+              <a href="/departments/gastro-surgery/" role="menuitem">Gastroenterology</a>
               <a href="/departments/urology-surgery/" role="menuitem">Urology</a>
-              <a href="/departments/icu/" role="menuitem">Critical Care & ICU</a>
+              <a href="/departments/cosmetology-plastic-surgery/" role="menuitem">Plastic Surgery</a>
+              <a href="/departments/vascular-surgery/" role="menuitem">Vascular Surgery</a>
+              <a href="/departments/neurosurgery/" role="menuitem">Neurosurgery</a>
+            </div>
+            <div>
+              <h4>Kidney, Critical Care &amp; Diagnostics</h4>
+              <a href="/departments/dialysis-unit/" role="menuitem">Nephrology &amp; Dialysis</a>
+              <a href="/departments/icu/" role="menuitem">Critical Care &amp; ICU</a>
+              <a href="/departments/pathology-laboratory/" role="menuitem">Pathology</a>
+              <a href="/departments/radiology/" role="menuitem">Radiology</a>
             </div>
           </div>
         </div>
       </li>
-      <li role="none">
-        <a href="/health-check-up/" role="menuitem" aria-haspopup="true" {% if activePage == "health" %}class="active" aria-current="page"{% endif %}>Health Check Up</a>
-        <ul class="dropdown" role="menu" aria-label="Health Check Up submenu">
-          <li role="none"><a href="/before-health-check-up/" role="menuitem">Before Health Checkup</a></li>
-          <li role="none"><a href="/health-check-up/" role="menuitem">Health Checkup Plans</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/news-media/" role="menuitem" {% if activePage == "news" %}class="active" aria-current="page"{% endif %}>News</a></li>
-      <li role="none"><a href="/contact/" role="menuitem" {% if activePage == "contact" %}class="active" aria-current="page"{% endif %}>Contact Us</a></li>
       <li role="none"><a href="/doctors/" role="menuitem" {% if activePage == "doctors" %}class="active" aria-current="page"{% endif %}>Find a Doctor</a></li>
+      <li role="none"><a href="/velys-robotic-knee-replacement-ahmedabad/" class="nav-robotic" role="menuitem" {% if activePage == "robotic" %}class="active" aria-current="page"{% endif %}>Robotic Knee <span class="nav-badge">NEW</span></a></li>
       <li role="none">
-        <a href="/about/" role="menuitem" aria-haspopup="true" {% if activePage == "more" %}class="active"{% endif %}>About DHS</a>
-        <ul class="dropdown" role="menu" aria-label="More links submenu">
-          <li role="none"><a href="/vision-mission/" role="menuitem">Vision & Mission</a></li>
-          <li role="none"><a href="/unique-in-dhs/" role="menuitem">Unique in DHS</a></li>
-          <li role="none"><a href="/testimonials/" role="menuitem">Testimonials</a></li>
-          <li role="none"><a href="/cashless/" role="menuitem">Cashless</a></li>
-          <li role="none"><a href="/blog/" role="menuitem">Blog</a></li>
-          <li role="none"><a href="/gallery/" role="menuitem">Photo Gallery</a></li>
-          <li role="none"><a href="/career/" role="menuitem">Career</a></li>
-          <li role="none"><a href="{{ site.virtual_tour_url }}" target="_blank" rel="noopener" role="menuitem">Virtual Tour</a></li>
+        <a href="/health-check-up/" role="menuitem" aria-haspopup="true" {% if activePage == "health" %}class="active" aria-current="page"{% endif %}>Health Check-ups</a>
+        <ul class="dropdown" role="menu" aria-label="Health Check-ups submenu">
+          <li role="none"><a href="/before-health-check-up/" role="menuitem">Before Your Check-up</a></li>
+          <li role="none"><a href="/health-check-up/" role="menuitem">Check-up Plans</a></li>
         </ul>
       </li>
+      <li role="none">
+        <a href="/about/" role="menuitem" aria-haspopup="true" {% if activePage == "more" %}class="active"{% endif %}>About</a>
+        <ul class="dropdown" role="menu" aria-label="About submenu">
+          <li role="none"><a href="/about/" role="menuitem">About DHS</a></li>
+          <li role="none"><a href="/vision-mission/" role="menuitem">Vision &amp; Mission</a></li>
+          <li role="none"><a href="/unique-in-dhs/" role="menuitem">Unique in DHS</a></li>
+          <li role="none"><a href="/cashless/" role="menuitem">Cashless &amp; Insurance</a></li>
+          <li role="none"><a href="/testimonials/" role="menuitem">Testimonials</a></li>
+          <li role="none"><a href="/news-media/" role="menuitem">News</a></li>
+          <li role="none"><a href="/blog/" role="menuitem">Blog</a></li>
+          <li role="none"><a href="/career/" role="menuitem">Career</a></li>
+        </ul>
+      </li>
+      <li role="none"><a href="/contact/" role="menuitem" {% if activePage == "contact" %}class="active" aria-current="page"{% endif %}>Contact</a></li>
     </ul>
+    <div class="nav-cta">
+      <a href="/appointment/" class="btn btn-accent btn-nav-book">Book Appointment</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
   </div>
 </nav>
