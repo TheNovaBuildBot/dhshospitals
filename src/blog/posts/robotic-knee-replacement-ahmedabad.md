@@ -148,6 +148,11 @@ activePage: "more"
     </details>
 
     <details class="faq-item">
+      <summary>How much does robotic knee replacement cost in Ahmedabad?</summary>
+      <div class="faq-answer">At DHS Multispecialty Hospital, VELYS robotic knee replacement typically costs <strong>₹2,50,000 to ₹3,50,000</strong> for a single knee — an indicative all-inclusive range. The final figure depends on implant choice, room category, and length of stay. For a personalised written estimate before admission, call our billing desk at <a href="tel:+919081021444">+91 9081021444</a>.</div>
+    </details>
+
+    <details class="faq-item">
       <summary>Is VELYS covered by health insurance in India?</summary>
       <div class="faq-answer">Yes. VELYS robotic knee replacement is covered by most Indian health insurance policies and TPAs. DHS Multispecialty Hospital is empaneled with major insurers and offers cashless processing. For a personalised written estimate before admission, call our billing desk at <a href="tel:+919081021444">+91 9081021444</a>.</div>
     </details>
