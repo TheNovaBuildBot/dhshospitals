@@ -1,0 +1,198 @@
+---
+layout: base.njk
+permalink: /orthopedic-surgeon-ahmedabad/
+title: "Orthopedic Surgeons in Ahmedabad — DHS Hospital"
+description: "Experienced orthopedic surgeons in Ahmedabad — Dr. Hardik Shah (FRCS Germany) and Dr. Swagat Shah (FIAAS UK) at DHS Hospital. Knee, hip, spine, sports."
+keywords: "orthopedic surgeon Ahmedabad, best orthopedic surgeon in Ahmedabad, best orthopedic doctor in Ahmedabad, orthopedic doctor Ahmedabad, knee replacement surgeon Ahmedabad, hip replacement surgeon Ahmedabad, Dr Hardik Shah, Dr Swagat Shah, FRCS Germany"
+canonical: "https://www.dhshospitals.com/orthopedic-surgeon-ahmedabad/"
+og_title: "Orthopedic Surgeons in Ahmedabad — DHS Multispecialty Hospital"
+og_description: "Experienced orthopedic surgeons at DHS Hospital, Ahmedabad — Dr. Hardik Shah (FRCS Germany) and Dr. Swagat Shah (FIAAS UK). Knee, hip, spine, sports medicine."
+og_image: "https://www.dhshospitals.com/assets/images/velys/ot-team.jpg"
+og_image_alt: "Orthopedic surgeons at DHS Multispecialty Hospital, Ahmedabad"
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Orthopedic Surgeons in Ahmedabad", url: "/orthopedic-surgeon-ahmedabad/" }
+activePage: "doctors"
+pageSchema: |
+  {
+    "@type": "ItemList",
+    "@id": "https://www.dhshospitals.com/orthopedic-surgeon-ahmedabad/#surgeons",
+    "name": "Orthopedic Surgeons in Ahmedabad — DHS Multispecialty Hospital",
+    "description": "Senior orthopedic surgeons at DHS Multispecialty Hospital, Ahmedabad — joint replacement, robotic-assisted knee, sports medicine, spine and trauma.",
+    "itemListOrder": "https://schema.org/ItemListUnordered",
+    "numberOfItems": 2,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": { "@id": "https://www.dhshospitals.com/doctors/doctor-hardik/#physician" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": { "@id": "https://www.dhshospitals.com/doctors/doctor-swagat/#physician" }
+      }
+    ]
+  }
+---
+
+<div class="page-banner">
+  <div class="container">
+    <h1>Orthopedic Surgeons in Ahmedabad</h1>
+    <div class="breadcrumb"><a href="/">Home</a> / Orthopedic Surgeons in Ahmedabad</div>
+  </div>
+</div>
+
+<section class="content-section">
+  <div class="container" style="max-width:1080px">
+
+    <p style="font-size:1.08rem;line-height:1.75">
+      Looking for an <strong>experienced orthopedic surgeon in Ahmedabad</strong>? The orthopedic team at <strong>DHS Multispecialty Hospital</strong> &mdash; led by <strong>Dr. Hardik Shah</strong> (Medical Director, MS Orthopedic, FRCS Germany) and <strong>Dr. Swagat Shah</strong> (MS Ortho, DNB Ortho, FIAAS UK) &mdash; covers the full spectrum of orthopedic care: <strong>joint replacement</strong> (knee and hip, including <a href="/velys-robotic-knee-replacement-ahmedabad/">VELYS robotic-assisted</a>), <strong>sports medicine</strong>, <strong>arthroscopy</strong>, <strong>spine surgery</strong> and 24/7 <strong>trauma care</strong>. The DHS knee programme alone has successfully performed <strong>2,000+ knee replacement surgeries</strong> (robotic and conventional).
+    </p>
+
+    <p style="font-size:.96rem;color:var(--text-light);line-height:1.7;margin-top:14px">
+      Located at 18 Sunrise Park Society, Vastrapur Lake &mdash; Drive-In Link Road, Gurukul, the DHS orthopedic department is reachable from <strong>Vastrapur, Gurukul, Drive-In, Satellite, Bodakdev, Memnagar, Thaltej, Sabarmati and Naranpura</strong>. Cashless treatment is available with most major Indian health insurers. If you are specifically looking for <a href="/robotic-surgeon-ahmedabad/">robotic knee replacement surgeons in Ahmedabad</a>, the same team performs VELYS robotic surgery at DHS.
+    </p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+      <a href="/appointment/" class="btn btn-accent">Book an Orthopedic Consultation</a>
+      <a href="tel:{{ site.phones.emergency }}" class="btn btn-outline">Call {{ site.phones.emergency }}</a>
+    </div>
+
+    <h2 style="color:var(--primary);margin-top:48px">Meet the Orthopedic Surgeons</h2>
+
+    <div class="surgeons-grid">
+      {% for slug in ["doctor-hardik", "doctor-swagat"] %}
+      {% for doc in doctors %}{% if doc.slug == slug %}
+      <article class="surgeon-card">
+        <a href="/doctors/{{ doc.slug }}/" style="text-decoration:none;color:inherit">
+          <img src="{{ doc.image }}" alt="{{ doc.name }} — Orthopedic Surgeon at DHS Multispecialty Hospital, Ahmedabad" loading="lazy" width="320" height="380">
+        </a>
+        <div class="surgeon-body">
+          <h3><a href="/doctors/{{ doc.slug }}/">{{ doc.name }}</a></h3>
+          <div class="surgeon-cred">{{ doc.qualification }}</div>
+          {% if doc.role %}<div class="surgeon-role">{{ doc.role }}</div>{% endif %}
+          {% if doc.about %}<p>{{ doc.about }}</p>{% endif %}
+
+          <div class="surgeon-tags">
+            <span>Knee Replacement</span>
+            <span>Hip Replacement</span>
+            <span>VELYS Robotic Knee</span>
+            <span>Arthroscopy</span>
+            <span>Sports Medicine</span>
+            <span>Trauma</span>
+          </div>
+
+          <div class="surgeon-cta">
+            <a href="/doctors/{{ doc.slug }}/" class="btn btn-outline">View full profile</a>
+            <a href="/appointment/" class="btn btn-primary">Book consultation</a>
+          </div>
+        </div>
+      </article>
+      {% endif %}{% endfor %}
+      {% endfor %}
+    </div>
+
+    <h2 style="color:var(--primary);margin-top:48px">What our orthopedic patients can expect</h2>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <h3>Verified surgical training</h3>
+        <p>Dr. Hardik Shah trained in orthopedic surgery in India and earned the <strong>FRCS (Germany)</strong> fellowship; Dr. Swagat Shah holds the <strong>FIAAS (UK)</strong> fellowship in arthroscopy and arthroplasty. Both credentials sit at the senior end of orthopedic specialisation in India.</p>
+      </div>
+      <div class="proof-card">
+        <h3>Full orthopedic spectrum</h3>
+        <p>One team, one hospital, all orthopedic sub-specialities &mdash; joint replacement, robotic-assisted knee, sports medicine, arthroscopy, spine surgery, trauma and emergency orthopedic care.</p>
+      </div>
+      <div class="proof-card">
+        <h3>2,000+ knee replacements performed</h3>
+        <p>The DHS knee programme has performed <strong>2,000+ knee replacement surgeries</strong> across robotic and conventional techniques, with high patient satisfaction.</p>
+      </div>
+      <div class="proof-card">
+        <h3>NABH-accredited hospital</h3>
+        <p>NABH-accredited, supported by 24/7 emergency, ICU, anaesthesia, radiology, pathology and physiotherapy &mdash; everything a complex orthopedic case needs in one building.</p>
+      </div>
+    </div>
+
+    <h2 style="color:var(--primary);margin-top:48px">Orthopedic procedures performed at DHS</h2>
+    <ul class="services-list" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+      <li><a href="/knee-replacement-ahmedabad/">Knee Replacement (Total, Partial, Revision)</a></li>
+      <li><a href="/velys-robotic-knee-replacement-ahmedabad/">VELYS Robotic Knee Replacement</a></li>
+      <li>Total &amp; Revision Hip Replacement</li>
+      <li>Shoulder Replacement (Anatomical &amp; Reverse)</li>
+      <li>Elbow &amp; Small Joint Replacement</li>
+      <li><a href="/departments/spine-surgery/">Spine Surgery (Disc, Fusion, Minimally Invasive)</a></li>
+      <li><a href="/departments/arthroscopy/">Arthroscopy (Knee, Shoulder, Hip)</a></li>
+      <li>ACL / PCL / Meniscus Reconstruction</li>
+      <li><a href="/departments/sports-medicine/">Sports Medicine &amp; Injury Rehabilitation</a></li>
+      <li><a href="/departments/trauma/">Trauma &amp; Fracture Management (24/7)</a></li>
+      <li>Joint Preservation Surgery</li>
+      <li>Cashless Insurance-Backed Surgery</li>
+    </ul>
+
+    <h2 style="color:var(--primary);margin-top:48px">Choosing an orthopedic surgeon in Ahmedabad &mdash; FAQs</h2>
+
+    {% set faqs = [
+      {q: "Who is the best orthopedic surgeon in Ahmedabad?", a: "There is no single 'best' orthopedic surgeon; the right surgeon depends on your specific condition (knee vs hip vs spine vs sports injury), the surgeon's fellowship training, hospital infrastructure, and your comfort after consultation. At DHS Multispecialty Hospital, Dr. Hardik Shah (Medical Director, MS Orthopedic, FRCS Germany) and Dr. Swagat Shah (MS Ortho, DNB Ortho, FIAAS UK) lead a senior orthopedic team that has successfully performed 2,000+ knee replacement surgeries (robotic and conventional). We recommend booking a face-to-face consultation before deciding."},
+      {q: "Who is the best orthopedic doctor in Ahmedabad?", a: "In India, the terms 'orthopedic doctor' and 'orthopedic surgeon' are used interchangeably — both refer to a medical doctor specialised in musculoskeletal conditions (bones, joints, ligaments, muscles). What matters more than the label is the qualification (MS Orthopedic or DNB Orthopedic plus a fellowship), the hospital they operate at, and their experience with your specific condition. At DHS Hospital, the orthopedic team is led by Dr. Hardik Shah (FRCS Germany) and Dr. Swagat Shah (FIAAS UK)."},
+      {q: "What's the difference between an orthopedic surgeon and an orthopedic doctor?", a: "There is no medical difference. Both refer to a doctor who specialises in diagnosing and treating problems of the bones, joints, ligaments, tendons and muscles. The label varies by region and patient preference. In India, orthopedic specialists are typically MS Orthopedic or DNB Orthopedic by qualification, often with an additional fellowship (FRCS, FIAAS, MCh, etc.)."},
+      {q: "What qualifications should I look for in an orthopedic surgeon?", a: "The base medical qualification is MS Orthopedic or DNB Orthopedic (5+ years of post-graduate training after MBBS). For complex surgery — joint replacement, robotic surgery, arthroscopy, spine — look for a senior fellowship (FRCS Germany, FIAAS UK, FAGE, MCh, or equivalent), plus documented experience with the specific procedure you need."},
+      {q: "Where is the orthopedic department at DHS Hospital located?", a: "DHS Multispecialty Hospital is at 18 Sunrise Park Society, Vastrapur Lake — Drive-In Link Road, Gurukul, Ahmedabad 380052. We are reachable from Vastrapur, Gurukul, Drive-In, Satellite, Bodakdev, Memnagar, Thaltej, Sabarmati and Naranpura within minutes, and from SG Highway with a short drive."},
+      {q: "Do the orthopedic surgeons at DHS treat sports injuries, trauma and arthritis?", a: "Yes. The DHS orthopedic team treats the full range of musculoskeletal conditions — knee and hip arthritis (medication, injections, replacement surgery), sports injuries (ACL/PCL/meniscus reconstruction, rehabilitation), road-accident trauma (24/7 emergency, fracture management), spine pain (conservative care and surgical interventions), and shoulder problems (replacement, rotator cuff repair)."},
+      {q: "How do I book a consultation with an orthopedic surgeon at DHS?", a: "Book online via the appointment page, call +91 9081610444, or visit the reception in Gurukul. Bring previous X-rays / MRIs / CT reports (if any), a list of current medications, and your insurance card. No referral is required."},
+      {q: "Is orthopedic surgery covered by insurance at DHS?", a: "Yes. DHS Multispecialty Hospital is empaneled with most major Indian health insurance providers and TPAs, with cashless processing for empaneled insurers. For a personalised written estimate before admission, call our billing desk at +91 9081021444."}
+    ] %}
+
+    {% for item in faqs %}
+    <details class="faq-item" {% if loop.first %}open{% endif %}>
+      <summary>{{ item.q }}</summary>
+      <div class="faq-answer">{{ item.a }}</div>
+    </details>
+    {% endfor %}
+
+    <div style="margin-top:48px;padding:30px;text-align:center;background:var(--primary-light);border-radius:var(--radius)">
+      <h3 style="color:var(--primary);margin-bottom:10px">Consult an orthopedic surgeon at DHS Hospital, Ahmedabad</h3>
+      <p style="margin-bottom:18px;color:var(--text-light)">Book a face-to-face consultation with Dr. Hardik Shah or Dr. Swagat Shah to find the right treatment for your knee, hip, spine or sports injury.</p>
+      <a href="/appointment/" class="btn btn-primary">Book Appointment</a>
+      <a href="tel:{{ site.phones.emergency }}" class="btn btn-outline" style="margin-left:10px">Call {{ site.phones.emergency }}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.surgeons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:24px;margin-top:18px}
+.surgeon-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.surgeon-card>a img{width:100%;height:auto;display:block}
+.surgeon-body{padding:20px 22px 22px}
+.surgeon-body h3{font-size:1.18rem;margin:0 0 4px}
+.surgeon-body h3 a{color:var(--primary);text-decoration:none}
+.surgeon-body h3 a:hover{text-decoration:underline}
+.surgeon-cred{font-size:.88rem;color:var(--text-light);margin-bottom:4px;font-weight:600}
+.surgeon-role{font-size:.85rem;color:var(--accent-gold);margin-bottom:8px;font-weight:600}
+.surgeon-body p{font-size:.92rem;line-height:1.6;color:var(--text-light);margin:8px 0 14px}
+.surgeon-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
+.surgeon-tags span{font-size:.74rem;background:var(--primary-light);color:var(--primary);padding:4px 9px;border-radius:12px;font-weight:600}
+.surgeon-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.surgeon-cta .btn{flex:1 1 auto;font-size:.85rem;padding:8px 14px;text-align:center}
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:14px}
+.proof-card{background:var(--bg-light);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px}
+.proof-card h3{font-size:1rem;color:var(--primary);margin-bottom:8px;font-family:'Inter',sans-serif}
+.proof-card p{font-size:.9rem;line-height:1.55;color:var(--text-light);margin:0}
+@media(max-width:600px){.surgeons-grid{grid-template-columns:1fr}.surgeon-cta .btn{flex:1 1 100%}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Who is the best orthopedic surgeon in Ahmedabad?","acceptedAnswer":{"@type":"Answer","text":"There is no single 'best' orthopedic surgeon; the right surgeon depends on your specific condition, fellowship training, hospital infrastructure, and your comfort after consultation. At DHS Multispecialty Hospital, Dr. Hardik Shah (FRCS Germany) and Dr. Swagat Shah (FIAAS UK) lead a senior orthopedic team that has successfully performed 2,000+ knee replacement surgeries (robotic and conventional). We recommend booking a face-to-face consultation before deciding."}},
+    {"@type":"Question","name":"Who is the best orthopedic doctor in Ahmedabad?","acceptedAnswer":{"@type":"Answer","text":"In India, 'orthopedic doctor' and 'orthopedic surgeon' are used interchangeably — both refer to a medical doctor specialised in musculoskeletal conditions. At DHS Hospital, the orthopedic team is led by Dr. Hardik Shah (FRCS Germany) and Dr. Swagat Shah (FIAAS UK)."}},
+    {"@type":"Question","name":"What is the difference between an orthopedic surgeon and an orthopedic doctor?","acceptedAnswer":{"@type":"Answer","text":"There is no medical difference. Both refer to a doctor who specialises in diagnosing and treating problems of the bones, joints, ligaments, tendons and muscles. In India, orthopedic specialists are typically MS Orthopedic or DNB Orthopedic by qualification, often with an additional fellowship."}},
+    {"@type":"Question","name":"What qualifications should I look for in an orthopedic surgeon?","acceptedAnswer":{"@type":"Answer","text":"The base medical qualification is MS Orthopedic or DNB Orthopedic (5+ years of post-graduate training after MBBS). For complex surgery — joint replacement, robotic surgery, arthroscopy, spine — look for a senior fellowship (FRCS Germany, FIAAS UK, FAGE, MCh, or equivalent), plus documented experience with the specific procedure you need."}},
+    {"@type":"Question","name":"Where is the orthopedic department at DHS Hospital located?","acceptedAnswer":{"@type":"Answer","text":"DHS Multispecialty Hospital is at 18 Sunrise Park Society, Vastrapur Lake — Drive-In Link Road, Gurukul, Ahmedabad 380052. We are reachable from Vastrapur, Gurukul, Drive-In, Satellite, Bodakdev, Memnagar, Thaltej, Sabarmati and Naranpura within minutes."}},
+    {"@type":"Question","name":"Do the orthopedic surgeons at DHS treat sports injuries, trauma and arthritis?","acceptedAnswer":{"@type":"Answer","text":"Yes. The DHS orthopedic team treats the full range of musculoskeletal conditions — knee and hip arthritis, sports injuries (ACL/PCL/meniscus reconstruction), road-accident trauma (24/7 emergency, fracture management), spine pain, and shoulder problems."}},
+    {"@type":"Question","name":"How do I book a consultation with an orthopedic surgeon at DHS?","acceptedAnswer":{"@type":"Answer","text":"Book online via the appointment page, call +91 9081610444, or visit the reception in Gurukul. Bring previous X-rays / MRIs / CT reports (if any), a list of current medications, and your insurance card. No referral is required."}},
+    {"@type":"Question","name":"Is orthopedic surgery covered by insurance at DHS?","acceptedAnswer":{"@type":"Answer","text":"Yes. DHS Multispecialty Hospital is empaneled with most major Indian health insurance providers and TPAs, with cashless processing for empaneled insurers."}}
+  ]
+}
+</script>
