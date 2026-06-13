@@ -36,7 +36,7 @@ activePage: "doctors"
 
 <div class="page-banner">
   <div class="container">
-    <h1>{{ doc.name }}</h1>
+    <h1>{{ doc.name }}{% if doc.seo_h1_suffix %} — {{ doc.seo_h1_suffix }}{% endif %}</h1>
     <div class="breadcrumb"><a href="/">Home</a> / <a href="/doctors/">Doctors</a> / {{ doc.name }}</div>
   </div>
 </div>
