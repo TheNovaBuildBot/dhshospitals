@@ -147,6 +147,41 @@
       ]
     },
     {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.name }}",
+      "alternateName": ["DHS Hospital", "DHS Hospitals", "DHS Multispeciality Hospital"],
+      "url": "{{ site.url }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/assets/images/logo.png",
+        "width": 400,
+        "height": 100
+      },
+      "telephone": "{{ site.phones.emergency }}",
+      "email": "{{ site.email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.address.line1 }}, {{ site.address.line2 }}",
+        "addressLocality": "{{ site.address.city }}",
+        "addressRegion": "{{ site.address.state }}",
+        "postalCode": "{{ site.address.pincode }}",
+        "addressCountry": "IN"
+      },
+      "foundingDate": "2018",
+      "legalName": "{{ site.legal_entity }}",
+      "sameAs": [
+        "https://www.google.com/maps?cid={{ site.google_place_cid }}",
+        "https://www.google.com/maps/place/DHS+Multispecialty+Hospital/@23.043011,72.5261337,17z",
+        "https://www.justdial.com/Ahmedabad/DHS-Multispeciality-Hospital-Vastrapur-Lake-Drive-In-Road-Vastrapur/079P26844444NRN",
+        "{{ site.social.facebook }}",
+        "{{ site.social.instagram }}",
+        "{{ site.social.linkedin }}",
+        "{{ site.social.twitter }}",
+        "https://drhardikshahortho.com/"
+      ]
+    },
+    {
       "@type": "WebSite",
       "@id": "{{ site.url }}/#website",
       "url": "{{ site.url }}/",

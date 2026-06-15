@@ -9,6 +9,69 @@ og_description: "NABH-accredited multispecialty hospital in Ahmedabad. 15+ speci
 activePage: "home"
 extra_head: true
 preload_hero: true
+pageSchema: |
+  {
+    "@type": "FAQPage",
+    "@id": "https://www.dhshospitals.com/#aeo-faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What specialties does DHS Multispecialty Hospital offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DHS Multispecialty Hospital offers 15+ specialties including Orthopedics & Joint Replacement, Cardiology, Neurosurgery, Oncology, Gastroenterology, Urology, Pulmonology, Plastic & Reconstructive Surgery, Critical Care (ICU), General Surgery, Internal Medicine, ENT, Ophthalmology, Nephrology, and Endocrinology. The hospital operates 24/7 with emergency and ICU facilities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is DHS Hospital NABH accredited?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. DHS Multispecialty Hospital is NABH (National Accreditation Board for Hospitals & Healthcare Providers) accredited — the gold standard for hospital quality and patient safety in India. NABH accreditation means the hospital is independently audited for clinical protocols, infection control, patient rights, and continuous quality improvement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does DHS Hospital offer robotic knee replacement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. DHS Multispecialty Hospital offers VELYS Robotic-Assisted Knee Replacement from Johnson & Johnson DePuy Synthes. The programme requires no pre-op CT scan and delivers sub-millimetre alignment accuracy. It is led by Dr. Hardik M Shah (FRCS Germany) and Dr. Swagat M Shah (FIAAS UK), who have collectively performed 2,000+ knee replacement surgeries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What health checkup packages are available at DHS Hospital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DHS offers seven health checkup packages: DHS Advance Screening, DHS Preventive, DHS Comprehensive, DHS Executive, DHS Executive Plus, DHS Basic Cardiac, and DHS Advance Cardiac. Packages cover blood tests, liver & kidney function, thyroid, cardiac profile (ECG, 2D Echo, TMT), cancer markers, and radiology. All include physician consultation. Call +91 9081610444 or visit dhshospitals.com/health-check-up/ to book."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does DHS Hospital accept cashless insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. DHS Multispecialty Hospital is empaneled with all major health insurance companies and TPAs in India, offering cashless hospitalisation for eligible policyholders — including for knee replacement, cancer treatment, and cardiac procedures. Contact the billing desk at +91 9081021444 for pre-authorisation queries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is DHS Multispecialty Hospital located in Ahmedabad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DHS Multispecialty Hospital is located at 18 Sunrise Park Society, Vastrapur Lake — Drive-in Link Road, Gurukul, Ahmedabad 380052. It is accessible from Vastrapur, Satellite, Bodakdev, Drive-In Road, and the SG Highway corridor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the emergency and OPD timings at DHS Hospital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DHS Multispecialty Hospital's Emergency Department and ICU operate 24/7. OPD timings vary by department — call +91 9081610444 for current schedules. Visiting hours for inpatients are 4 PM to 6 PM daily; ICU visiting is 5 PM to 6 PM."
+        }
+      }
+    ]
+  }
 ---
 
 <section class="hero velys-led-hero">
@@ -224,19 +287,49 @@ preload_hero: true
   </div>
 </section>
 
-<section class="section faq-section" style="background:var(--bg-light)">
+<section class="section aeo-faq-section" id="faq" style="background:var(--bg-light)">
   <div class="container">
     <h2 class="section-title">Frequently Asked Questions</h2>
-    <p class="section-subtitle">Find answers to common questions about DHS Multispecialty Hospital.</p>
-    {% for section in faq %}
-    <h3 class="faq-category">{{ section.category }}</h3>
-    {% for item in section.items %}
+    <p class="section-subtitle">Everything you need to know about DHS Multispecialty Hospital, Ahmedabad — answered clearly.</p>
+
     <details class="faq-item">
-      <summary>{{ item.q }}</summary>
-      <div class="faq-answer">{{ item.a }}</div>
+      <summary>What specialties does DHS Multispecialty Hospital offer?</summary>
+      <div class="faq-answer">DHS Multispecialty Hospital offers 15+ specialties under one roof including Orthopedics &amp; Joint Replacement, Cardiology, Neurosurgery, Oncology (Cancer Care), Gastroenterology, Urology, Pulmonology, Plastic &amp; Reconstructive Surgery, Critical Care (ICU), General Surgery, Internal Medicine, ENT, Ophthalmology, Nephrology, and Endocrinology. The hospital operates 24/7 with emergency and ICU facilities.</div>
     </details>
-    {% endfor %}
-    {% endfor %}
+
+    <details class="faq-item">
+      <summary>Is DHS Hospital NABH accredited?</summary>
+      <div class="faq-answer">Yes. DHS Multispecialty Hospital is NABH (National Accreditation Board for Hospitals &amp; Healthcare Providers) accredited — the gold standard for hospital quality and patient safety in India. NABH accreditation means the hospital is independently audited for clinical protocols, infection control, patient rights, and continuous quality improvement.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does DHS Hospital offer robotic knee replacement?</summary>
+      <div class="faq-answer">Yes. DHS Multispecialty Hospital is one of the few hospitals in Ahmedabad to offer VELYS Robotic-Assisted Knee Replacement — an imageless robotic platform from Johnson &amp; Johnson DePuy Synthes paired with the J&amp;J Attune knee implant. The programme requires no pre-op CT scan and delivers sub-millimetre alignment accuracy. It is led by Dr. Hardik M Shah (FRCS Germany) and Dr. Swagat M Shah (FIAAS UK), who have collectively performed 2,000+ knee replacement surgeries.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What health checkup packages are available at DHS Hospital?</summary>
+      <div class="faq-answer">DHS offers seven health checkup packages tailored to different needs: DHS Advance Screening (basic screening with blood, liver, kidney, cardiac, and radiology tests), DHS Preventive (adds thyroid, HbA1c, vitamins, and PFT), DHS Comprehensive (adds USG Abdomen, T3/T4, Vitamin D, and orthopedic consultation), DHS Executive (adds 2D Echo, TMT, cancer markers PSA/CA-125), DHS Executive Plus (the most comprehensive — adds anemia profile, cardiac biomarkers like hs-CRP, Homocysteine, ApoLipoprotein), DHS Basic Cardiac, and DHS Advance Cardiac. All packages include physician consultation and report review. Call +91 9081610444 or <a href="/health-check-up/">view all packages</a> to book.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does DHS Hospital accept cashless insurance?</summary>
+      <div class="faq-answer">Yes. DHS Multispecialty Hospital is empaneled with all major health insurance companies and TPAs in India, offering cashless hospitalisation for eligible policyholders. This includes coverage for surgeries such as knee replacement, cancer treatment, cardiac procedures, and more. For cashless eligibility or a pre-authorisation query, contact our billing desk at +91 9081021444 or visit our <a href="/cashless/">cashless insurance page</a>.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Where is DHS Multispecialty Hospital located in Ahmedabad?</summary>
+      <div class="faq-answer">DHS Multispecialty Hospital is located at 18 Sunrise Park Society, Vastrapur Lake — Drive-in Link Road, Gurukul, Ahmedabad 380052. It is conveniently accessible from Vastrapur, Satellite, Bodakdev, Drive-In Road, and the SG Highway corridor. Free patient parking is available. <a href="/contact/">Get directions</a>.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What are the emergency and OPD timings at DHS Hospital?</summary>
+      <div class="faq-answer">DHS Multispecialty Hospital's Emergency Department and ICU operate 24 hours a day, 7 days a week. OPD timings vary by department and consultant — please call +91 9081610444 or check our <a href="/appointment/">appointment page</a> for current schedules. Visiting hours for inpatients are 4 PM to 6 PM daily; ICU visiting is 5 PM to 6 PM.</div>
+    </details>
+
+    <div style="margin-top:30px;padding:20px 24px;background:#fff;border-radius:var(--radius);border-left:4px solid var(--primary);box-shadow:var(--shadow)">
+      <p style="margin:0;font-size:.95rem;color:var(--text-light)">Have more questions? <a href="/contact/">Contact our team</a> or call us at <a href="tel:+919081610444">+91 9081610444</a> — we're available 24/7.</p>
+    </div>
   </div>
 </section>
 
