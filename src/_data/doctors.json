@@ -84,14 +84,36 @@
     "name": "Dr. Chirag Thakkar",
     "qualification": "MBBS, MS General Surgery, MRCS (UK)",
     "specialty": "Gastro Surgery / General Surgery",
+    "role": "Consultant GI, Laparoscopic & Bariatric Surgeon",
     "languages": "English, Hindi, Gujarati",
     "image": "/assets/images/doctors/dr-chirag.jpg",
     "seo_title": "Dr. Chirag Thakkar — Laparoscopic & GI Surgeon in Ahmedabad | DHS Hospital",
-    "seo_description": "Dr. Chirag Thakkar is a GI & laparoscopic surgeon at DHS Hospital, Ahmedabad. Expert in GERD, hernia & obesity surgery. Book a consultation today.",
+    "seo_description": "Dr. Chirag Thakkar — Laparoscopic & GI Surgeon at DHS Multispecialty Hospital, Ahmedabad. Expert in GERD, hernia, obesity & GI cancer surgery. MRCS (UK). Book an appointment online.",
     "seo_h1_suffix": "Laparoscopic & GI Surgeon in Ahmedabad",
-    "about": "Dr Chirag Thakkar is a consultant Gastro-Intestinal, Advanced Laparoscopic and Obesity Surgeon. He is adequately trained and equipped to give the best medical advice and services for patients with gastro-intestinal problems as well as those requiring abdominal, laparoscopic surgeries, weight loss and hernia surgeries.",
-    "about_extended": "He has special interest in treatment of gastro-esophageal reflux disease (GERD), esophageal motility disorders including achalasia cardia, weight loss and hernia surgery as well as treatment of esophageal and stomach cancers.",
-    "specializations": []
+    "about": "Dr. Chirag Thakkar is a highly accomplished laparoscopic surgeon and leading GI surgeon in Ahmedabad, practising at the NABH-accredited DHS Multispecialty Hospital in Gujarat. With prestigious qualifications including MBBS, MS General Surgery, and the internationally recognised MRCS (UK) — Membership of the Royal Colleges of Surgeons (UK) — Dr. Thakkar brings world-class expertise to his patients. The MRCS qualification represents one of the most respected surgical credentials globally, demonstrating his commitment to maintaining the highest international standards in surgical practice. His comprehensive expertise spans advanced laparoscopic surgery, gastro-intestinal surgery, and specialised obesity and bariatric procedures, making him a trusted choice for complex surgical interventions in Ahmedabad and across Gujarat.",
+    "about_extended": "Dr. Thakkar's surgical excellence is evident in his exceptional patient outcomes across diverse procedures — from minimally invasive GERD treatment to complex cancer surgeries. His procedural expertise encompasses advanced antireflux surgery for gastro-oesophageal reflux disease, comprehensive hernia repair including laparoscopic inguinal, ventral, and hiatal hernia repairs, and specialised treatments for oesophageal motility disorders such as Heller myotomy for achalasia cardia. As a leading bariatric surgeon in Ahmedabad, he performs transformative procedures including sleeve gastrectomy and gastric bypass surgery, helping patients achieve sustainable weight loss and improved metabolic health outcomes. Dr. Thakkar also specialises in oncological surgeries for oesophageal and stomach cancers, combining technical precision with compassionate care. Fluent in English, Hindi, and Gujarati, he ensures clear communication with every patient — embodying a patient-first philosophy that prioritises individual needs, comfort, and comprehensive surgical support throughout the entire treatment journey.",
+    "specializations": [
+      {
+        "name": "Laparoscopic & Advanced GI Surgery",
+        "desc": "Dr. Thakkar specialises in advanced laparoscopic procedures for a wide range of gastrointestinal conditions, utilising minimally invasive techniques that result in smaller incisions, reduced post-operative pain, and significantly faster recovery times. His expertise in cutting-edge surgical technology ensures patients receive the most effective treatment with minimal disruption to their daily lives."
+      },
+      {
+        "name": "GERD & Antireflux Surgery",
+        "desc": "As a leading GERD specialist in Ahmedabad, Dr. Thakkar performs laparoscopic Nissen fundoplication and hiatal hernia repairs. His surgical approach provides long-term relief from chronic heartburn and acid reflux — helping patients regain their quality of life without lifelong dependence on medications."
+      },
+      {
+        "name": "Hernia Surgery",
+        "desc": "Dr. Thakkar offers comprehensive hernia repair, including laparoscopic treatment for inguinal, ventral, and hiatal hernias. Using advanced mesh repair techniques and minimally invasive approaches, he achieves excellent outcomes with low recurrence rates, enabling patients to return to normal activities quickly and confidently."
+      },
+      {
+        "name": "Obesity & Bariatric Surgery",
+        "desc": "Dr. Thakkar performs advanced bariatric procedures including sleeve gastrectomy and gastric bypass surgery. His comprehensive approach to metabolic surgery focuses on sustainable weight loss and the improvement of obesity-related health conditions, supported by thorough pre- and post-operative care and nutritional counselling."
+      },
+      {
+        "name": "Esophageal & Stomach Cancer Surgery",
+        "desc": "Dr. Thakkar provides expert oncological surgical care for oesophageal and stomach cancers, performing complex procedures such as oesophagectomy and gastrectomy. Working within DHS Hospital's multidisciplinary oncology team in Ahmedabad, he ensures comprehensive cancer treatment focused on complete tumour removal while preserving maximum function and quality of life."
+      }
+    ]
   },
   {
     "slug": "doctor-darshil",

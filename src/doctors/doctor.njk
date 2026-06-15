@@ -23,13 +23,47 @@ eleventyComputed:
       "name": "{{ doc.name }}",
       "image": "https://www.dhshospitals.com{{ doc.image }}",
       "url": "https://www.dhshospitals.com/doctors/{{ doc.slug }}/",
+      "description": "{{ doc.seo_description or (doc.name + ' — ' + doc.specialty + ' specialist at DHS Multispecialty Hospital, Ahmedabad.') }}",
       "medicalSpecialty": "{{ doc.specialty }}",
       "knowsLanguage": "{{ doc.languages or 'English, Hindi, Gujarati' }}",
-      "worksFor": { "@id": "https://www.dhshospitals.com/#hospital" },
+      "worksFor": {
+        "@type": "Hospital",
+        "@id": "https://www.dhshospitals.com/#hospital",
+        "name": "DHS Multispecialty Hospital",
+        "url": "https://www.dhshospitals.com/",
+        "telephone": "+91 9081610444",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "18 Sunrise Park Society, Vastrapur Lake - Drive in Link Road",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "postalCode": "380052",
+          "addressCountry": "IN"
+        }
+      },
       "memberOf": { "@id": "https://www.dhshospitals.com/#hospital" },
       "hasCredential": "{{ doc.qualification }}",
       "jobTitle": "{{ doc.role or doc.specialty + ' Specialist' }}",
-      "areaServed": { "@type": "City", "name": "Ahmedabad" }
+      "telephone": "+91 9081610444",
+      "email": "info@dhshospitals.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 Sunrise Park Society, Vastrapur Lake - Drive in Link Road",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "380052",
+        "addressCountry": "IN"
+      },
+      "areaServed": { "@type": "City", "name": "Ahmedabad" },
+      "availableService": [
+        {% if doc.specializations and doc.specializations.length %}
+        {% for spec in doc.specializations %}
+        { "@type": "MedicalProcedure", "name": "{{ spec.name }}" }{% if not loop.last %},{% endif %}
+        {% endfor %}
+        {% else %}
+        { "@type": "MedicalProcedure", "name": "{{ doc.specialty }}" }
+        {% endif %}
+      ]
     }
 activePage: "doctors"
 ---
