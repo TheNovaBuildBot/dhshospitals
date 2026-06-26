@@ -82,6 +82,14 @@ activePage: "departments"
     </div>
     {% endif %}
 
+    {% if dept.slug == "robotic-surgery" %}
+    <div style="margin-top:50px;padding:32px 36px;background:#f0f7ff;border-left:5px solid var(--primary);border-radius:var(--radius)">
+      <h3 style="color:var(--primary);margin-bottom:12px">Led by Ahmedabad's Foremost Robotic Joint Replacement Expert</h3>
+      <p style="color:var(--text-light);margin-bottom:16px">Our Robotic Joint Replacement programme is spearheaded by <strong><a href="https://www.drhardikshahortho.com/" rel="noopener" style="color:var(--primary)">Dr. Hardik Shah</a></strong>, one of Gujarat's most experienced orthopedic surgeons specialising in VELYS robotic knee and hip replacement. With thousands of successful procedures and rigorous training on the VELYS Robotic System, Dr. Shah combines precision technology with patient-centred care to deliver outstanding outcomes.</p>
+      <a href="https://www.drhardikshahortho.com/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.92rem">View Dr. Hardik Shah's Full Profile &rarr;</a>
+    </div>
+    {% endif %}
+
     {% if deptFaqs[dept.slug] %}
     <div class="faq-section" style="margin-top:50px">
       <h2 style="color:var(--primary);margin-bottom:20px">{{ dept.name }} — Frequently Asked Questions</h2>
