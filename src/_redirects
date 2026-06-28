@@ -171,3 +171,7 @@ https://dhshospitals.com/* https://www.dhshospitals.com/:splat 301!
 /need-help/ /contact/  301
 /blog-details  /blog/  301
 /blog-details/ /blog/  301
+
+# /velys-... renamed to /robotic-knee-replacement-ahmedabad/ (consolidation for SEO)
+/velys-robotic-knee-replacement-ahmedabad/  /robotic-knee-replacement-ahmedabad/  301
+/velys-robotic-knee-replacement-ahmedabad   /robotic-knee-replacement-ahmedabad/  301

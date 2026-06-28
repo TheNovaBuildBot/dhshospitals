@@ -30,7 +30,7 @@ pageSchema: |
     "about": [
       { "@type": "MedicalCondition", "name": "Knee Osteoarthritis" },
       { "@type": "MedicalCondition", "name": "Joint Pain" },
-      { "@type": "MedicalProcedure", "name": "VELYS Robotic Knee Replacement", "url": "https://www.dhshospitals.com/velys-robotic-knee-replacement-ahmedabad/" },
+      { "@type": "MedicalProcedure", "name": "VELYS Robotic Knee Replacement", "url": "https://www.dhshospitals.com/robotic-knee-replacement-ahmedabad/" },
       { "@type": "MedicalTherapy", "name": "Physiotherapy" }
     ],
     "spatialCoverage": [
@@ -125,7 +125,7 @@ activePage: "more"
       <li><strong>Less pain, smaller incisions.</strong> Precision cuts mean less trauma to surrounding soft tissue.</li>
     </ul>
 
-    <p>With over <strong>2,000 knee replacement surgeries</strong> performed at DHS (robotic and conventional), I can confidently say that robotic assistance has significantly improved both surgical outcomes and patient satisfaction. <a href="/velys-robotic-knee-replacement-ahmedabad/">Read our full VELYS guide</a> for more detail on how the technology works.</p>
+    <p>With over <strong>2,000 knee replacement surgeries</strong> performed at DHS (robotic and conventional), I can confidently say that robotic assistance has significantly improved both surgical outcomes and patient satisfaction. <a href="/robotic-knee-replacement-ahmedabad/">Read our full VELYS guide</a> for more detail on how the technology works.</p>
 
     <h2>When Should You Book Your Appointment?</h2>
 
@@ -140,7 +140,7 @@ activePage: "more"
     <div style="margin-top:28px;padding:24px;background:var(--primary-light);border-radius:var(--radius)">
       <p style="margin-bottom:14px;font-weight:600">Experiencing knee or joint pain this monsoon? We can help.</p>
       <a href="/appointment/" class="btn btn-primary">Book Appointment</a>
-      <a href="/velys-robotic-knee-replacement-ahmedabad/" class="btn btn-accent" style="margin-left:8px">Learn About VELYS</a>
+      <a href="/robotic-knee-replacement-ahmedabad/" class="btn btn-accent" style="margin-left:8px">Learn About VELYS</a>
       <a href="tel:+919081610444" class="btn btn-outline" style="margin-left:8px">Call +91 9081610444</a>
     </div>
 
