@@ -324,10 +324,10 @@ pageSchema: |
 
   <!-- CTA -->
   <div style="background: linear-gradient(135deg, #0a3d62 0%, #1565c0 100%); color: #ffffff; border-radius: 14px; padding: 40px 32px; text-align: center; margin-top: 52px;">
-    <h2 style="color: #ffffff; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; border: none; padding: 0;">Book a Robotic Joint Assessment with Dr. Hardik Shah</h2>
+    <h2 style="color: #ffffff; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; border: none; padding: 0;">Book Your Robotic Joint Assessment with Dr. Hardik Shah at DHS Hospital Today</h2>
     <p style="font-size: 1.05rem; margin-bottom: 28px; color: #d6eeff;">Get a personalised cost estimate and surgical plan — tailored to your knee, your implant preference, and your insurance. No obligations.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
-      <a href="/appointment/" style="display: inline-block; background: #ffffff; color: #0a3d62; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem;">Book Consultation</a>
+      <a href="/appointment/" style="display: inline-block; background: #ffffff; color: #0a3d62; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem;">Book Robotic Joint Assessment</a>
       <a href="tel:+919081610444" style="display: inline-block; background: transparent; color: #ffffff; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem; border: 2px solid #ffffff;">Call +91 9081610444</a>
       <a href="https://wa.me/919081610444" style="display: inline-block; background: #25d366; color: #ffffff; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem;">WhatsApp Us</a>
     </div>

@@ -120,6 +120,8 @@ pageSchema: |
     </p>
   </div>
 
+  <p>If your parent or grandparent is considering knee replacement surgery, you want to make sure they receive the most advanced, safest care available — not just the most widely advertised. For family members supporting senior citizens through this decision in Ahmedabad, understanding the difference between robotic systems is one of the most important things you can do.</p>
+
   <p>Robotic knee replacement surgery has moved from novelty to mainstream in India — but not all robots work the same way. When families in Ahmedabad research their options, they often see brand names like Mako, ROSA, and VELYS listed side by side, as if they are interchangeable. They are not.</p>
 
   <p>The single most important technical distinction between these systems is whether they require a CT scan before surgery — or whether they map your actual anatomy <em>during</em> the procedure. That difference has real consequences for your radiation exposure, your wallet, your surgical timeline, and how well your implant fits your knee on the day you actually go under anaesthesia.</p>
@@ -344,10 +346,10 @@ pageSchema: |
 
   <!-- CTA -->
   <div style="background: linear-gradient(135deg, #0a3d62 0%, #1565c0 100%); color: #ffffff; border-radius: 14px; padding: 40px 32px; text-align: center; margin-top: 52px;">
-    <h2 style="color: #ffffff; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; border: none; padding: 0;">Schedule a Pre-Op Assessment — Understand YOUR Case</h2>
-    <p style="font-size: 1.05rem; margin-bottom: 28px; color: #d6eeff;">Every knee is different. Book a robotic joint assessment with Dr. Hardik Shah at DHS Hospital and get a personalised surgical plan — no CT scan required at this stage.</p>
+    <h2 style="color: #ffffff; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; border: none; padding: 0;">Schedule Your Consultation with Dr. Hardik Shah to Experience Next-Generation Robotic Surgery</h2>
+    <p style="font-size: 1.05rem; margin-bottom: 28px; color: #d6eeff;">Every knee is different. Whether it's for you or a loved one, Dr. Hardik Shah will provide a personalised robotic joint assessment at DHS Hospital — no CT scan required, real answers from the first visit.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
-      <a href="/appointment/" style="display: inline-block; background: #ffffff; color: #0a3d62; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem;">Book Robotic Assessment</a>
+      <a href="/appointment/" style="display: inline-block; background: #ffffff; color: #0a3d62; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem;">Schedule Consultation</a>
       <a href="tel:+919081610444" style="display: inline-block; background: transparent; color: #ffffff; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem; border: 2px solid #ffffff;">Call +91 9081610444</a>
       <a href="https://wa.me/919081610444" style="display: inline-block; background: #25d366; color: #ffffff; font-weight: 700; padding: 13px 26px; border-radius: 8px; text-decoration: none; font-size: 1rem;">WhatsApp Us</a>
     </div>

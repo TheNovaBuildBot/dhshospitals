@@ -447,9 +447,9 @@ pageSchema: |
       Walk in 24 hours. Home in 48 hours. Back to life in 6 weeks.
     </p>
     <p style="color:#c8dff8; font-size:0.95rem; margin:0 0 28px 0; line-height:1.7;">
-      Book your pre-operative consultation with Dr. Hardik Shah and let us show you exactly what your VELYS recovery will look like — personalised to your age, health, and lifestyle goals.
+      Experience faster recovery — book your robotic knee replacement consultation with Dr. Hardik Shah at DHS Hospital and get a personalised recovery plan tailored to your age, health, and lifestyle goals.
     </p>
-    <a href="/contact/" style="background:#ffffff; color:#0a3d62; padding:16px 36px; border-radius:8px; font-weight:800; text-decoration:none; font-size:1.05rem; display:inline-block;">📋 Book Your Pre-Op Consultation</a>
+    <a href="/appointment/" style="background:#ffffff; color:#0a3d62; padding:16px 36px; border-radius:8px; font-weight:800; text-decoration:none; font-size:1.05rem; display:inline-block;">📋 Book Robotic Knee Replacement Consultation</a>
   </div>
 
   <!-- AUTHOR BOX -->

@@ -114,7 +114,7 @@ pageSchema: |
     Facing a knee replacement surgery is already stressful enough — the last thing you or your family needs is the added burden of navigating insurance paperwork, chasing TPAs, and worrying about hospital deposits at a time when your focus should be entirely on recovery.
   </p>
   <p style="font-size:1.05rem; color:#333; line-height:1.75; margin-bottom:32px;">
-    At <strong style="color:#0a3d62;">DHS Multispecialty Hospital, Ahmedabad</strong>, our dedicated insurance billing team handles the entire cashless claim process on your behalf — from first verification to final discharge settlement — so you never have to stand in a queue or make a single call to your insurer.
+    At <strong style="color:#0a3d62;">DHS Multispecialty Hospital, Ahmedabad</strong>, our dedicated TPA desk handles the entire cashless claim process on your behalf — from first verification to final discharge settlement — so you never have to stand in a queue or make a single call to your insurer.
   </p>
 
   <!-- STATS BAR -->
@@ -137,7 +137,7 @@ pageSchema: |
     <div style="background:#f0f7ff; border:1px solid #d0e3f7; border-radius:10px; padding:18px; text-align:center; flex:1 1 180px; min-width:160px;">
       <div style="font-size:1.8rem; font-weight:800; color:#0a3d62; line-height:1.1;">100%</div>
       <div style="font-size:0.88rem; color:#444; margin-top:7px; font-weight:600;">Paperwork Handled</div>
-      <div style="font-size:0.78rem; color:#777; margin-top:4px;">By DHS billing desk, end-to-end</div>
+      <div style="font-size:0.78rem; color:#777; margin-top:4px;">By DHS TPA desk, end-to-end</div>
     </div>
   </div>
 
@@ -235,8 +235,8 @@ pageSchema: |
   <div style="position:relative; padding-left:52px; border-left:2px solid #d0e3f7; margin-bottom:8px;">
     <div style="position:absolute; left:-22px; top:0; width:42px; height:42px; background:#0a3d62; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem;">4</div>
     <div style="background:#f8fbff; border:1px solid #d0e3f7; border-radius:8px; padding:18px 22px; margin-bottom:22px;">
-      <p style="font-weight:700; color:#0a3d62; margin:0 0 8px 0; font-size:1rem;">DHS Billing Desk Submits Pre-Authorization</p>
-      <p style="margin:0; font-size:0.95rem; color:#333; line-height:1.75;">Our team submits the complete pre-auth package and follows up directly with the TPA. For <strong>HDFC Ergo, Bajaj Allianz, Star Health, Niva Bupa, SBI, and Government schemes</strong>, we commit to a <strong>24-hour pre-authorization turnaround</strong> in most cases.</p>
+      <p style="font-weight:700; color:#0a3d62; margin:0 0 8px 0; font-size:1rem;">DHS TPA Desk Submits Pre-Authorization</p>
+      <p style="margin:0; font-size:0.95rem; color:#333; line-height:1.75;">Our dedicated TPA desk submits the complete pre-auth package and follows up directly with the insurer. For <strong>HDFC Ergo, Bajaj Allianz, Star Health, Niva Bupa, SBI, and Government schemes</strong>, we commit to a <strong>24-hour pre-authorization turnaround</strong> in most cases.</p>
     </div>
   </div>
 
@@ -399,7 +399,7 @@ pageSchema: |
   <details style="border:1px solid #d0e3f7; border-radius:6px; margin-bottom:14px; overflow:hidden;">
     <summary style="background:#f8fbff; padding:15px 20px; cursor:pointer; font-weight:600; color:#0a3d62; list-style:none;">What happens if my insurance pre-authorization is rejected?</summary>
     <div style="padding:16px 22px; background:#fff; font-size:0.95rem; color:#333; line-height:1.8;">
-      Rejections are rare at DHS because we verify coverage before submitting. If a rejection does occur, our billing team immediately assists with the appeals process — submitting additional clinical justification from Dr. Hardik Shah, requesting a review from the insurer's medical officer. In parallel, we present you with a clear self-pay package so you can make an informed decision without delays to your surgery.
+      Rejections are rare at DHS because we verify coverage before submitting. If a rejection does occur, our TPA desk immediately assists with the appeals process — submitting additional clinical justification from Dr. Hardik Shah, requesting a review from the insurer's medical officer. In parallel, we present you with a clear self-pay package so you can make an informed decision without delays to your surgery.
     </div>
   </details>
 
@@ -429,14 +429,14 @@ pageSchema: |
   <!-- CTA BOX -->
   <div style="background:linear-gradient(135deg,#0a3d62 0%,#1565c0 100%); border-radius:14px; padding:40px 36px; text-align:center; margin:44px 0;">
     <h3 style="color:#ffffff; font-size:1.6rem; font-weight:800; margin:0 0 14px 0; line-height:1.3;">
-      Let DHS Handle Your Insurance Pre-Auth — We've Got You Covered
+      Contact Our Insurance Desk or Book a Consultation to Verify Your Coverage with Dr. Hardik Shah
     </h3>
     <p style="color:#c8dff8; font-size:1rem; margin:0 0 28px 0; line-height:1.7;">
-      Our dedicated billing desk manages everything from pre-authorization to final discharge claim across 20+ insurance partners. You focus on your health — we handle the paperwork.
+      Our dedicated TPA desk processes pre-authorisation approvals within 24 hours across 20+ insurance partners. You focus on your health — we handle the paperwork from first submission to final discharge claim.
     </p>
     <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center;">
-      <a href="tel:+917926575000" style="background:#ffffff; color:#0a3d62; padding:14px 30px; border-radius:8px; font-weight:700; text-decoration:none; font-size:1rem; display:inline-block;">📞 Call Our Billing Desk</a>
-      <a href="/contact/" style="background:transparent; color:#ffffff; border:2px solid #ffffff; padding:12px 28px; border-radius:8px; font-weight:700; text-decoration:none; font-size:1rem; display:inline-block;">📋 Book Your Consultation</a>
+      <a href="tel:+917926575000" style="background:#ffffff; color:#0a3d62; padding:14px 30px; border-radius:8px; font-weight:700; text-decoration:none; font-size:1rem; display:inline-block;">📞 Contact Insurance Desk</a>
+      <a href="/appointment/" style="background:transparent; color:#ffffff; border:2px solid #ffffff; padding:12px 28px; border-radius:8px; font-weight:700; text-decoration:none; font-size:1rem; display:inline-block;">📋 Book Consultation with Dr. Hardik Shah</a>
     </div>
   </div>
 
