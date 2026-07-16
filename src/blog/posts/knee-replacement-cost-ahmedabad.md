@@ -8,6 +8,7 @@ keywords: "knee replacement cost Ahmedabad, robotic knee replacement cost Gujara
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Robotic knee replacement cost breakdown at DHS Multispecialty Hospital Ahmedabad"
+category: "Insurance & Costs"
 date: 2026-05-27
 tags: ["post"]
 breadcrumbs:

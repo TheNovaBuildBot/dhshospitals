@@ -8,6 +8,7 @@ keywords: "cashless knee replacement insurance Gujarat, health insurance robotic
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Cashless health insurance for robotic knee replacement at DHS Multispecialty Hospital Ahmedabad"
+category: "Insurance & Costs"
 date: 2025-06-18
 tags: ["post"]
 breadcrumbs:

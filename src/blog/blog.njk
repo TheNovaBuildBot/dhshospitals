@@ -1,12 +1,28 @@
 ---
 layout: base.njk
-title: "Health Blog — DHS Hospital Ahmedabad"
-description: "Health articles, medical tips, and updates from the doctors at DHS Multispecialty Hospital, Ahmedabad."
+title: "Health Blog | DHS Multispecialty Hospital Ahmedabad"
+description: "Read the latest orthopedic and health articles from DHS Multispecialty Hospital, Ahmedabad — robotic knee replacement, VELYS technology, recovery guides, insurance help and more."
 canonical: "https://www.dhshospitals.com/blog/"
+og_type: "website"
+og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
+og_image_alt: "DHS Multispecialty Hospital health blog"
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Blog", url: "/blog/" }
 activePage: "more"
+pageSchema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Health Blog — DHS Multispecialty Hospital",
+    "url": "https://www.dhshospitals.com/blog/",
+    "description": "Orthopedic and health articles from DHS Multispecialty Hospital, Ahmedabad.",
+    "publisher": {
+      "@type": "MedicalOrganization",
+      "name": "DHS Multispecialty Hospital",
+      "url": "https://www.dhshospitals.com/"
+    }
+  }
 ---
 
 <div class="page-banner">
@@ -16,22 +32,129 @@ activePage: "more"
   </div>
 </div>
 
-<section class="content-section">
+<section class="content-section blog-hub">
   <div class="container">
-    {% if collections.post and collections.post.length %}
-    <div class="dept-grid" style="grid-template-columns:repeat(3,1fr)">
-      {% for post in collections.post %}
-      <a href="{{ post.url }}" class="dept-card" style="text-decoration:none;color:inherit">
-        <div class="dept-card-body">
-          <h3>{{ post.data.title }}</h3>
-          <p style="font-size:.8rem;color:var(--primary);margin-bottom:8px">{{ post.date | dateFormat }}</p>
-          <p>{{ post.data.description }}</p>
-        </div>
-      </a>
+    {% if collections.posts and collections.posts.length %}
+
+    <div class="blog-cats" role="tablist" aria-label="Filter articles by category">
+      <button type="button" class="blog-cat-btn active" data-cat="all">All Articles</button>
+      {% set catList = [] %}
+      {% for post in collections.posts %}
+        {% if post.data.category and catList.indexOf(post.data.category) == -1 %}
+          {% set catList = (catList.push(post.data.category), catList) %}
+        {% endif %}
+      {% endfor %}
+      {% for cat in catList %}
+      <button type="button" class="blog-cat-btn" data-cat="{{ cat }}">{{ cat }}</button>
       {% endfor %}
     </div>
+
+    <div class="blog-layout">
+      <div class="blog-main">
+        <div class="dept-grid blog-grid">
+          {% for post in collections.posts %}
+          <a href="{{ post.url }}" class="dept-card blog-card" data-cat="{{ post.data.category or 'General' }}" style="text-decoration:none;color:inherit">
+            <img src="{{ post.data.og_image or 'https://www.dhshospitals.com/assets/images/client/joint-bg.jpg' }}" alt="{{ post.data.og_image_alt or post.data.title }}" loading="lazy">
+            <div class="dept-card-body">
+              {% if post.data.category %}<span class="blog-badge">{{ post.data.category }}</span>{% endif %}
+              <h3>{{ post.data.title }}</h3>
+              <p style="font-size:.8rem;color:var(--primary);margin-bottom:8px">{{ post.date | dateFormat }}{% if post.data.readTime %} · {{ post.data.readTime }}{% endif %}</p>
+              <p>{{ post.data.description | truncate(140) }}</p>
+              <span class="btn blog-readmore">Read More</span>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <aside class="blog-sidebar">
+        <div class="blog-side-block">
+          <h3>Recent Posts</h3>
+          <ul class="blog-recent-list">
+            {% for post in collections.posts | head(5) %}
+            <li>
+              <a href="{{ post.url }}">
+                <span class="blog-recent-title">{{ post.data.title }}</span>
+                <span class="blog-recent-date">{{ post.date | dateFormat }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="blog-side-block">
+          <h3>Categories</h3>
+          <ul class="blog-cat-list">
+            {% for cat in catList %}
+            <li><button type="button" class="blog-cat-link" data-cat="{{ cat }}">{{ cat }}</button></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="blog-side-block blog-cta-block">
+          <h3>Have Knee or Joint Pain?</h3>
+          <p>Book a robotic joint assessment with Dr. Hardik Shah at DHS Multispecialty Hospital, Ahmedabad.</p>
+          <a href="/appointment/" class="btn">Book Appointment</a>
+        </div>
+      </aside>
+    </div>
+
     {% else %}
     <p style="text-align:center;color:var(--text-light)">Blog posts coming soon. Stay tuned for health tips and medical updates from our doctors.</p>
     {% endif %}
   </div>
 </section>
+
+<style>
+.blog-cats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.blog-cat-btn{border:1px solid var(--primary);background:#fff;color:var(--primary);padding:8px 18px;border-radius:30px;font-size:.85rem;cursor:pointer;transition:.2s}
+.blog-cat-btn:hover{background:var(--primary);color:#fff}
+.blog-cat-btn.active{background:var(--primary);color:#fff}
+.blog-layout{display:grid;grid-template-columns:2.3fr 1fr;gap:40px;align-items:start}
+.blog-grid{grid-template-columns:repeat(2,1fr) !important;gap:24px}
+.blog-card.blog-hidden{display:none}
+.blog-badge{display:inline-block;background:var(--primary);color:#fff;font-size:.7rem;padding:3px 10px;border-radius:20px;margin-bottom:8px}
+.blog-readmore{display:inline-block;margin-top:12px;padding:8px 20px;font-size:.8rem}
+.blog-sidebar{position:sticky;top:20px}
+.blog-side-block{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-bottom:24px}
+.blog-side-block h3{font-size:1rem;color:var(--primary);margin-bottom:14px}
+.blog-recent-list{list-style:none;margin:0;padding:0}
+.blog-recent-list li{border-bottom:1px solid #eee;padding:10px 0}
+.blog-recent-list li:last-child{border-bottom:none}
+.blog-recent-list a{text-decoration:none;color:inherit;display:block}
+.blog-recent-title{display:block;font-size:.85rem;font-weight:600;color:#222;line-height:1.4}
+.blog-recent-date{display:block;font-size:.72rem;color:var(--text-light);margin-top:4px}
+.blog-cat-list{list-style:none;margin:0;padding:0}
+.blog-cat-list li{border-bottom:1px solid #eee}
+.blog-cat-list li:last-child{border-bottom:none}
+.blog-cat-link{background:none;border:none;padding:9px 0;font-size:.85rem;color:#444;cursor:pointer;width:100%;text-align:left}
+.blog-cat-link:hover{color:var(--primary)}
+.blog-cta-block p{font-size:.85rem;color:var(--text-light);margin-bottom:14px}
+@media (max-width:900px){
+  .blog-layout{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr !important}
+  .blog-sidebar{position:static}
+}
+</style>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.blog-cat-btn, .blog-cat-link');
+  var cards = document.querySelectorAll('.blog-card');
+  function setActive(cat){
+    document.querySelectorAll('.blog-cat-btn').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-cat') === cat);
+    });
+    cards.forEach(function(card){
+      var show = (cat === 'all') || (card.getAttribute('data-cat') === cat);
+      card.classList.toggle('blog-hidden', !show);
+    });
+  }
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      setActive(btn.getAttribute('data-cat'));
+      window.scrollTo({top: document.querySelector('.blog-hub').offsetTop - 100, behavior:'smooth'});
+    });
+  });
+})();
+</script>

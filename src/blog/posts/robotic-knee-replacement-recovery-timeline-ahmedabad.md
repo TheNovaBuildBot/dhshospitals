@@ -8,6 +8,7 @@ keywords: "robotic knee replacement recovery timeline Ahmedabad, VELYS knee surg
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Patient walking after robotic knee replacement at DHS Multispecialty Hospital Ahmedabad within 24 hours"
+category: "Recovery & Rehab"
 date: 2025-06-18
 tags: ["post"]
 breadcrumbs:

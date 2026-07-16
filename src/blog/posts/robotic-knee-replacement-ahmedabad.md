@@ -8,6 +8,7 @@ keywords: "robotic knee replacement Ahmedabad, VELYS Ahmedabad, robotic knee sur
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Robotic knee replacement at DHS Multispecialty Hospital Ahmedabad"
+category: "Robotic Technology"
 date: 2026-05-04
 tags: ["post"]
 breadcrumbs:

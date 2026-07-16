@@ -8,6 +8,7 @@ keywords: "knee pain in monsoon, joint pain Ahmedabad, knee replacement Ahmedaba
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Knee and joint pain treatment during monsoon season at DHS Multispecialty Hospital Ahmedabad"
+category: "Seasonal Health"
 date: 2025-07-10
 tags: ["post"]
 breadcrumbs:

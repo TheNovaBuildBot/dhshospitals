@@ -6,6 +6,7 @@ description: "Discover why robotic knee replacement with the imageless VELYS sys
 date: "2025-07-04"
 author: "DHS Multispecialty Hospital"
 readTime: "6 min read"
+category: "Patient Guide"
 activePage: "blog"
 toc:
   - "Is Knee Pain Stealing Your Independence?"

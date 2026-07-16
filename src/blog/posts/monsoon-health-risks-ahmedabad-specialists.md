@@ -8,6 +8,7 @@ keywords: "monsoon health risks Ahmedabad, dengue fever Ahmedabad, waterborne di
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/medicine-bg.jpg"
 og_image_alt: "Monsoon health risks Ahmedabad — DHS Multispecialty Hospital specialists guide"
+category: "Seasonal Health"
 date: 2025-07-18
 tags: ["post"]
 breadcrumbs:

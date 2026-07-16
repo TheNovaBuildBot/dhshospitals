@@ -8,6 +8,7 @@ keywords: "imageless robotic knee surgery Ahmedabad, VELYS vs Mako Gujarat, CT s
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "VELYS imageless robotic knee surgery vs CT-based systems at DHS Hospital Ahmedabad"
+category: "Robotic Technology"
 date: 2026-05-27
 tags: ["post"]
 breadcrumbs:

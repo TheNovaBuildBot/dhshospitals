@@ -8,6 +8,7 @@ keywords: "knee pain old age, knee pain treatment Ahmedabad, when do I need knee
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Knee pain in older adults — when to consider knee replacement at DHS Multispecialty Hospital Ahmedabad"
+category: "Patient Guide"
 date: 2026-06-13
 tags: ["post"]
 breadcrumbs:

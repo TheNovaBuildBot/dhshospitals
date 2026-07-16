@@ -8,6 +8,7 @@ keywords: "robotic knee replacement, traditional knee replacement, VELYS system,
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Robotic vs Traditional Knee Replacement — Dr. Hardik Shah, DHS Multispecialty Hospital Ahmedabad"
+category: "Robotic Technology"
 date: 2026-05-25
 tags: ["post"]
 breadcrumbs:
