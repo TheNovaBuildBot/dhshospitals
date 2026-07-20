@@ -1,5 +1,6 @@
-# Apex → www (canonical host)
-https://dhshospitals.com/* https://www.dhshospitals.com/:splat 301!
+# NOTE: Cloudflare Pages _redirects does not support domain-level redirects.
+# The apex → www redirect must be configured in the Cloudflare dashboard
+# (Redirect Rules or Page Rules). The rules below are path-level only.
 
 # Old HTML pages → new clean URLs (301 permanent redirects)
 /index.html / 301
