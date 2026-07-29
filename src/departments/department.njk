@@ -90,6 +90,17 @@ activePage: "departments"
     </div>
     {% endif %}
 
+    {% if dept.slug == "orthopedics" %}
+    <div style="margin-top:50px;padding:28px 32px;background:linear-gradient(135deg,#e6f4ff 0%,#f0f9ff 100%);border-left:5px solid var(--primary);border-radius:var(--radius)">
+      <h3 style="color:var(--primary);margin-bottom:12px">🌧️ Monsoon Joint Care Reminder</h3>
+      <p style="color:var(--text-light);margin-bottom:18px">Monsoon brings more than rain — damp, cooler weather can make joint stiffness more noticeable for our parents and grandparents. A little extra care goes a long way: gentle movement, warm compresses, and not ignoring persistent discomfort. If a loved one's knee or joint pain has been bothering them this season, our team at DHS Hospital is here for a caring conversation.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="/appointment/" class="btn btn-primary">Book a Caring Consultation</a>
+        <a href="/blog/monsoon-knee-joint-pain-ahmedabad/" class="btn btn-outline">Read Our Monsoon Joint Care Guide</a>
+      </div>
+    </div>
+    {% endif %}
+
     {% if deptFaqs[dept.slug] %}
     <div class="faq-section" style="margin-top:50px">
       <h2 style="color:var(--primary);margin-bottom:20px">{{ dept.name }} — Frequently Asked Questions</h2>
