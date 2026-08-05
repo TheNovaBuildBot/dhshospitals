@@ -39,7 +39,7 @@ activePage: "departments"
 
 <div class="page-banner">
   <div class="container">
-    <h1>{{ dept.name }} in Ahmedabad</h1>
+    <h1>{% if dept.slug == 'orthopedics' %}Advanced Orthopedic &amp; Robotic Knee Care at DHS Hospital{% else %}{{ dept.name }} in Ahmedabad{% endif %}</h1>
     <div class="breadcrumb"><a href="/">Home</a> / <a href="/departments/">Departments</a> / {{ dept.name }}</div>
   </div>
 </div>
