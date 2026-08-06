@@ -126,7 +126,7 @@ activePage: "more"
     <p>Knee replacement at the right time, in the right patient, is one of the most effective surgeries modern medicine offers. Patients sleep through the night again, walk to the temple or the market without thinking about pain, and often regret only that they waited too long.</p>
 
     <h2>What changes with robotic-assisted knee replacement</h2>
-    <p>For the patients who do reach the point of replacement, a senior surgeon may offer <a href="/velys-robotic-knee-replacement-ahmedabad/">VELYS robotic-assisted knee replacement</a> — an imageless robotic platform from Johnson &amp; Johnson DePuy Synthes that DHS uses at our Gurukul hospital. The robot does not perform the surgery; the surgeon does. What the robot adds is a real-time, computer-verified plan, intra-operative ligament balance assessment, and an instrument that guides bone cuts to sub-millimetre precision.</p>
+    <p>For the patients who do reach the point of replacement, a senior surgeon may offer <a href="/robotic-knee-replacement-ahmedabad/">VELYS robotic-assisted knee replacement</a> — an imageless robotic platform from Johnson &amp; Johnson DePuy Synthes that DHS uses at our Gurukul hospital. The robot does not perform the surgery; the surgeon does. What the robot adds is a real-time, computer-verified plan, intra-operative ligament balance assessment, and an instrument that guides bone cuts to sub-millimetre precision.</p>
 
     <p>Robotic-assisted technique is not the right answer for every patient, and the DHS team performs both robotic and conventional total, partial and revision knee replacement. The choice is made jointly, after a face-to-face consultation, with a clear-eyed look at the X-ray, the patient's anatomy, and the patient's priorities.</p>
 

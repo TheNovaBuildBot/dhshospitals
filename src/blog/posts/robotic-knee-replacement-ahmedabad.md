@@ -30,7 +30,7 @@ pageSchema: |
     "publisher": { "@id": "https://www.dhshospitals.com/#hospital" },
     "isPartOf": { "@id": "https://www.dhshospitals.com/#website" },
     "about": [
-      { "@type": "MedicalProcedure", "name": "VELYS Robotic Knee Replacement", "url": "https://www.dhshospitals.com/velys-robotic-knee-replacement-ahmedabad/" },
+      { "@type": "MedicalProcedure", "name": "VELYS Robotic Knee Replacement", "url": "https://www.dhshospitals.com/robotic-knee-replacement-ahmedabad/" },
       { "@type": "MedicalCondition", "name": "Knee Osteoarthritis" }
     ],
     "spatialCoverage": [
@@ -171,7 +171,7 @@ activePage: "more"
     <h2>Learn more or book a consultation</h2>
     <div style="margin-top:20px;padding:24px;background:var(--primary-light);border-radius:var(--radius)">
       <p style="margin-bottom:14px"><strong>Ready to talk to one of our orthopedic surgeons?</strong></p>
-      <a href="/velys-robotic-knee-replacement-ahmedabad/" class="btn btn-primary">Read the full VELYS guide</a>
+      <a href="/robotic-knee-replacement-ahmedabad/" class="btn btn-primary">Read the full VELYS guide</a>
       <a href="/appointment/" class="btn btn-accent" style="margin-left:8px">Book Appointment</a>
       <a href="tel:+919081610444" class="btn btn-outline" style="margin-left:8px">Call +91 9081610444</a>
     </div>
