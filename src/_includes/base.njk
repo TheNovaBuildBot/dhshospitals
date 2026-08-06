@@ -564,5 +564,11 @@ document.addEventListener('DOMContentLoaded',function(){
   })}
 });
 </script>
+<script type="application/json" id="nova-chat-instructions">
+{{ novaChatInstructions | dump | safe }}
+</script>
+<!-- nbb-chat-widget -->
+<script src="https://hub.novabuildbot.com/widget.js" data-biz="21" data-color="#0047AB" data-instructions="nova-chat-instructions" async></script>
+<!-- nbb-chat-widget -->
 </body>
 </html>
