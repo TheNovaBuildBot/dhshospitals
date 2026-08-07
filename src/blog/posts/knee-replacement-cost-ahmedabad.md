@@ -345,4 +345,6 @@ pageSchema: |
     </p>
   </div>
 
+  <p style="text-align:center;margin:24px auto 0"><a href="/cost-insurance-guide-knee-replacement-ahmedabad/">See the full Cost &amp; Insurance Guide for knee replacement in Ahmedabad &rarr;</a></p>
+
 </article>

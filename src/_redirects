@@ -172,3 +172,8 @@
 /need-help/ /contact/  301
 /blog-details  /blog/  301
 /blog-details/ /blog/  301
+
+# Page consolidation — robotic-surgeon merged into the broader orthopedic-surgeon
+# page (same surgeons; ends title/CTR cannibalization). 301 preserves link equity.
+/robotic-surgeon-ahmedabad  /orthopedic-surgeon-ahmedabad/  301
+/robotic-surgeon-ahmedabad/ /orthopedic-surgeon-ahmedabad/  301
