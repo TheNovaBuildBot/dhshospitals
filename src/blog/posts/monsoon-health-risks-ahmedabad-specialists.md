@@ -9,7 +9,7 @@ og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/medicine-bg.jpg"
 og_image_alt: "Monsoon health risks Ahmedabad — DHS Multispecialty Hospital specialists guide"
 category: "Seasonal Health"
-date: 2025-07-18
+date: 2026-07-18
 tags: ["post"]
 breadcrumbs:
   - { name: "Home", url: "/" }
@@ -22,8 +22,8 @@ pageSchema: |
     "headline": "Monsoon Health Risks in Ahmedabad: What DHS's Specialists Want You to Know",
     "description": "Dengue, waterborne infections, gastroenteritis, respiratory illness — DHS Hospital's Internal Medicine, Gastroenterology & Pulmonology specialists explain monsoon health risks in Ahmedabad and when to seek care.",
     "image": "https://www.dhshospitals.com/assets/images/client/medicine-bg.jpg",
-    "datePublished": "2025-07-18",
-    "dateModified": "2025-07-18",
+    "datePublished": "2026-07-18",
+    "dateModified": "2026-07-18",
     "inLanguage": "en-IN",
     "author": { "@type": "Organization", "name": "DHS Multispecialty Hospital", "url": "https://www.dhshospitals.com" },
     "publisher": { "@id": "https://www.dhshospitals.com/#hospital" },

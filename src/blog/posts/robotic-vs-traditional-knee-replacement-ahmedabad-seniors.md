@@ -3,7 +3,7 @@ layout: base.njk
 permalink: /blog/robotic-vs-traditional-knee-replacement-ahmedabad-seniors/
 title: "Robotic vs Traditional Knee Replacement in Ahmedabad — What Every 50+ Patient Must Know"
 description: "Discover why robotic knee replacement with the imageless VELYS system at DHS Hospital Ahmedabad delivers less pain, faster recovery, and cashless insurance support for 50+ patients."
-date: "2025-07-04"
+date: "2026-07-04"
 author: "DHS Multispecialty Hospital"
 readTime: "6 min read"
 category: "Patient Guide"

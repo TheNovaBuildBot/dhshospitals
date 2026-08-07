@@ -9,7 +9,7 @@ og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Patient walking after robotic knee replacement at DHS Multispecialty Hospital Ahmedabad within 24 hours"
 category: "Recovery & Rehab"
-date: 2025-06-18
+date: 2026-06-18
 tags: ["post"]
 breadcrumbs:
   - { name: "Home", url: "/" }
@@ -25,8 +25,8 @@ pageSchema: |
         "headline": "Walking Within 24 Hours: The Real Recovery Timeline of Robotic Knee Replacement Patients",
         "description": "Detailed milestone-by-milestone recovery timeline for VELYS robotic knee replacement at DHS Ahmedabad. Walking in 24 hours, discharge in 48 hours, full mobility in 6 weeks.",
         "image": "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg",
-        "datePublished": "2025-06-18",
-        "dateModified": "2025-06-18",
+        "datePublished": "2026-06-18",
+        "dateModified": "2026-06-18",
         "inLanguage": "en-IN",
         "author": { "@id": "https://www.dhshospitals.com/doctors/doctor-hardik/#physician" },
         "reviewedBy": { "@id": "https://www.dhshospitals.com/doctors/doctor-swagat/#physician" },

@@ -9,7 +9,7 @@ og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Cashless health insurance for robotic knee replacement at DHS Multispecialty Hospital Ahmedabad"
 category: "Insurance & Costs"
-date: 2025-06-18
+date: 2026-06-18
 tags: ["post"]
 breadcrumbs:
   - { name: "Home", url: "/" }
@@ -25,8 +25,8 @@ pageSchema: |
         "headline": "How to Claim Cashless Health Insurance for Robotic Knee Joint Replacement in Gujarat",
         "description": "Complete step-by-step guide to cashless health insurance claims for robotic knee replacement at DHS Multispecialty Hospital, Ahmedabad. 20+ insurers, 24-hour pre-authorisation.",
         "image": "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg",
-        "datePublished": "2025-06-18",
-        "dateModified": "2025-06-18",
+        "datePublished": "2026-06-18",
+        "dateModified": "2026-06-18",
         "inLanguage": "en-IN",
         "author": { "@id": "https://www.dhshospitals.com/doctors/doctor-hardik/#physician" },
         "reviewedBy": { "@id": "https://www.dhshospitals.com/doctors/doctor-swagat/#physician" },

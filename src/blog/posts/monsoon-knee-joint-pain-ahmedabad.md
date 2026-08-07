@@ -9,7 +9,7 @@ og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Knee and joint pain treatment during monsoon season at DHS Multispecialty Hospital Ahmedabad"
 category: "Seasonal Health"
-date: 2025-07-10
+date: 2026-07-10
 tags: ["post"]
 breadcrumbs:
   - { name: "Home", url: "/" }
@@ -22,8 +22,8 @@ pageSchema: |
     "headline": "Why Knee & Joint Pain Gets Worse in Monsoon — and What to Do",
     "description": "Knee pain worse during Ahmedabad monsoons? Dr. Hardik Shah explains why joints ache in humidity & when to consider VELYS robotic knee replacement vs physiotherapy.",
     "image": "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg",
-    "datePublished": "2025-07-10",
-    "dateModified": "2025-07-10",
+    "datePublished": "2026-07-10",
+    "dateModified": "2026-07-10",
     "inLanguage": "en-IN",
     "author": { "@id": "https://www.dhshospitals.com/doctors/doctor-hardik/#physician" },
     "publisher": { "@id": "https://www.dhshospitals.com/#hospital" },
