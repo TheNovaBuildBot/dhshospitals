@@ -42,8 +42,11 @@ eleventyComputed:
         }
       },
       "memberOf": { "@id": "https://www.dhshospitals.com/#hospital" },
+      "hospitalAffiliation": { "@id": "https://www.dhshospitals.com/#hospital" },
       "hasCredential": "{{ doc.qualification }}",
       "jobTitle": "{{ doc.role or doc.specialty + ' Specialist' }}",
+      {% if doc.knowsAbout and doc.knowsAbout.length %}"knowsAbout": {{ doc.knowsAbout | dump }},{% endif %}
+      {% if doc.sameAs and doc.sameAs.length %}"sameAs": {{ doc.sameAs | dump }},{% endif %}
       "telephone": "+91 9081610444",
       "email": "info@dhshospitals.com",
       "address": {
