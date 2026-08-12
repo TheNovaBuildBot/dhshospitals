@@ -9,7 +9,13 @@
     "image": "/assets/images/team/dr-hardik.jpg",
     "seo_title": "Dr. Hardik M Shah — Best Knee Replacement Surgeon in Ahmedabad",
     "seo_description": "Dr. Hardik M Shah, Medical Director at DHS Multispecialty Hospital, is a senior knee replacement surgeon in Ahmedabad. VELYS robotic knee replacement, over a decade of joint-replacement experience, FRCS (Germany).",
-    "knowsAbout": ["VELYS robotic knee replacement", "imageless navigation", "joint preservation", "Robotic-assisted hip replacement", "Trauma surgery"],
+    "knowsAbout": [
+      {"name": "VELYS robotic knee replacement"},
+      {"name": "imageless navigation"},
+      {"name": "joint preservation"},
+      {"name": "Robotic-assisted hip replacement"},
+      {"name": "Trauma surgery"}
+    ],
     "sameAs": ["https://drhardikshahortho.com/"],
     "about": "Dr Hardik Shah is our esteemed Medical Director and leading orthopedic surgeon at DHS Multispecialty Hospital. With over a decade of experience in the field, Dr. Shah is renowned for his expertise in knee and hip replacements as well as trauma surgeries in Gujarat. He is one of the leading knee replacement surgeons in Ahmedabad.",
     "about_extended": "Dr. Hardik Shah graduated with honors from one of India's top medical schools and completed his specialized training in orthopedic surgery at prestigious institutions both in India and abroad. His commitment to advancing medical science and improving patient care has driven him to excel in his field, earning him a reputation as one of the best orthopedic surgeons in Ahmedabad.",
