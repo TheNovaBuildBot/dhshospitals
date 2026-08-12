@@ -79,13 +79,24 @@
     "slug": "doctor-archit",
     "name": "Dr. Archit Parikh",
     "qualification": "MD Medicine",
-    "specialty": "Internal Medicine",
+    "specialty": "Infectious Disease, Critical Care & ICU Medicine",
+    "role": "Consultant Physician — Infectious Disease, Critical Care & ICU",
     "languages": "English, Hindi, Gujarati",
     "image": "/assets/images/team/dr-archit.jpg",
-    "about": "Dr. Archit Parikh is a consultant physician at DHS Multispecialty Hospital. He has various publications and presentations to his credit and holds a special interest in diabetes management, chronic diseases, and geriatric care.",
-    "about_extended": "He has expertise in hypertension and infectious disease treatments. He has special focus on treating kidney, liver and lung diseases. He has had immense experience in resolving Dengue, Chikungunya, Malaria, Cholera, Jaundice and other viral infections.",
-    "expertise": "Diabetes, Thyroid, Cholesterol, Hypertension, Dengue, Chikungunya",
-    "specializations": []
+    "seo_title": "Dr. Archit Parikh MD | Infectious Disease & Critical Care Specialist Ahmedabad",
+    "seo_description": "Dr. Archit Parikh MD — Infectious Disease, Critical Care ICU, and Diabetes specialist with 8+ years experience in Ahmedabad. Expert geriatric care for elderly patients.",
+    "seo_h1_suffix": "Infectious Disease & Critical Care Specialist in Ahmedabad",
+    "about": "Dr. Archit Parikh, MD is a consultant physician at DHS Multispecialty Hospital with over 8 years of clinical experience practicing in Ahmedabad. He is known for his expertise in infectious disease management and critical care/ICU medicine, and for a patient-first, family-oriented approach that puts elderly patients and their loved ones at ease during complex treatment decisions.",
+    "about_extended": "Dr. Parikh manages critically ill patients in the ICU with a focus on close monitoring, ventilator support, and timely intervention, alongside long-term management of diabetes and other chronic conditions. He has extensive experience diagnosing and treating Dengue, Chikungunya, Malaria, Typhoid, Cholera, Jaundice and other infectious and viral illnesses, and has a special interest in geriatric care — helping older patients and their families navigate multiple, often interrelated health conditions safely.",
+    "expertise": "Infectious Disease Management, Critical Care & ICU, Diabetes Management, Geriatric Care, Hypertension, Dengue & Chikungunya",
+    "knowsAbout": ["Infectious Disease Management", "Critical Care Medicine", "ICU Medicine", "Diabetes Management", "Geriatric Care", "Hypertension", "Dengue", "Chikungunya", "Malaria"],
+    "specializations": [
+      { "name": "Infectious Disease Management", "desc": "Diagnosis and treatment of infectious and viral illnesses including Dengue, Chikungunya, Malaria, Typhoid and Jaundice, with a focus on early detection and prompt, evidence-based care." },
+      { "name": "Critical Care & ICU Medicine", "desc": "Comprehensive management of critically ill patients in the ICU, including ventilator support, central monitoring, and coordinated care with surgical and specialist teams." },
+      { "name": "Diabetes Management", "desc": "Long-term management of diabetes and related metabolic conditions, with individualized treatment plans focused on preventing complications." },
+      { "name": "Geriatric / Elderly Care", "desc": "Holistic care for older patients managing multiple health conditions, with close attention to medication safety, mobility and quality of life." }
+    ],
+    "closing": "Dr. Parikh believes in compassionate, family-inclusive care — taking the time to explain diagnoses and treatment plans clearly so that elderly patients and their families feel informed and supported at every step."
   },
   {
     "slug": "doctor-chirag",

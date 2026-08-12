@@ -193,7 +193,7 @@
     "short_desc": "8-bed ICU with advanced life-support systems and HEPA filters for critical patient care.",
     "full_desc": "Our 8-bed ICU is designed to provide critical care for seriously ill or injured patients, with advanced life-support systems, ventilator support, and central monitoring. Equipped with HEPA filters to prevent cross-infections, we also have dedicated isolation rooms for immunocompromised or highly infectious patients.",
     "services": ["Ventilator Support", "Central Monitoring", "Isolation Wards", "Advanced Life Support", "Post-Surgical ICU Care"],
-    "doctors": ["doctor-mansi"]
+    "doctors": ["doctor-mansi", "doctor-archit"]
   },
   {
     "slug": "pathology-laboratory",
