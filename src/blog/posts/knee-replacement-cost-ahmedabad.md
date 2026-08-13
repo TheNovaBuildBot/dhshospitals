@@ -1,10 +1,10 @@
 ---
 layout: base.njk
 permalink: /blog/knee-replacement-cost-ahmedabad/
-title: "Knee Replacement Cost in Ahmedabad: Complete Breakdown 2025 | DHS Hospital"
+title: "Knee Replacement Cost in Ahmedabad: Complete Breakdown 2026 | DHS Hospital"
 description: "What does robotic knee replacement cost in Ahmedabad? Compare VELYS imageless vs conventional costs, implant tiers, room charges & insurance. DHS Hospital breaks it all down."
-canonical: "https://www.dhshospitals.com/blog/knee-replacement-cost-ahmedabad/"
-keywords: "knee replacement cost Ahmedabad, robotic knee replacement cost Gujarat, VELYS knee replacement price India, knee replacement surgery cost 2025, total knee replacement Ahmedabad price"
+canonical: "https://www.dhshospitals.com/cost-insurance-guide-knee-replacement-ahmedabad/"
+keywords: "knee replacement cost Ahmedabad, robotic knee replacement cost Gujarat, VELYS knee replacement price India, knee replacement surgery cost 2026, total knee replacement Ahmedabad price"
 og_type: "article"
 og_image: "https://www.dhshospitals.com/assets/images/client/joint-bg.jpg"
 og_image_alt: "Robotic knee replacement cost breakdown at DHS Multispecialty Hospital Ahmedabad"
