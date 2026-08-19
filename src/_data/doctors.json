@@ -83,9 +83,12 @@
     "role": "Consultant Physician — Infectious Disease, Critical Care & ICU",
     "languages": "English, Hindi, Gujarati",
     "image": "/assets/images/team/dr-archit.jpg",
-    "seo_title": "Dr. Archit Parikh MD | Infectious Disease & Critical Care Specialist Ahmedabad",
-    "seo_description": "Dr. Archit Parikh MD — Infectious Disease, Critical Care ICU, and Diabetes specialist with 8+ years experience in Ahmedabad. Expert geriatric care for elderly patients.",
+    "seo_title": "Dr. Archit Parikh — MD Internal Medicine, Consultant Physician Vastrapur | DHS Hospital",
+    "seo_description": "Consultant Physician specializing in dengue, fever, diabetes & geriatric care near Vastrapur Lake, Gurukul, Drive-In Road. 24/7 Emergency OPD at DHS Hospital, Ahmedabad.",
     "seo_h1_suffix": "Infectious Disease & Critical Care Specialist in Ahmedabad",
+    "seo_h1": "General Physician & Internal Medicine Specialist Near Vastrapur & Gurukul, Ahmedabad",
+    "medicalSpecialtyList": ["InternalMedicine", "InfectiousDiseases", "CriticalCare"],
+    "areaServedList": ["Vastrapur", "Gurukul", "Satellite", "SG Highway", "Drive-In Road", "Mansi Circle"],
     "about": "Dr. Archit Parikh, MD is a consultant physician at DHS Multispecialty Hospital with over 8 years of clinical experience practicing in Ahmedabad. He is known for his expertise in infectious disease management and critical care/ICU medicine, and for a patient-first, family-oriented approach that puts elderly patients and their loved ones at ease during complex treatment decisions.",
     "about_extended": "Dr. Parikh manages critically ill patients in the ICU with a focus on close monitoring, ventilator support, and timely intervention, alongside long-term management of diabetes and other chronic conditions. He has extensive experience diagnosing and treating Dengue, Chikungunya, Malaria, Typhoid, Cholera, Jaundice and other infectious and viral illnesses, and has a special interest in geriatric care — helping older patients and their families navigate multiple, often interrelated health conditions safely.",
     "expertise": "Infectious Disease Management, Critical Care & ICU, Diabetes Management, Geriatric Care, Hypertension, Dengue & Chikungunya",
@@ -96,7 +99,35 @@
       { "name": "Diabetes Management", "desc": "Long-term management of diabetes and related metabolic conditions, with individualized treatment plans focused on preventing complications." },
       { "name": "Geriatric / Elderly Care", "desc": "Holistic care for older patients managing multiple health conditions, with close attention to medication safety, mobility and quality of life." }
     ],
-    "closing": "Dr. Parikh believes in compassionate, family-inclusive care — taking the time to explain diagnoses and treatment plans clearly so that elderly patients and their families feel informed and supported at every step."
+    "closing": "Dr. Parikh believes in compassionate, family-inclusive care — taking the time to explain diagnoses and treatment plans clearly so that elderly patients and their families feel informed and supported at every step.",
+    "serviceAreas": [
+      {
+        "h3": "General Physician Services Near Drive-In Road & Vastrapur Lake",
+        "content": "Dr. Archit Parikh provides comprehensive internal medicine and general physician consultation at DHS Multispecialty Hospital, located near Vastrapur Lake and Drive-In Link Road in Gurukul, Ahmedabad. Whether you're seeking preventive health checkups, management of chronic conditions like diabetes and hypertension, or immediate care for acute illness, Dr. Parikh's clinic offers accessible healthcare near Satellite, Mansi Circle, and the surrounding Vastrapur neighborhood. With expertise in infectious diseases and critical care, he manages everything from routine fever consultations to complex patient cases requiring intensive monitoring."
+      },
+      {
+        "h3": "Dengue, Viral Fever & Infectious Disease Treatment Near Satellite & Gurukul",
+        "content": "During monsoon and post-monsoon seasons, dengue, chikungunya, and viral fevers are common in the Vastrapur, Gurukul, and Satellite areas. Dr. Archit Parikh specializes in rapid diagnosis and evidence-based treatment of infectious diseases, including dengue hemorrhagic fever, chikungunya arthralgia management, malaria, and typhoid. His clinic near Drive-In Road offers OPD consultations and critical care ICU management for severe cases. Families across SG Highway, Mansi Circle, and nearby localities trust DHS Hospital for quick fever diagnosis and comprehensive fever management with real-time monitoring."
+      },
+      {
+        "h3": "Geriatric Care & Elderly Health Management Near SG Highway & Vastrapur",
+        "content": "As an internal medicine specialist, Dr. Archit Parikh provides specialized geriatric care for senior citizens and elderly patients in and around Vastrapur, Gurukul, and SG Highway. He manages age-related conditions including hypertension, diabetes complications, thyroid disorders, and polypharmacy in older adults. His approach focuses on maintaining quality of life while treating multiple chronic conditions simultaneously. DHS Hospital's 24/7 emergency facility and critical care ICU near Drive-In Road ensure that elderly patients from Satellite, Mansi Circle, and Vastrapur Lake receive immediate care if complications arise. Regular health checkups and preventive medicine consultations are available during extended OPD timings."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Who is a leading general physician near Vastrapur Lake and Gurukul Road in Ahmedabad?",
+        "a": "Dr. Archit Parikh, MD (Internal Medicine), is a Consultant Physician at DHS Multispecialty Hospital located near Vastrapur Lake and Drive-In Link Road in Gurukul, Ahmedabad. With expertise in infectious diseases, critical care, and geriatric medicine, he provides comprehensive general physician and internal medicine consultation to families across Vastrapur, Satellite, SG Highway, and surrounding neighborhoods. Dr. Parikh manages acute illnesses, chronic disease prevention, and complex multi-system patient care."
+      },
+      {
+        "q": "Where can I get treatment for dengue, viral fever, and diabetes near Satellite or Drive-In Road?",
+        "a": "DHS Multispecialty Hospital, where Dr. Archit Parikh practices, is conveniently located near Satellite, Mansi Circle, and Drive-In Link Road in Gurukul, Ahmedabad. Dr. Parikh specializes in rapid diagnosis and treatment of dengue, chikungunya, malaria, typhoid, and other viral fevers, as well as diabetes and hypertension management. The hospital offers 24/7 emergency OPD services, in-patient admission, and critical care ICU support for severe cases. Consultation timings are extended to serve working professionals and families across Vastrapur Lake and SG Highway areas."
+      },
+      {
+        "q": "What are the OPD consultation timings for Dr. Archit Parikh at DHS Hospital?",
+        "a": "Dr. Archit Parikh's OPD consultation is available during extended timings at DHS Multispecialty Hospital's clinic near Vastrapur Lake, Gurukul. Emergency consultation and critical care services are available 24/7. For exact appointment timings and to book a consultation with Dr. Parikh, please contact DHS Hospital or visit the clinic near Drive-In Link Road, Vastrapur, Ahmedabad. Walk-in patients are also welcome during OPD hours."
+      }
+    ]
   },
   {
     "slug": "doctor-chirag",

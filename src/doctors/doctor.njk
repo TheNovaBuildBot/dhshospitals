@@ -24,7 +24,7 @@ eleventyComputed:
       "image": "https://www.dhshospitals.com{{ doc.image }}",
       "url": "https://www.dhshospitals.com/doctors/{{ doc.slug }}/",
       "description": "{{ doc.seo_description or (doc.name + ' — ' + doc.specialty + ' specialist at DHS Multispecialty Hospital, Ahmedabad.') }}",
-      "medicalSpecialty": "{{ doc.specialty }}",
+      "medicalSpecialty": {% if doc.medicalSpecialtyList and doc.medicalSpecialtyList.length %}{{ doc.medicalSpecialtyList | dump }}{% else %}"{{ doc.specialty }}"{% endif %},
       "knowsLanguage": "{{ doc.languages or 'English, Hindi, Gujarati' }}",
       "worksFor": {
         "@type": "Hospital",
@@ -43,6 +43,7 @@ eleventyComputed:
       },
       "memberOf": { "@id": "https://www.dhshospitals.com/#hospital" },
       "hospitalAffiliation": { "@id": "https://www.dhshospitals.com/#hospital" },
+      "affiliatedWith": { "@type": "Hospital", "name": "DHS Multispecialty Hospital", "url": "https://dhshospitals.com" },
       "hasCredential": "{{ doc.qualification }}",
       "jobTitle": "{{ doc.role or doc.specialty + ' Specialist' }}",
       {% if doc.knowsAbout and doc.knowsAbout.length %}"knowsAbout": {{ doc.knowsAbout | dump }},{% endif %}
@@ -57,7 +58,7 @@ eleventyComputed:
         "postalCode": "380052",
         "addressCountry": "IN"
       },
-      "areaServed": { "@type": "City", "name": "Ahmedabad" },
+      "areaServed": {% if doc.areaServedList and doc.areaServedList.length %}[{% for area in doc.areaServedList %}{ "@type": "City", "name": "{{ area }}" }{% if not loop.last %},{% endif %}{% endfor %}]{% else %}{ "@type": "City", "name": "Ahmedabad" }{% endif %},
       "availableService": [
         {% if doc.specializations and doc.specializations.length %}
         {% for spec in doc.specializations %}
@@ -73,7 +74,7 @@ activePage: "doctors"
 
 <div class="page-banner">
   <div class="container">
-    <h1>{{ doc.name }}{% if doc.seo_h1_suffix %} — {{ doc.seo_h1_suffix }}{% endif %}</h1>
+    <h1>{% if doc.seo_h1 %}{{ doc.seo_h1 }}{% else %}{{ doc.name }}{% if doc.seo_h1_suffix %} — {{ doc.seo_h1_suffix }}{% endif %}{% endif %}</h1>
     <div class="breadcrumb"><a href="/">Home</a> / <a href="/doctors/">Doctors</a> / {{ doc.name }}</div>
   </div>
 </div>
@@ -125,7 +126,61 @@ activePage: "doctors"
         {% if doc.closing %}
         <p style="margin-top:20px;font-style:italic;color:var(--text-light)">{{ doc.closing }}</p>
         {% endif %}
+
+        {% if doc.languages %}
+        <p style="margin-top:14px;font-size:.9rem;color:var(--text-light)">Consultation available in {{ doc.languages }}.</p>
+        {% endif %}
       </div>
     </div>
   </div>
 </section>
+
+{% if doc.serviceAreas and doc.serviceAreas.length %}
+<section class="content-section" style="background:var(--bg-light,#f8f9fb)">
+  <div class="container">
+    <h2>Service Areas &amp; Specialties</h2>
+    {% for area in doc.serviceAreas %}
+    <div style="margin-top:22px">
+      <h3 style="color:var(--primary);font-size:1.05rem">{{ area.h3 }}</h3>
+      <p>{{ area.content }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if doc.faqs and doc.faqs.length %}
+<section class="content-section" id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions — {{ doc.name }}, Internal Medicine Specialist</h2>
+    <div class="faq-section">
+      {% for item in doc.faqs %}
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <h4 itemprop="name">Q: {{ item.q }}</h4>
+        <p itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+          <span itemprop="text">{{ item.a }}</span>
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in doc.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | dump | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | dump | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
