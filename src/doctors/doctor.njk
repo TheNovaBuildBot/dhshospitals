@@ -111,6 +111,11 @@ activePage: "doctors"
         <p>{{ doc.about_extended }}</p>
         {% endif %}
 
+        {% if doc.areasWeServe %}
+        <h3 style="margin-top:25px">Areas We Serve</h3>
+        <p>{{ doc.areasWeServe }}</p>
+        {% endif %}
+
         {% if doc.specializations and doc.specializations.length %}
         <div class="specialization-list">
           <h3 style="margin-top:25px">Areas of Expertise</h3>
