@@ -60,7 +60,11 @@ eleventyComputed:
       },
       "areaServed": {% if doc.areaServedList and doc.areaServedList.length %}[{% for area in doc.areaServedList %}{ "@type": "City", "name": "{{ area }}" }{% if not loop.last %},{% endif %}{% endfor %}]{% else %}{ "@type": "City", "name": "Ahmedabad" }{% endif %},
       "availableService": [
-        {% if doc.specializations and doc.specializations.length %}
+        {% if doc.availableServiceList and doc.availableServiceList.length %}
+        {% for svc in doc.availableServiceList %}
+        { "@type": "MedicalProcedure", "name": "{{ svc }}" }{% if not loop.last %},{% endif %}
+        {% endfor %}
+        {% elif doc.specializations and doc.specializations.length %}
         {% for spec in doc.specializations %}
         { "@type": "MedicalProcedure", "name": "{{ spec.name }}" }{% if not loop.last %},{% endif %}
         {% endfor %}
@@ -105,20 +109,20 @@ activePage: "doctors"
         <div style="color:var(--primary);font-weight:600;margin-bottom:20px">{{ doc.specialty }}</div>
 
         {% if doc.about %}
-        <p>{{ doc.about }}</p>
+        <p>{{ doc.about | safe }}</p>
         {% endif %}
         {% if doc.about_extended %}
-        <p>{{ doc.about_extended }}</p>
+        <p>{{ doc.about_extended | safe }}</p>
         {% endif %}
 
         {% if doc.areasWeServe %}
-        <h3 style="margin-top:25px">Areas We Serve</h3>
-        <p>{{ doc.areasWeServe }}</p>
+        <h2 style="margin-top:25px;font-size:1.3rem">Areas We Serve</h2>
+        <p>{{ doc.areasWeServe | safe }}</p>
         {% endif %}
 
         {% if doc.specializations and doc.specializations.length %}
         <div class="specialization-list">
-          <h3 style="margin-top:25px">Areas of Expertise</h3>
+          <h2 style="margin-top:25px;font-size:1.3rem">Areas of Expertise</h2>
           {% for spec in doc.specializations %}
           <div style="margin-top:15px">
             <h4 style="color:var(--primary);font-size:1rem;font-family:'Inter',sans-serif">{{ spec.name }}</h4>
@@ -157,7 +161,7 @@ activePage: "doctors"
 {% if doc.faqs and doc.faqs.length %}
 <section class="content-section" id="faq">
   <div class="container">
-    <h2>Frequently Asked Questions — {{ doc.name }}, Internal Medicine Specialist</h2>
+    <h2>{% if doc.faqHeading %}{{ doc.faqHeading }}{% else %}Frequently Asked Questions — {{ doc.name }}, Internal Medicine Specialist{% endif %}</h2>
     <div class="faq-section">
       {% for item in doc.faqs %}
       <div class="faq-item" itemscope itemtype="https://schema.org/Question">

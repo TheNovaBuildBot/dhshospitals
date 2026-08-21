@@ -48,12 +48,56 @@
   {
     "slug": "doctor-dileep",
     "name": "Dr. Dileep Srinivasan",
-    "qualification": "MD (Medicine), DM (Oncology)",
-    "specialty": "Oncology",
+    "qualification": "MBBS, MD (Medicine), DM (Medical Oncology)",
+    "specialty": "Medical Oncology & Hemato-Oncology",
+    "role": "Senior Medical Oncologist & Hemato-Oncologist",
     "languages": "English, Hindi, Gujarati",
     "image": "/assets/images/team/dr-dileep.jpg",
-    "about": "Dr. Dileep Srinivasan is a consultant oncologist at DHS Multispecialty Hospital, specializing in the diagnosis and treatment of various cancers. His comprehensive approach to cancer care combines the latest treatments with compassionate patient support.",
-    "specializations": []
+    "seo_title": "Dr. Dileep Srinivasan | Medical Oncologist & Cancer Specialist in Vastrapur, Ahmedabad",
+    "seo_description": "Consult Dr. Dileep Srinivasan (MBBS, MD, DM Medical Oncology) at DHS Hospital, Vastrapur. Over 30+ years experience in chemotherapy, immunotherapy, blood cancer & targeted cancer care.",
+    "seo_h1": "Dr. Dileep Srinivasan | Senior Medical Oncologist & Hemato-Oncologist in Ahmedabad",
+    "about": "Dr. Dileep Srinivasan (MBBS, MD Medicine, DM Medical Oncology) is a Senior Medical Oncologist and Hemato-Oncologist with over 30 years of clinical excellence in cancer care. He specializes in precision oncology, <a href=\"/departments/cancer-surgery/\">daycare chemotherapy</a>, targeted molecular therapy, and biological immunotherapy for solid tumors and blood malignancies.",
+    "about_extended": "As the lead of the Medical Oncology division at <a href=\"https://www.dhshospitals.com/\">DHS Multispecialty Hospital</a>, Vastrapur, Dr. Srinivasan is dedicated to delivering evidence-based, compassionate, and personalized cancer treatments. His clinical approach focuses on maximizing treatment efficacy while preserving quality of life through advanced supportive and palliative care protocols.",
+    "expertise": "Chemotherapy, Immunotherapy, Targeted Therapy, Hemato-Oncology, Palliative Care",
+    "areasWeServe": "Dr. Dileep Srinivasan and DHS Multispecialty Hospital's Medical Oncology division serve cancer patients and families across Vastrapur, Gurukul, Drive-In Road, Satellite, Bodakdev, Mansi Circle, Memnagar, Thaltej, SG Highway, and West Ahmedabad. Patients from these neighborhoods come to him for daycare chemotherapy, blood cancer treatment, targeted therapy and multidisciplinary tumor board second opinions close to home.",
+    "medicalSpecialtyList": ["Medical Oncology", "Hemato-Oncology", "Oncology"],
+    "areaServedList": ["Vastrapur", "Gurukul", "Drive-In Road", "Satellite", "Bodakdev", "Mansi Circle", "Memnagar", "Thaltej", "SG Highway", "West Ahmedabad"],
+    "knowsAbout": ["Solid Tumor Oncology", "Breast Cancer", "Lung Cancer", "Blood Cancer", "Leukemia", "Lymphoma", "Chemotherapy", "Immunotherapy", "Targeted Therapy", "Palliative Care", "Cancer Screening"],
+    "availableServiceList": ["Chemotherapy", "Immunotherapy", "Targeted Therapy", "Port-a-Cath Management", "Tumor Board Consultations", "Palliative Care"],
+    "specializations": [
+      { "name": "Solid Tumor Medical Oncology (Breast, Lung, GI, Gynecological, Head & Neck Cancers)", "desc": "Comprehensive diagnosis and chemotherapy-based treatment for breast, lung, gastrointestinal, gynecological and head & neck cancers." },
+      { "name": "Hemato-Oncology (Leukemia, Lymphoma, Multiple Myeloma, Bone Marrow Disorders)", "desc": "Specialized management of blood cancers and bone marrow disorders including leukemia, lymphoma and multiple myeloma." },
+      { "name": "Daycare Chemotherapy & Port-a-Cath Infusion Management", "desc": "Same-day chemotherapy infusions and long-term Port-a-Cath management in a dedicated, comfortable daycare oncology wing." },
+      { "name": "Targeted Molecular Therapy & Biological Immunotherapy", "desc": "Precision drugs and immunotherapy protocols tailored to individual tumor genetic and molecular profiles." },
+      { "name": "Hormonal & Anti-Angiogenic Cancer Therapies", "desc": "Hormone-based and anti-angiogenic treatment regimens for hormone-sensitive and vascular-dependent tumors." },
+      { "name": "Preventive Cancer Screening & Genetic Risk Assessment", "desc": "Early detection screening and genetic risk counselling for patients with a family history of cancer." },
+      { "name": "Cancer Pain Management, Supportive & Palliative Care", "desc": "Dedicated pain control, symptom management and palliative care support throughout the cancer journey." },
+      { "name": "Multidisciplinary Tumor Board Second Opinions", "desc": "Collaborative tumor board reviews bringing together surgical, medical and radiation oncology expertise for complex cases." }
+    ],
+    "closing": "Dr. Srinivasan believes cancer care works best when it is evidence-based, compassionate and family-centered — helping patients and their loved ones understand each step of the treatment journey with clarity and support.",
+    "faqHeading": "Frequently Asked Questions About Dr. Dileep Srinivasan's Oncology Services",
+    "faqs": [
+      {
+        "q": "Who is a leading Medical Oncologist near Vastrapur and Satellite, Ahmedabad?",
+        "a": "Dr. Dileep Srinivasan (DM Medical Oncology) at DHS Multispecialty Hospital, Vastrapur, is a senior cancer specialist with 30+ years of experience in chemotherapy, immunotherapy, and blood cancer treatment."
+      },
+      {
+        "q": "Does DHS Hospital provide daycare chemotherapy facilities in West Ahmedabad?",
+        "a": "Yes, DHS Hospital features a modern Daycare Chemotherapy wing in Vastrapur equipped with specialized oncology nurses, aseptic safety protocols, and 24/7 ICU backup for comfortable, same-day infusion care."
+      },
+      {
+        "q": "What is the difference between chemotherapy and immunotherapy?",
+        "a": "Chemotherapy uses cytotoxic medications to target and destroy rapidly dividing cancer cells throughout the body. Immunotherapy trains your body's natural immune system to recognize and eliminate specific cancer cells with fewer side effects on healthy tissue."
+      },
+      {
+        "q": "What is targeted cancer therapy, and is it available at DHS Hospital?",
+        "a": "Targeted therapy uses precision drugs that block specific genes, proteins, or cellular pathways driving tumor growth. Dr. Dileep Srinivasan provides advanced targeted therapy protocols tailored to individual tumor genetic profiling."
+      },
+      {
+        "q": "How do I book a consultation or second opinion for cancer treatment at DHS Hospital?",
+        "a": "You can schedule an OPD consultation or second opinion with Dr. Dileep Srinivasan by calling +91 90816 10444 or visiting DHS Multispecialty Hospital at Drive-In Link Road, near Vastrapur Lake, Ahmedabad."
+      }
+    ]
   },
   {
     "slug": "doctor-yesha",
