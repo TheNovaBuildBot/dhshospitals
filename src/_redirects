@@ -181,5 +181,8 @@
 
 # Page consolidation — old /departments/icu/ merged into the newer, more
 # complete /departments/icu-critical-care/ page. 301 preserves link equity.
-/departments/icu/ /departments/icu-critical-care/ 301
-/departments/icu /departments/icu-critical-care/ 301
+# Force flag (!) needed because a static page still exists at this exact
+# path (kept intentionally, not deleted) — without it, Pages would serve
+# the static file instead of redirecting.
+/departments/icu/ /departments/icu-critical-care/ 301!
+/departments/icu /departments/icu-critical-care/ 301!
