@@ -179,10 +179,10 @@
 /robotic-surgeon-ahmedabad  /orthopedic-surgeon-ahmedabad/  301
 /robotic-surgeon-ahmedabad/ /orthopedic-surgeon-ahmedabad/  301
 
-# Page consolidation — old /departments/icu/ merged into the newer, more
-# complete /departments/icu-critical-care/ page. 301 preserves link equity.
-# Force flag (!) needed because a static page still exists at this exact
-# path (kept intentionally, not deleted) — without it, Pages would serve
-# the static file instead of redirecting.
+# Page consolidation — old /departments/icu/ (generic, non-geo page) has
+# been removed from the site. 301 preserves link equity and sends all
+# backlinks/internal links to the hyper-local /departments/icu-critical-care/
+# resource so it ranks as a single canonical page instead of competing
+# with itself.
 /departments/icu/ /departments/icu-critical-care/ 301!
 /departments/icu /departments/icu-critical-care/ 301!
