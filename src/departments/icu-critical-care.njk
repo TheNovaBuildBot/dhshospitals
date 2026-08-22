@@ -1,9 +1,10 @@
 ---
 layout: base.njk
 permalink: "/departments/icu-critical-care/"
-title: "ICU & Critical Care at DHS Hospital Ahmedabad"
-description: "Professional ICU & Critical Care services with advanced monitoring and 24/7 care at DHS Hospital."
+title: "24/7 ICU & Green Critical Care Unit in Vastrapur, Ahmedabad | DHS Hospital"
+description: "State-of-the-art 24/7 ICU & Green Critical Care Unit at DHS Hospital, Vastrapur. Invasive ventilation, hemodynamic monitoring, infection-control Green ICU led by Dr. Archit Parikh."
 canonical: "https://www.dhshospitals.com/departments/icu-critical-care/"
+activePage: "icu"
 breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "Departments", url: "/departments/" }
@@ -11,24 +12,57 @@ breadcrumbs:
 pageSchema: |
   {
     "@type": "MedicalClinic",
-    "@id": "https://www.dhshospitals.com/departments/icu-critical-care/#clinic",
-    "name": "ICU & Critical Care — DHS Multispecialty Hospital",
+    "name": "DHS Multispecialty Hospital - 24/7 Green ICU & Critical Care Unit",
     "url": "https://www.dhshospitals.com/departments/icu-critical-care/",
-    "description": "Professional ICU & Critical Care services with advanced monitoring and 24/7 care at DHS Hospital.",
-    "parentOrganization": { "@id": "https://www.dhshospitals.com/#hospital" },
-    "areaServed": [
-      { "@type": "City", "name": "Ahmedabad" },
-      { "@type": "AdministrativeArea", "name": "Gujarat" }
-    ],
-    "medicalSpecialty": "Critical Care Medicine"
+    "address": "18 Sunrise Park Society, Vastrapur Lake - Drive-In Link Road, Ahmedabad 380015",
+    "telephone": "+919081610444",
+    "medicalSpecialty": ["EmergencyCare", "CriticalCare", "IntensiveCare"],
+    "availableService": [
+      { "@type": "MedicalProcedure", "name": "Mechanical Ventilation Support" },
+      { "@type": "MedicalProcedure", "name": "HEPA Filtered Green ICU Isolation" },
+      { "@type": "MedicalProcedure", "name": "Hemodynamic Monitoring" },
+      { "@type": "MedicalProcedure", "name": "Sepsis & Multi-Organ Dysfunction Care" },
+      { "@type": "MedicalProcedure", "name": "Post-Surgical High Risk Recovery" }
+    ]
   }
-activePage: "departments"
 ---
+
+<style>
+  .icu-emergency-banner{
+    position:fixed;
+    right:0;
+    top:38%;
+    z-index:150;
+    background:#c0182b;
+    color:#fff;
+    padding:14px 18px 14px 20px;
+    border-radius:10px 0 0 10px;
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+    max-width:200px;
+    text-align:center;
+    font-weight:600;
+    line-height:1.4;
+    font-size:.92rem;
+  }
+  .icu-emergency-banner a{color:#fff;text-decoration:none;display:block;margin-top:6px;font-size:1.05rem;letter-spacing:.3px}
+  .icu-emergency-banner small{display:block;font-weight:500;opacity:.9;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px}
+  @media (max-width:768px){
+    .icu-emergency-banner{
+      right:0;left:0;top:auto;bottom:0;max-width:none;border-radius:0;
+      display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 90px 10px 14px;
+    }
+    .icu-emergency-banner a{margin-top:0}
+  }
+</style>
+
+<div class="icu-emergency-banner">
+  <small>24/7 Emergency &amp; ICU Helpline</small>
+  <a href="tel:+919081610444">+91 90816 10444</a>
+</div>
 
 <div class="page-banner">
   <div class="container">
-    <h1>ICU &amp; Critical Care</h1>
-    <p style="margin-top:10px;font-size:1.05rem;color:var(--text-light)">Advanced critical care services with round-the-clock monitoring and expert-led life support at DHS Hospital.</p>
+    <h1>24/7 ICU &amp; Green Critical Care Unit | DHS Hospital Ahmedabad</h1>
     <div class="breadcrumb"><a href="/">Home</a> / <a href="/departments/">Departments</a> / ICU &amp; Critical Care</div>
   </div>
 </div>
@@ -37,26 +71,92 @@ activePage: "departments"
   <div class="container">
 
     <div class="dept-intro">
-      <h2 class="dept-intro-heading">Overview</h2>
-      <p style="color:var(--text-light);font-style:italic">Content for this section is coming soon — an overview of the ICU &amp; Critical Care department will be added here.</p>
+      <h2 class="dept-intro-heading">Advanced Intensive Care &amp; Emergency Life Support in West Ahmedabad</h2>
+      <img class="dept-intro-image" src="/assets/images/client/icu-bg.jpg" alt="24/7 ICU and Green Critical Care Unit at DHS Hospital, Vastrapur, Ahmedabad" loading="lazy" width="900" height="500">
+      <p>DHS Multispecialty Hospital operates a round-the-clock Intensive Care Unit built to manage the most critical, life-threatening conditions — from post-surgical complications and multi-organ failure to severe infections and trauma. Located in Vastrapur, our Green Critical Care Unit combines advanced life-support technology with strict infection-control protocols so patients across West Ahmedabad receive world-class critical care without needing to travel across the city.</p>
     </div>
 
-    <h3 class="dept-services-heading">Services Offered</h3>
-    <ul class="services-list">
-      <li style="color:var(--text-light);font-style:italic">Service details coming soon — this section will list our ICU &amp; Critical Care services.</li>
-    </ul>
+    <h3 class="dept-services-heading">The Green ICU Concept</h3>
+    <p>Our ICU is designed around the "Green ICU" principle — a critical care environment engineered to minimise hospital-acquired infections while supporting faster, calmer recovery. Every bed is served by HEPA-filtered positive-pressure air handling, dedicated isolation zones for immunocompromised and highly infectious patients, controlled visitor traffic, and continuous environmental monitoring. Natural light, noise control, and single-point nursing supervision are built into the unit's layout to reduce patient stress and delirium — both of which are known to slow recovery in critically ill patients. The result is an ICU that is not only clinically advanced, but also safer and more humane for patients and the families waiting beside them.</p>
 
-    <h3 style="color:var(--primary);margin:30px 0 20px">Advanced Technology &amp; Equipment</h3>
-    <p style="color:var(--text-light);font-style:italic">Content for this section is coming soon — details of our advanced monitoring systems and critical care equipment will be added here.</p>
+    <h3 class="dept-services-heading">Comprehensive Critical Care Services</h3>
+    <ol class="services-list">
+      <li><strong>Invasive &amp; Non-Invasive Ventilation Support</strong> — Advanced mechanical ventilators for patients in respiratory failure, with continuous monitoring by critical care specialists and trained ICU nursing staff.</li>
+      <li><strong>Hemodynamic Monitoring</strong> — Continuous, beat-to-beat monitoring of blood pressure, cardiac output, and oxygenation to detect deterioration early and guide real-time treatment decisions.</li>
+      <li><strong>HEPA-Filtered Isolation Bays</strong> — Dedicated Green ICU isolation beds with filtered air handling to protect immunocompromised patients and contain infectious cases.</li>
+      <li><strong>Sepsis &amp; Multi-Organ Dysfunction Management</strong> — Protocol-driven sepsis bundles, renal support, and coordinated multi-specialty management for patients with failing organ systems.</li>
+      <li><strong>Post-Surgical High-Risk Recovery</strong> — Close-monitoring recovery beds for high-risk orthopedic, oncology, and general surgery patients who need intensive observation immediately after major procedures.</li>
+      <li><strong>24/7 Intensivist &amp; Code Blue Response</strong> — On-site critical care physicians and a trained code-blue team available around the clock for immediate emergency life support.</li>
+    </ol>
 
-    <h3 style="color:var(--primary);margin:30px 0 20px">Our Team</h3>
-    <p style="color:var(--text-light);font-style:italic">Content for this section is coming soon — profiles of our critical care specialists and nursing team will be added here.</p>
+    <h3 class="dept-services-heading">Expert Critical Care Medical Team</h3>
+    <div class="doctors-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+      <div class="doctor-card">
+        <div class="doctor-card-body">
+          <h4><a href="https://www.dhshospitals.com/doctors/doctor-archit/">Dr. Archit Parikh</a></h4>
+          <p class="qualification">MD Medicine — Infectious Disease, Critical Care &amp; ICU</p>
+          <p>Leads the Critical Care &amp; ICU team, managing complex infections, sepsis, and multi-organ critical illness with a strong focus on infection-controlled, evidence-based intensive care.</p>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-card-body">
+          <h4><a href="https://www.dhshospitals.com/doctors/doctor-hardik/">Dr. Hardik Shah</a></h4>
+          <p class="qualification">MBBS, MS Orthopedic, FRCS (Germany)</p>
+          <p>Medical Director at DHS Multispecialty Hospital, working closely with the ICU team to ensure seamless post-surgical critical care for high-risk orthopedic and joint replacement patients.</p>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-card-body">
+          <h4><a href="https://www.dhshospitals.com/doctors/doctor-swagat/">Dr. Swagat M Shah</a></h4>
+          <p class="qualification">MS Ortho, DNB Ortho, FIAAS (UK)</p>
+          <p>Coordinates closely with the critical care unit for close-monitoring recovery of patients following robotic and complex orthopedic surgery.</p>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-card-body">
+          <h4><a href="https://www.dhshospitals.com/doctors/doctor-dileep/">Dr. Dileep Srinivasan</a></h4>
+          <p class="qualification">MBBS, MD Medicine, DM Medical Oncology</p>
+          <p>Senior Medical Oncologist who partners with the ICU team on critical care support for oncology patients undergoing chemotherapy or recovering from major cancer surgery.</p>
+        </div>
+      </div>
+    </div>
 
-    <h3 style="color:var(--primary);margin:30px 0 20px">Why Choose DHS</h3>
-    <p style="color:var(--text-light);font-style:italic">Content for this section is coming soon — it will highlight why families choose DHS Hospital for critical care.</p>
+    <h3 class="dept-services-heading">Geographic Service Area</h3>
+    <p>DHS Hospital's 24/7 ICU &amp; Green Critical Care Unit serves patients from across West and Central Ahmedabad, including <strong>Vastrapur, Gurukul, Drive-In Road, Satellite, Bodakdev, Prahladnagar, Thaltej, Bopal, Ambawadi, and Navrangpura</strong>. Our location on Drive-In Link Road, near Vastrapur Lake, makes it one of the most accessible critical care destinations for families in West Ahmedabad, with a dedicated emergency entrance and ambulance bay for rapid ICU admission.</p>
+
+    <div class="faq-section">
+      <h3 class="dept-services-heading">Frequently Asked Questions</h3>
+
+      <details class="faq-item">
+        <summary>What facilities are available in the DHS Green ICU?</summary>
+        <div class="faq-answer">Our Green ICU is equipped with invasive and non-invasive ventilators, continuous hemodynamic monitoring, HEPA-filtered isolation bays, central nursing monitoring, and 24/7 on-site critical care intensivists and specially trained ICU nursing staff.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What does "Green ICU" mean at DHS Hospital?</summary>
+        <div class="faq-answer">Green ICU refers to our infection-controlled critical care design — HEPA-filtered positive-pressure air handling, dedicated isolation zones, controlled visitor movement, and a calmer, lower-noise environment — all aimed at reducing hospital-acquired infections and supporting faster patient recovery.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who manages critical care patients at DHS Hospital?</summary>
+        <div class="faq-answer">The ICU is led by Dr. Archit Parikh (MD Medicine — Infectious Disease, Critical Care &amp; ICU), supported by a multi-disciplinary team of specialists including orthopedic, oncology, and internal medicine consultants who coordinate care for complex, critically ill patients.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are ICU visiting hours flexible for family members?</summary>
+        <div class="faq-answer">ICU visiting is restricted to protect critically ill patients from infection and stress. A daily attendant briefing is provided by the treating team, and emergency updates are shared with family members as needed at any hour.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How quickly can a patient be admitted to the ICU in an emergency?</summary>
+        <div class="faq-answer">DHS Hospital runs a 24/7 emergency and ICU admission service. Call our round-the-clock helpline at +91 90816 10444 and our emergency team will guide immediate triage, stabilisation, and ICU admission on arrival.</div>
+      </details>
+    </div>
 
     <div style="margin-top:40px;text-align:center;padding:30px;background:var(--primary-light);border-radius:var(--radius)">
-      <a href="/contact/" class="btn btn-primary">Schedule a Consultation</a>
+      <p style="font-weight:600;margin-bottom:15px">For ICU admissions or a critical care emergency, call us anytime — day or night.</p>
+      <a href="tel:+919081610444" class="btn btn-primary">Call 24/7 Emergency &amp; ICU Helpline</a>
+      <a href="/contact/" class="btn btn-outline" style="margin-left:12px">Contact DHS Hospital</a>
     </div>
 
   </div>
