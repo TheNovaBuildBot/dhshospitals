@@ -339,9 +339,10 @@ nav.main-nav{background:#fff;padding:0;position:sticky;top:0;z-index:100;box-sha
 nav.main-nav .container{display:flex;align-items:center}
 .nav-logo{margin-right:auto}
 .nav-logo img{height:72px;padding:10px 0}
-.nav-links{display:flex;list-style:none;gap:0;align-items:center}
+.nav-links{display:flex;flex-wrap:wrap;list-style:none;gap:0;align-items:center;justify-content:center;max-width:720px}
 .nav-links>li{position:relative}
-.nav-links>li>a{display:block;padding:26px 8px;font-weight:600;color:var(--text);font-size:.84rem;transition:color .2s;letter-spacing:normal;white-space:nowrap}
+.nav-break{flex-basis:100%;height:0;width:0;padding:0;margin:0}
+.nav-links>li>a{display:block;padding:15px 10px;font-weight:600;color:var(--text);font-size:.84rem;transition:color .2s;letter-spacing:normal;white-space:nowrap}
 .nav-links>li>a:hover,.nav-links>li>a.active{color:var(--primary)}
 .nav-links>li>a.active{border-bottom:3px solid var(--primary);margin-bottom:-3px}
 .nav-links>li>a.nav-robotic{color:var(--accent);font-weight:700}
@@ -503,9 +504,10 @@ footer{background:var(--text);color:#ccc;padding:50px 0 0}
 .whatsapp-float:hover{transform:scale(1.1)}
 .whatsapp-float svg{width:28px;height:28px;fill:#fff}
 @media(max-width:960px){
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;box-shadow:var(--shadow);padding:10px 0}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;flex-wrap:nowrap;box-shadow:var(--shadow);padding:10px 0;max-width:none;justify-content:flex-start}
   .nav-links.open{display:flex}
   .nav-links>li>a{padding:12px 20px;font-size:.95rem;letter-spacing:.01em;white-space:normal}
+  .nav-break{display:none}
   .hamburger{display:block}
   .nav-cta{display:flex;margin-left:0;margin-right:8px}
   .btn-nav-book{padding:8px 16px;font-size:.82rem}
