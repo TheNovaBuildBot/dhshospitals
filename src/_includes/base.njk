@@ -551,6 +551,17 @@ footer{background:var(--text);color:#ccc;padding:50px 0 0}
 #localities-served h3{font-size:1.15rem;color:var(--primary-dark);margin:1.5rem 0 .5rem}
 #localities-served p{color:var(--text-light);line-height:1.7;margin-bottom:1rem}
 
+/* Media Coverage & Press page */
+.media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;margin-top:10px}
+.media-card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.media-card .media-badge{display:inline-flex;align-items:center;gap:8px;background:var(--primary-light);color:var(--primary-dark);font-weight:700;font-size:.85rem;padding:6px 14px;border-radius:999px;width:fit-content;margin-bottom:16px}
+.media-card .media-date{color:var(--text-light);font-size:.8rem;margin-bottom:10px;letter-spacing:.02em}
+.media-card h3{font-size:1.15rem;color:var(--text);line-height:1.4;margin-bottom:18px}
+.media-card .btn{margin-top:auto;align-self:flex-start}
+.media-card-placeholder{border:2px dashed var(--border);border-radius:var(--radius);padding:30px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--text-light);font-size:.9rem;min-height:220px}
+@media (max-width:768px){
+  .media-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
