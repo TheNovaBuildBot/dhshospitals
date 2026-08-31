@@ -265,15 +265,5 @@
     "image": "/assets/images/doctors/dr-sunil.jpg",
     "about": "Dr. Sunil Gurmukhani is a consultant cardiologist at DHS Multispecialty Hospital, providing comprehensive cardiac diagnostics and treatment including ECG, echocardiography, stress testing, and preventive cardiology.",
     "specializations": []
-  },
-  {
-    "slug": "doctor-devshi",
-    "name": "Dr. Devshi Shah",
-    "qualification": "Consultant Surgeon",
-    "specialty": "General Surgery",
-    "languages": "English, Hindi, Gujarati",
-    "image": "/assets/images/doctors/dr-devshi.jpg",
-    "about": "Dr. Devshi Shah is a consultant surgeon at DHS Multispecialty Hospital specializing in general and vascular surgery.",
-    "specializations": []
   }
 ]

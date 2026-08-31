@@ -130,7 +130,7 @@
     "short_desc": "General and laparoscopic surgery focusing on abdominal and minimally invasive procedures.",
     "full_desc": "The General and Laparoscopic Surgery department focuses on abdominal contents and provides comprehensive surgical care using both traditional and minimally invasive techniques.",
     "services": ["Laparoscopic Surgery", "Hernia Repair", "Appendectomy", "Gallbladder Surgery", "Thyroid Surgery"],
-    "doctors": ["doctor-chirag", "doctor-devshi"]
+    "doctors": ["doctor-chirag"]
   },
   {
     "slug": "internal-medicine",
@@ -157,7 +157,7 @@
     "short_desc": "Diagnosis, treatment, and management of conditions in arteries and veins.",
     "full_desc": "Our Vascular Surgery department diagnoses, treats, and manages conditions in your arteries and veins. We offer both surgical and endovascular treatments for vascular diseases.",
     "services": ["Varicose Vein Treatment", "Peripheral Artery Disease", "Dialysis Access Surgery", "Deep Vein Thrombosis", "Aneurysm Repair"],
-    "doctors": ["doctor-devshi"]
+    "doctors": []
   },
   {
     "slug": "dialysis-unit",
