@@ -316,6 +316,7 @@ pageSchema: |
     <div class="hero-content">
       <div class="hero-eyebrow">2,000+ KNEE REPLACEMENTS &nbsp;·&nbsp; VELYS 4.0 Robotic-Assisted Solution</div>
       <h1>Orthopedic Hospital in Ahmedabad — DHS Multispecialty Hospital</h1>
+      <p>DHS Multispecialty Hospital is a NABH-accredited <strong>orthopedic hospital in Ahmedabad</strong> offering knee replacement, hip replacement, spine surgery, sports injury &amp; ACL/ligament surgery, fracture &amp; trauma care, and joint pain treatment — alongside 15+ multispecialty departments for complete family healthcare under one roof.</p>
       <p>Advanced <strong>VELYS 4.0 robotic knee replacement</strong> from Johnson &amp; Johnson DePuy Synthes &mdash; an imageless platform with real-time intra-operative mapping, no pre-operative CT scan required, and sub-millimetre precision. Paired with the proven J&amp;J Attune knee implant for faster recovery and strong alignment accuracy.</p>
 
       <div class="hero-stats">
@@ -350,7 +351,26 @@ pageSchema: |
     </div>
   </div>
 </section>
+
+<section class="section" style="padding:34px 0;background:#fff;border-bottom:1px solid #eee">
+  <div class="container">
+    <div class="nap-map-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center">
+      <div class="nap-block">
+        <h2 style="font-size:1.3rem;margin-bottom:12px">Visit Our Orthopedic Hospital in Ahmedabad</h2>
+        <p style="margin:0 0 6px"><strong>{{ site.name }}</strong></p>
+        <p style="margin:0 0 6px">{{ site.address.full }}</p>
+        <p style="margin:0 0 6px">Emergency (24x7): <a href="tel:{{ site.phones.emergency }}">{{ site.phones.emergency }}</a></p>
+        <p style="margin:0 0 6px">Landline: {{ site.phones.landline1 }} / {{ site.phones.landline2 }}</p>
+        <p style="margin:0">Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+      <div class="map-container">
+        <iframe src="{{ site.google_maps_embed }}" allowfullscreen loading="lazy" title="DHS Multispecialty Hospital Location Map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 <style>
+@media (max-width:768px){.nap-map-grid{grid-template-columns:1fr!important}}
 .velys-led-hero .hero-content{max-width:760px}
 .hero-eyebrow{display:inline-block;background:var(--accent);color:#fff;padding:5px 14px;border-radius:14px;font-size:.78rem;font-weight:800;letter-spacing:.6px;margin-bottom:18px}
 .velys-led-hero h1{font-size:3.05rem;line-height:1.18;margin-bottom:16px}
