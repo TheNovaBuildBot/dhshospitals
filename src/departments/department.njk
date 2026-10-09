@@ -30,7 +30,27 @@ eleventyComputed:
       ],
       "medicalSpecialty": "{{ dept.name }}",
       "availableService": [
-        {%- if dept.services %}{% for service in dept.services %}
+        {%- if dept.slug == "orthopedics" %}
+        {
+          "@type": "MedicalProcedure",
+          "name": "Robotic Knee Replacement",
+          "alternateName": "VELYS Robotic-Assisted Total Knee Replacement",
+          "description": "Minimally invasive robotic-assisted knee replacement using VELYS real-time intra-operative digital mapping — no pre-operative CT scan required, with sub-millimetre implant precision and faster recovery than traditional CT-based robotic systems.",
+          "bodyLocation": "Knee",
+          "provider": { "@id": "https://www.dhshospitals.com/#hospital" },
+          "areaServed": { "@type": "City", "name": "Ahmedabad" }
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Robotic Hip Replacement",
+          "alternateName": "VELYS Robotic-Assisted Hip Replacement",
+          "description": "Robotic-assisted hip replacement using VELYS real-time intra-operative digital mapping — no pre-operative CT scan required, with precise implant positioning and faster recovery.",
+          "bodyLocation": "Hip",
+          "provider": { "@id": "https://www.dhshospitals.com/#hospital" },
+          "areaServed": { "@type": "City", "name": "Ahmedabad" }
+        }{% if dept.services %},{% for service in dept.services %}
+        { "@type": "MedicalProcedure", "name": "{{ service }}" }{% if not loop.last %},{% endif %}{% endfor %}{% endif %}
+        {%- elif dept.services %}{% for service in dept.services %}
         { "@type": "MedicalProcedure", "name": "{{ service }}" }{% if not loop.last %},{% endif %}{% endfor %}{%- endif %}
       ]
     }
