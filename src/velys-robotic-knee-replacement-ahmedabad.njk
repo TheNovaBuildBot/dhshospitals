@@ -63,7 +63,7 @@ pageSchema: |
         </div>
       </div>
       <div>
-        <img src="/assets/images/velys/ot-robotic-knee.jpg" alt="VELYS robotic-assisted knee replacement in progress at DHS Multispecialty Hospital, Ahmedabad — surgeon using tracking array during robotic-guided bone preparation" loading="lazy" width="720" height="1280" style="border-radius:var(--radius);box-shadow:var(--shadow);max-height:600px;width:auto;margin:0 auto;display:block">
+        <img src="/assets/images/velys/ot-robotic-knee.jpg" alt="VELYS robotic-assisted knee replacement in progress at DHS Multispecialty Hospital, Ahmedabad — surgeon using tracking array during robotic-guided bone preparation" fetchpriority="high" width="720" height="1280" style="border-radius:var(--radius);box-shadow:var(--shadow);max-height:600px;width:auto;aspect-ratio:720/1280;margin:0 auto;display:block">
       </div>
     </div>
 
@@ -128,7 +128,7 @@ pageSchema: |
       {% for slug in ["doctor-hardik", "doctor-swagat"] %}
       {% for doc in doctors %}{% if doc.slug == slug %}
       <a href="/doctors/{{ doc.slug }}/" class="doctor-card" style="text-decoration:none;color:inherit">
-        <img src="{{ doc.image }}" alt="{{ doc.name }} — Robotic Knee Replacement Surgeon, DHS Hospital Ahmedabad" loading="lazy" width="300" height="380">
+        <img src="{{ doc.image }}" alt="{{ doc.name }} — Robotic Knee Replacement Surgeon, DHS Hospital Ahmedabad" loading="lazy" width="300" height="380" style="aspect-ratio:300/380;object-fit:cover">
         <div class="doctor-card-body">
           <h3>{{ doc.name }}</h3>
           <div class="qualification">{{ doc.qualification }}</div>
