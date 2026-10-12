@@ -80,6 +80,14 @@ activePage: "doctors"
   <div class="container">
     <h1>{% if doc.seo_h1 %}{{ doc.seo_h1 }}{% else %}{{ doc.name }}{% if doc.seo_h1_suffix %} — {{ doc.seo_h1_suffix }}{% endif %}{% endif %}</h1>
     <div class="breadcrumb"><a href="/">Home</a> / <a href="/doctors/">Doctors</a> / {{ doc.name }}</div>
+    {% if doc.banner_intro %}
+    <p style="max-width:700px;margin:14px auto 0;font-size:1.05rem;opacity:.95">{{ doc.banner_intro | safe }}</p>
+    {% endif %}
+    {% if doc.banner_cta_text %}
+    <div style="margin-top:18px">
+      <a href="{{ doc.banner_cta_url or '/appointment/' }}" class="btn btn-accent">{{ doc.banner_cta_text }}</a>
+    </div>
+    {% endif %}
   </div>
 </div>
 
