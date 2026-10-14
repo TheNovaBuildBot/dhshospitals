@@ -24,7 +24,7 @@ eleventyComputed:
       "image": "https://www.dhshospitals.com{{ doc.image }}",
       "url": "https://www.dhshospitals.com/doctors/{{ doc.slug }}/",
       "description": "{{ doc.seo_description or (doc.name + ' — ' + doc.specialty + ' specialist at DHS Multispecialty Hospital, Ahmedabad.') }}",
-      "medicalSpecialty": {% if doc.medicalSpecialtyList and doc.medicalSpecialtyList.length %}{{ doc.medicalSpecialtyList | dump }}{% else %}"{{ doc.specialty }}"{% endif %},
+      "medicalSpecialty": {% if doc.medicalSpecialtyList and doc.medicalSpecialtyList.length %}{{ doc.medicalSpecialtyList | dump | safe }}{% else %}"{{ doc.specialty }}"{% endif %},
       "knowsLanguage": "{{ doc.languages or 'English, Hindi, Gujarati' }}",
       "worksFor": {
         "@type": "Hospital",
@@ -46,8 +46,8 @@ eleventyComputed:
       "affiliatedWith": { "@type": "Hospital", "name": "DHS Multispecialty Hospital", "url": "https://dhshospitals.com" },
       "hasCredential": "{{ doc.qualification }}",
       "jobTitle": "{{ doc.role or doc.specialty + ' Specialist' }}",
-      {% if doc.knowsAbout and doc.knowsAbout.length %}"knowsAbout": {{ doc.knowsAbout | dump }},{% endif %}
-      {% if doc.sameAs and doc.sameAs.length %}"sameAs": {{ doc.sameAs | dump }},{% endif %}
+      {% if doc.knowsAbout and doc.knowsAbout.length %}"knowsAbout": {{ doc.knowsAbout | dump | safe }},{% endif %}
+      {% if doc.sameAs and doc.sameAs.length %}"sameAs": {{ doc.sameAs | dump | safe }},{% endif %}
       "telephone": "+91 9081610444",
       "email": "info@dhshospitals.com",
       "address": {
