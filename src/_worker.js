@@ -4,7 +4,9 @@
 // applied explicitly here before falling through to static asset serving.
 const PAGE_REDIRECTS = {
   "/departments/icu": "/departments/icu-critical-care/",
-  "/departments/icu/": "/departments/icu-critical-care/"
+  "/departments/icu/": "/departments/icu-critical-care/",
+  "/orthopedic-hospital-ahmedabad": "/orthopedic-care-ahmedabad/",
+  "/orthopedic-hospital-ahmedabad/": "/orthopedic-care-ahmedabad/"
 };
 
 export default {

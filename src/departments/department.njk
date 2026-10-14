@@ -83,6 +83,16 @@ activePage: "departments"
     </ul>
     {% endif %}
 
+    {% set deptGuides = {
+      "orthopedics": ["/orthopedic-care-ahmedabad/", "Orthopedic Hospital in Ahmedabad: complete guide to orthopedic care at DHS"],
+      "cardiology": ["/blog/heart-tests-ecg-echo-tmt-ahmedabad/", "Patient guide: ECG, 2D Echo or TMT? Heart tests explained"],
+      "neurosurgery": ["/blog/stroke-warning-signs-golden-hour-ahmedabad/", "Patient guide: stroke warning signs and why every minute counts"],
+      "urology-surgery": ["/blog/kidney-stones-symptoms-treatment-ahmedabad/", "Patient guide: kidney stones, symptoms, treatment and prevention"]
+    } %}
+    {% if deptGuides[dept.slug] %}
+    <p style="margin:22px 0 0;padding:14px 18px;background:var(--primary-light);border-radius:var(--radius)"><a href="{{ deptGuides[dept.slug][0] }}" style="color:var(--primary);font-weight:600">{{ deptGuides[dept.slug][1] }} &rarr;</a></p>
+    {% endif %}
+
     {% if dept.doctors and dept.doctors.length %}
     <h3 style="color:var(--primary);margin:30px 0 20px">Meet our {{ dept.name }} Specialists in Ahmedabad</h3>
     <div class="doctors-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
