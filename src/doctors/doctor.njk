@@ -144,6 +144,10 @@ activePage: "doctors"
         <p style="margin-top:20px;font-style:italic;color:var(--text-light)">{{ doc.closing }}</p>
         {% endif %}
 
+        {% if doc.personal_site_url %}
+        <p style="margin-top:14px"><a href="{{ doc.personal_site_url }}" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600">{{ doc.personal_site_label or 'Learn more →' }}</a></p>
+        {% endif %}
+
         {% if doc.languages %}
         <p style="margin-top:14px;font-size:.9rem;color:var(--text-light)">Consultation available in {{ doc.languages }}.</p>
         {% endif %}
