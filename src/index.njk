@@ -459,7 +459,7 @@ pageSchema: |
       <div class="media-card">
         <span class="media-badge">Divya Bhaskar</span>
         <div class="media-date">August 31, 2026</div>
-        <img src="/assets/tmpbxgq-69s.jpg" alt="Divya Bhaskar newspaper clipping covering DHS Multispecialty Hospital's twin tower inauguration and J&amp;J VELYS robotic knee replacement launch" loading="lazy" style="width:100%;border-radius:8px;margin:10px 0 16px;display:block">
+        <img src="/assets/tmpbxgq-69s.jpg" alt="Divya Bhaskar newspaper clipping covering DHS Multispecialty Hospital's twin tower inauguration and J&amp;J VELYS robotic knee replacement launch" loading="lazy" decoding="async" fetchpriority="low" style="width:100%;border-radius:8px;margin:10px 0 16px;display:block">
         <h3>DHS Multispecialty Hospital's Twin Tower Inauguration &amp; JJ VELYS Robotic Knee Launch</h3>
         <a href="/mediacoverage/" class="btn btn-primary">View All Media Coverage &rarr;</a>
       </div>
@@ -467,7 +467,7 @@ pageSchema: |
       <div class="media-card">
         <span class="media-badge">Ahmedabad Mirror</span>
         <div class="media-date">August 30, 2026</div>
-        <img src="/assets/add-this-next-to-divyabhasker-clipping-o.jpg" alt="Ahmedabad Mirror press coverage of DHS Multispecialty Hospital's twin tower inauguration and J&amp;J VELYS robotic knee replacement launch" loading="lazy" style="width:100%;border-radius:8px;margin:10px 0 16px;display:block">
+        <img src="/assets/add-this-next-to-divyabhasker-clipping-o.jpg" alt="Ahmedabad Mirror press coverage of DHS Multispecialty Hospital's twin tower inauguration and J&amp;J VELYS robotic knee replacement launch" loading="lazy" decoding="async" fetchpriority="low" style="width:100%;border-radius:8px;margin:10px 0 16px;display:block">
         <h3>DHS Multispecialty Hospital inaugurates new twin tower, launches JJ VELYS Robotic Knee Replacement System in Ahmedabad</h3>
         <a href="https://www.ahmedabadmirror.com/dhs-multispecialty-hospital-inaugurates-new-twin-tower-launches-jj-velys-robotic-knee-replacement-system-in-ahmedabad/81920754.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read on Ahmedabad Mirror &rarr;</a>
       </div>
@@ -514,7 +514,7 @@ pageSchema: |
     </div>
 
     <div class="robotic-photo-block">
-      <img src="/assets/tmpgwaq6o0k.jpg" alt="Dr. Hardik M Shah and Dr. Swagat M Shah with the VELYS 4.0 Robotic-Assisted Solution at DHS Multispecialty Hospital" loading="lazy" class="robotic-photo">
+      <img src="/assets/tmpgwaq6o0k.jpg" alt="Dr. Hardik M Shah and Dr. Swagat M Shah with the VELYS 4.0 Robotic-Assisted Solution at DHS Multispecialty Hospital" loading="lazy" decoding="async" fetchpriority="low" class="robotic-photo">
       <p class="robotic-photo-caption">Dr. Hardik M Shah and Dr. Swagat M Shah with DHS Hospital's VELYS 4.0 Robotic-Assisted Solution from Johnson &amp; Johnson. Both senior surgeons train on and operate the latest imageless, real-time mapping technology for every robotic knee replacement performed at DHS — delivering sub-millimetre accuracy without a pre-operative CT scan.</p>
     </div>
 
@@ -549,7 +549,7 @@ pageSchema: |
     <p class="section-subtitle">Dr. Hardik M Shah and Dr. Swagat M Shah bring decades of combined orthopedic experience to every robotic knee replacement performed at DHS — supported by the VELYS 4.0 Robotic-Assisted Solution from Johnson &amp; Johnson.</p>
 
     <div class="surgeons-photo-block">
-      <img src="/assets/i-am-giving-the-same-image-for-7th-time-.jpg" alt="Dr. Hardik M Shah and Dr. Swagat M Shah with the VELYS 4.0 Robotic-Assisted Solution from Johnson & Johnson at DHS Multispecialty Hospital" loading="lazy" class="surgeons-photo">
+      <img src="/assets/i-am-giving-the-same-image-for-7th-time-.jpg" alt="Dr. Hardik M Shah and Dr. Swagat M Shah with the VELYS 4.0 Robotic-Assisted Solution from Johnson & Johnson at DHS Multispecialty Hospital" loading="lazy" decoding="async" fetchpriority="low" class="surgeons-photo">
     </div>
 
     <div class="surgeons-grid">
@@ -612,7 +612,7 @@ pageSchema: |
     <div class="facilities-grid">
       {% for facility in facilities %}
       <div class="facility-card">
-        <img src="{{ facility.icon }}" alt="{{ facility.name }} at DHS Hospital Ahmedabad" loading="lazy" width="50" height="50">
+        <img src="{{ facility.icon }}" alt="{{ facility.name }} at DHS Hospital Ahmedabad" loading="lazy" decoding="async" width="50" height="50">
         <h3>{{ facility.name }}</h3>
         <p>{{ facility.description }}</p>
       </div>
@@ -628,7 +628,7 @@ pageSchema: |
     <div class="dept-grid">
       {% for dept in departments | head(8) %}
       <div class="dept-card">
-        <img src="{{ dept.image }}" alt="{{ dept.name }} department at DHS Hospital Ahmedabad" loading="lazy" width="300" height="180">
+        <img src="{{ dept.image }}" alt="{{ dept.name }} department at DHS Hospital Ahmedabad" loading="lazy" decoding="async" width="300" height="180">
         <div class="dept-card-body">
           <h3>{{ dept.name }}</h3>
           <p>{{ dept.short_desc }}</p>
@@ -650,7 +650,7 @@ pageSchema: |
     <div class="doctors-grid">
       {% for doc in doctors | head(4) %}
       <div class="doctor-card">
-        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy" width="300" height="250">
+        <img src="{{ doc.image }}" alt="{{ doc.name }} — {{ doc.specialty }} at DHS Hospital Ahmedabad" loading="lazy" decoding="async" width="300" height="250">
         <div class="doctor-card-body">
           <h3>{{ doc.name }}</h3>
           <div class="qualification">{{ doc.qualification }}</div>
