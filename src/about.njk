@@ -7,6 +7,56 @@ breadcrumbs:
   - { name: "Home", url: "/" }
   - { name: "About Us", url: "/about/" }
 activePage: "more"
+pageSchema: |
+  {
+    "@type": "MedicalOrganization",
+    "@id": "https://www.dhshospitals.com/about/#credentials",
+    "name": "DHS Multispecialty Hospital",
+    "url": "https://www.dhshospitals.com/about/",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Hospital accreditation",
+      "name": "NABH Accreditation",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "National Accreditation Board for Hospitals & Healthcare Providers (NABH)"
+      }
+    },
+    "employee": [
+      {
+        "@type": "Physician",
+        "name": "Dr. Hardik M Shah",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Medical Director",
+        "medicalSpecialty": "Orthopedic",
+        "hasCredential": "MBBS, MS Orthopedic, FRCS (Germany)"
+      },
+      {
+        "@type": "Physician",
+        "name": "Dr. Swagat M Shah",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Director",
+        "medicalSpecialty": "Orthopedic",
+        "hasCredential": "MS Ortho, DNB Ortho, FIAAS (UK)"
+      },
+      {
+        "@type": "Physician",
+        "name": "Dr. Dileep Srinivasan",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Senior Medical Oncologist & Hemato-Oncologist",
+        "medicalSpecialty": "Oncologic",
+        "hasCredential": "MBBS, MD (Medicine), DM (Medical Oncology)"
+      },
+      {
+        "@type": "Physician",
+        "name": "Dr. Chirag Thakkar",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "GI & Laparoscopic Surgeon",
+        "medicalSpecialty": "Surgical",
+        "hasCredential": "MBBS, MS General Surgery, MRCS (UK)"
+      }
+    ]
+  }
 ---
 
 <div class="page-banner">
@@ -26,13 +76,52 @@ activePage: "more"
         <div class="welcome">WELCOME TO</div>
         <h2>DHS Multispecialty Hospital</h2>
         <p>Welcome to DHS Multispecialty Hospital, your trusted hospital partner in Ahmedabad. DHS Multispecialty Hospital is a state-of-the-art advanced multispecialty hospital located in Vastrapur. DHS is a one-stop solution for secondary and tertiary care providing medical and surgical treatments. DHS Multispecialty Hospital has fully equipped 50 beds with 24x7 ICU & Emergency services providing exceptional medical services.</p>
-        <p>DHS Multispecialty Hospital focuses on providing patient-centric care and transparency in the hospital process. After 5+ years of providing comprehensive medical services, DHS hospital proudly stands out for its cutting-edge infrastructure and personalised treatment. Having treated 25,000+ indoor and 100,000+ outdoor patients, we have carved a niche among hospitals in Ahmedabad.</p>
+        <p>DHS Multispecialty Hospital focuses on providing patient-centric care and transparency in the hospital process. After 6+ years of providing comprehensive medical services, DHS hospital proudly stands out for its cutting-edge infrastructure and personalised treatment. Having treated 25,000+ indoor and 100,000+ outdoor patients, we have carved a niche among hospitals in Ahmedabad.</p>
         <p>At DHS Multispecialty Hospital, your health is our top priority and we strive to deliver the highest standards of care in a comfortable and supportive environment.</p>
         <p>Our Hospital is accredited by NABH, reflecting our dedication to quality, safety, and continuous improvement.</p>
         <p>DHS Multispecialty Hospital offers Mediclaim & Cashless services from major insurance companies for patient's ease.</p>
         <p>In addition, DHS Multispecialty Hospital also offers healthcare-related services like Health Check-Up, Endoscopy, Dialysis, Day Care Services for chemotherapy and Orthopedic treatments, and ICU care. Diagnostic services of Pathology and Radiology support all medical and surgical treatment.</p>
         <div class="nabh-badge">NABH Accredited Hospital</div>
       </div>
+    </div>
+
+    <div style="margin-top:48px">
+      <h2 style="font-size:1.3rem;color:var(--primary);margin-bottom:16px">Credentials &amp; Accreditation</h2>
+      <p style="color:var(--text-light);font-size:.95rem;margin-bottom:20px">DHS Multispecialty Hospital is accredited by the National Accreditation Board for Hospitals &amp; Healthcare Providers (NABH), which certifies that our clinical protocols, infection control standards and patient safety systems meet nationally recognised quality benchmarks. We have been operating in Vastrapur, Ahmedabad for over 6 years.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:32px">
+        {% for stat in site.stats %}
+        <div style="background:#fff;border:1px solid var(--primary-light);border-radius:var(--radius);padding:16px;text-align:center">
+          <div style="font-size:1.4rem;font-weight:700;color:var(--primary)">{{ stat.value }}</div>
+          <div style="font-size:.8rem;color:var(--text-light)">{{ stat.label }}</div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h3 style="font-size:1.05rem;color:var(--primary);margin-bottom:12px">Senior specialists</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+        <div style="background:#fff;border:1px solid var(--primary-light);border-radius:var(--radius);padding:16px">
+          <div style="font-weight:600;color:var(--text)">Dr. Hardik M Shah</div>
+          <div style="font-size:.85rem;color:var(--primary);margin:2px 0">Medical Director — Orthopedics</div>
+          <div style="font-size:.8rem;color:var(--text-light)">MBBS, MS Orthopedic, FRCS (Germany)</div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--primary-light);border-radius:var(--radius);padding:16px">
+          <div style="font-weight:600;color:var(--text)">Dr. Swagat M Shah</div>
+          <div style="font-size:.85rem;color:var(--primary);margin:2px 0">Director — Orthopedics</div>
+          <div style="font-size:.8rem;color:var(--text-light)">MS Ortho, DNB Ortho, FIAAS (UK)</div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--primary-light);border-radius:var(--radius);padding:16px">
+          <div style="font-weight:600;color:var(--text)">Dr. Dileep Srinivasan</div>
+          <div style="font-size:.85rem;color:var(--primary);margin:2px 0">Senior Medical Oncologist &amp; Hemato-Oncologist</div>
+          <div style="font-size:.8rem;color:var(--text-light)">MBBS, MD (Medicine), DM (Medical Oncology)</div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--primary-light);border-radius:var(--radius);padding:16px">
+          <div style="font-weight:600;color:var(--text)">Dr. Chirag Thakkar</div>
+          <div style="font-size:.85rem;color:var(--primary);margin:2px 0">GI &amp; Laparoscopic Surgeon</div>
+          <div style="font-size:.8rem;color:var(--text-light)">MBBS, MS General Surgery, MRCS (UK)</div>
+        </div>
+      </div>
+      <p style="font-size:.85rem;color:var(--text-light);margin-top:16px"><a href="/doctors/">View all doctors and departments →</a></p>
     </div>
 
     <div style="margin-top:48px;padding:24px 32px;background:var(--primary-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
