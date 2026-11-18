@@ -186,3 +186,10 @@
 # with itself.
 /departments/icu/ /departments/icu-critical-care/ 301!
 /departments/icu /departments/icu-critical-care/ 301!
+
+# Blog consolidation — "robotic vs traditional knee replacement" had two
+# near-duplicate posts published six weeks apart, competing for the same
+# search intent. Kept the stronger, fully-schema'd post; this 301 sends
+# the weaker duplicate's traffic and link equity to it.
+/blog/robotic-vs-traditional-knee-replacement-ahmedabad-seniors/ /blog/robotic-vs-traditional-knee-replacement-ahmedabad/ 301!
+/blog/robotic-vs-traditional-knee-replacement-ahmedabad-seniors /blog/robotic-vs-traditional-knee-replacement-ahmedabad/ 301!
